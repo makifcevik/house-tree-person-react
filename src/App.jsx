@@ -9,6 +9,7 @@ export default function App() {
     setThemeMode((prev) => (prev === "light" ? "dark" : "light"));
   };
 
+  // update themes on change
   useEffect(() => {
     document.querySelector("html").classList.remove("dark", "light");
     document.querySelector("html").classList.add(themeMode);
