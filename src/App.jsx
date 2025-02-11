@@ -3,10 +3,14 @@ import { HomePage } from "./pages/HomePage";
 import { ThemeProvider } from "./contexts/themeContext";
 
 export default function App() {
-  const [themeMode, setThemeMode] = useState("light");
+  const [themeMode, setThemeMode] = useState(localStorage.getItem("theme") || "light");
 
   const toggleTheme = () => {
-    setThemeMode((prev) => (prev === "light" ? "dark" : "light"));
+    setThemeMode((prev) => {
+      const newTheme = prev === "light" ? "dark" : "light";
+      localStorage.setItem("theme", newTheme);
+      return newTheme;
+    });
   };
 
   // update themes on change
