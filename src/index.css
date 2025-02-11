@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-poppins;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center text-center
+  }
+
+  .p-common {
+    @apply px-10 py-6
+  }
+
+  .text-theme-color {
+    @apply text-black dark:text-white
+  }
+}
