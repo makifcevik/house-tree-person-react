@@ -38,6 +38,7 @@ function LoginForm() {
           id='passoword'
           type='password'
           name='password'
+          placeholder='••••••••'
         ></input>
       </div>
 
