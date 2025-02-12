@@ -22,4 +22,10 @@
   .anim-items {
     @apply opacity-0 translate-y-20
   }
+
+  .btnPrimary {
+    @apply px-12 py-3 bg-primary text-white 
+      border-primary border-2 rounded-3xl hover:bg-white 
+      hover:text-primary hover:shadow-lg
+  }
 }

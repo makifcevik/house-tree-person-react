@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
-import BtnPrimary from "./BtnPrimary";
 import gsap from "gsap";
+import BtnGetStarted from "./BtnGetStarted";
 
 function Heros() {
   useGSAP(() => {
@@ -24,7 +24,7 @@ function Heros() {
           Some text will be put here to briefly talk about the project and maybe describe
           some aspects of it. Vision of the project can be stated here.
         </p>
-        <BtnPrimary text={"Login"} className='anim-items' />
+        <BtnGetStarted className='anim-items' />
       </div>
     </main>
   );
