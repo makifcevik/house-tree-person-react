@@ -18,7 +18,10 @@ export default {
           light: "#FFFFFF",
           dark: "#031A3B",
         },
-        paragraph: "#848484",
+        gray: {
+          light: "#848484",
+          dark: "#94A0B8",
+        },
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

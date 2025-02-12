@@ -4,7 +4,7 @@ import Wave from "../components/Wave";
 
 export const HomePage = () => {
   return (
-    <div className='relative w-screen h-screen bg-background-light dark:bg-background-dark'>
+    <div className='relative page-default'>
       <Navbar />
       <Heros />
       <Wave />

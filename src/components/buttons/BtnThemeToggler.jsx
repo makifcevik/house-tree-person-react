@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import useTheme from "../contexts/themeContext";
+import useTheme from "../../contexts/themeContext";
 
 function BtnThemeToggler() {
   const { themeMode, toggleTheme } = useTheme();
@@ -10,7 +10,7 @@ function BtnThemeToggler() {
       {themeMode === "light" ? (
         <FontAwesomeIcon icon={faSun} size='lg' className='text-primary pb-2' />
       ) : (
-        <FontAwesomeIcon icon={faMoon} size='lg' className='mr-1 pb-2' />
+        <FontAwesomeIcon icon={faMoon} size='lg' className='text-white mr-1 pb-2' />
       )}
     </button>
   );

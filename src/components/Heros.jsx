@@ -1,10 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import BtnGetStarted from "./BtnGetStarted";
+import BtnGetStarted from "./buttons/BtnGetStarted";
+import { herosText } from "../constants";
 
 function Heros() {
   useGSAP(() => {
-    gsap.to(".anim-items", {
+    gsap.to(".anim-items-bottom", {
       opacity: 1,
       y: 20,
       delay: 0.5,
@@ -17,14 +18,9 @@ function Heros() {
   return (
     <main className='flex flex-center'>
       <div className='flex flex-col flex-center w-1/3 max-lg:w-1/2 max-md:w-2/3 max-sm:w-3/4 gap-5 mt-12 max-md:mt-40'>
-        <h1 className='anim-items text-theme-color text-2xl font-black'>
-          House Tree Person
-        </h1>
-        <p className='anim-items text-paragraph mb-10'>
-          Some text will be put here to briefly talk about the project and maybe describe
-          some aspects of it. Vision of the project can be stated here.
-        </p>
-        <BtnGetStarted className='anim-items' />
+        <h1 className='anim-items-bottom section-header'>House Tree Person</h1>
+        <p className='anim-items-bottom text-gray mb-10'>{herosText}</p>
+        <BtnGetStarted className='anim-items-bottom' />
       </div>
     </main>
   );

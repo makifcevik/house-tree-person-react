@@ -6,7 +6,23 @@
   @apply font-poppins;
 }
 
+body {
+  @apply bg-background-light dark:bg-background-dark
+}
+
 @layer utilities {
+  .page-default {
+    @apply w-screen h-screen bg-background-light dark:bg-background-dark
+  }
+
+  .section-header {
+    @apply text-theme-color text-2xl font-black
+  }
+
+  .text-gray {
+    @apply text-gray-light dark:text-gray-dark
+  }
+
   .flex-center {
     @apply flex items-center justify-center text-center
   }
@@ -19,13 +35,27 @@
     @apply text-black dark:text-white
   }
 
-  .anim-items {
+  .anim-items-bottom {
     @apply opacity-0 translate-y-20
   }
 
-  .btnPrimary {
-    @apply px-12 py-3 bg-primary text-white 
-      border-primary border-2 rounded-3xl hover:bg-white 
+  .btn-primary {
+    @apply bg-primary text-white 
+      border-primary border-2 hover:bg-white 
       hover:text-primary hover:shadow-lg
+  }
+
+  .btn-secondary {
+    @apply border-background-dark dark:border-background-light border-2 
+    bg-background-dark dark:bg-white text-white dark:text-black
+    hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white
+  }
+
+  .nav-item {
+    @apply cursor-pointer hover:underline
+  }
+
+  .form-input {
+    @apply rounded-md px-6 py-3 max-sm:min-w-48 max-sm:text-sm min-w-96 dark:bg-background-dark border-2 border-background-dark dark:border-white
   }
 }
