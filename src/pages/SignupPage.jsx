@@ -1,9 +1,19 @@
 import React from "react";
+import FormWrapper from "../components/FormWrapper";
+import Navbar from "../components/Navbar";
+import WelcomePanel from "../components/WelcomePanel";
+import SignupForm from "../components/SignupForm";
 
 function SignupPage() {
   return (
-    <div>
-      <h1>Sign Up!</h1>
+    <div className='page-default'>
+      <Navbar />
+      <div className='flex flex-col lg:flex-row justify-center items-center gap-20'>
+        <FormWrapper>
+          <SignupForm />
+        </FormWrapper>
+        <WelcomePanel className='order-last lg:order-first' />
+      </div>
     </div>
   );
 }

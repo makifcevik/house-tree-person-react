@@ -3,7 +3,7 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
-function PasswordInput({ id, name }) {
+function PasswordInput({ id, name, placeholder }) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -12,7 +12,7 @@ function PasswordInput({ id, name }) {
         id={id}
         name={name}
         type={showPassword ? "text" : "password"}
-        placeholder='Enter your password'
+        placeholder={placeholder}
         className='form-input'
       />
       <button

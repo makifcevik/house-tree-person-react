@@ -2,7 +2,7 @@ export const herosText =
   "Some text will be put here to briefly talk about the project and maybe describe some aspects of it. Vision of the project can be stated here.";
 
 export const welcomePanelText = {
-  header: "Welcome back to HTP!",
+  header: "Welcome to HTP!",
   features: [
     {
       header: "Image Classification",
