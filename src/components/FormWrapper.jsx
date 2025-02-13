@@ -17,7 +17,7 @@ function FormWrapper({ children }) {
   return (
     <div
       ref={wrapperRef} // Attach the ref to the div
-      className='p-common shadow-md dark:shadow-sm shadow-background-dark dark:shadow-background-light
+      className='p-common border-black border-opacity-20 dark:border-white dark:border-opacity-10 border-2
       rounded-2xl bg-middleground-light dark:bg-middleground-dark'
     >
       {children}
