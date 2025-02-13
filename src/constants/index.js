@@ -1,5 +1,3 @@
-import { text } from "@fortawesome/fontawesome-svg-core";
-
 export const herosText =
   "Some text will be put here to briefly talk about the project and maybe describe some aspects of it. Vision of the project can be stated here.";
 

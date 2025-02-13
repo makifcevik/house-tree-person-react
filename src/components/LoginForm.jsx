@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BtnLogin from "./buttons/BtnLogin";
 import BtnGoogleLogin from "./buttons/BtnGoogleLogin";
+import PasswordInput from "./PasswordInput";
 
 function LoginForm() {
   return (
@@ -33,13 +34,7 @@ function LoginForm() {
             Forgot password?
           </Link>
         </div>
-        <input
-          className='form-input'
-          id='passoword'
-          type='password'
-          name='password'
-          placeholder='••••••••'
-        ></input>
+        <PasswordInput id='password' name='password' />
       </div>
 
       {/* Remember me */}
