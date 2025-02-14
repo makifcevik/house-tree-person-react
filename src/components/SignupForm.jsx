@@ -33,10 +33,14 @@ function SignupForm() {
 
       {/* Password Again */}
       <div className='flex flex-col gap-1'>
-        <label className='text-gray max-sm:text-sm' htmlFor='password'>
+        <label className='text-gray max-sm:text-sm' htmlFor='passwordAgain'>
           Password
         </label>
-        <PasswordInput id='password' name='password' placeholder='Password again' />
+        <PasswordInput
+          id='passwordAgain'
+          name='passwordAgain'
+          placeholder='Password again'
+        />
       </div>
 
       {/* Remember me */}

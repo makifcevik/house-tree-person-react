@@ -8,9 +8,9 @@ function Heros() {
     gsap.to(".anim-items-bottom", {
       opacity: 1,
       y: 20,
-      delay: 0.5,
-      duration: 2,
-      stagger: 1,
+      delay: 0.3,
+      duration: 1.5,
+      stagger: 0.6,
       ease: "power2.out",
     });
   }, []);
