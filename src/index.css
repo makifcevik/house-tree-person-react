@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  @apply font-poppins;
+  @apply font-poppins m-0 p-0 box-border;
 }
 
 body {
@@ -12,7 +12,11 @@ body {
 
 @layer utilities {
   .page-default {
-    @apply w-screen h-screen bg-background-light dark:bg-background-dark
+    @apply w-full min-h-screen overflow-hidden
+  }
+
+  .page-default-colors {
+    @apply bg-background-light dark:bg-background-dark
   }
 
   .section-header {

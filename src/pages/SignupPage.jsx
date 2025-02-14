@@ -6,7 +6,7 @@ import SignupForm from "../components/SignupForm";
 
 function SignupPage() {
   return (
-    <div className='page-default'>
+    <div className='page-default page-default-colors'>
       <Navbar />
       <div className='flex flex-col lg:flex-row justify-center items-center gap-20'>
         <FormWrapper>
