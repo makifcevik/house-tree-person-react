@@ -3,7 +3,7 @@ import gsap from "gsap";
 import BtnGetStarted from "../buttons/BtnGetStarted";
 import { herosText } from "../../constants";
 
-function Heros() {
+function HerosSection() {
   useGSAP(() => {
     gsap.to(".anim-items-bottom", {
       opacity: 1,
@@ -17,13 +17,13 @@ function Heros() {
 
   return (
     <main className='flex flex-center'>
-      <div className='flex flex-col flex-center w-1/3 max-lg:w-1/2 max-md:w-2/3 max-sm:w-3/4 gap-5 mt-12 max-md:mt-40'>
+      <div className='flex flex-col flex-center section-highlights gap-5 mt-12 max-md:mt-40'>
         <h1 className='anim-items-bottom section-header'>House Tree Person</h1>
-        <p className='anim-items-bottom text-gray mb-10'>{herosText}</p>
+        <h3 className='anim-items-bottom text-gray mb-10'>{herosText}</h3>
         <BtnGetStarted className='anim-items-bottom' />
       </div>
     </main>
   );
 }
 
-export default Heros;
+export default HerosSection;

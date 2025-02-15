@@ -18,3 +18,31 @@ export const welcomePanelText = {
     },
   ],
 };
+
+export const ProblemSectionText = {
+  header: "The Challenge in Modern Psychology",
+  oneLiner:
+    "Professionals face increasing challenges in handling complex cases, analyzing data, and making accurate assessments.",
+  problems: [
+    {
+      icon: "📊",
+      header: "Data Overload",
+      text: "Manually analyzing large volumes of patient data is time-consuming.",
+    },
+    {
+      icon: "🧠",
+      header: "Subjectivity in Diagnosis",
+      text: "Psychological assessments depend heavily on individual interpretation.",
+    },
+    {
+      icon: "🕒",
+      header: "Time Constraints",
+      text: "Experts struggle to dedicate enough time to each case due to high demand.",
+    },
+    {
+      icon: "🔍",
+      header: "Lack of AI-Assisted Insights",
+      text: "Current tools do not provide deep, data-driven analysis.",
+    },
+  ],
+};

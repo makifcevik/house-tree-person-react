@@ -23,6 +23,10 @@ body {
     @apply text-theme-color text-2xl font-black
   }
 
+  .section-highlights {
+    @apply w-1/3 max-lg:w-1/2 max-md:w-2/3 max-sm:w-3/4
+  }
+
   .text-gray {
     @apply text-gray-light dark:text-gray-dark
   }
