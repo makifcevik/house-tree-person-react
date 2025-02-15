@@ -1,8 +1,8 @@
 import React from "react";
-import FormWrapper from "../components/FormWrapper";
+import FormWrapper from "../components/forms/FormWrapper";
 import Navbar from "../components/Navbar";
 import WelcomePanel from "../components/WelcomePanel";
-import SignupForm from "../components/SignupForm";
+import SignupForm from "../components/forms/SignupForm";
 
 function SignupPage() {
   return (

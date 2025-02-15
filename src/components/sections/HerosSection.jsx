@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import BtnGetStarted from "./buttons/BtnGetStarted";
-import { herosText } from "../constants";
+import BtnGetStarted from "../buttons/BtnGetStarted";
+import { herosText } from "../../constants";
 
 function Heros() {
   useGSAP(() => {

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BtnLogin from "./buttons/BtnLogin";
-import BtnGoogleLogin from "./buttons/BtnGoogleLogin";
-import PasswordInput from "./PasswordInput";
-import ROUTES from "../routes/routes";
+import BtnLogin from "../buttons/BtnLogin";
+import BtnGoogleLogin from "../buttons/BtnGoogleLogin";
+import PasswordInput from "../PasswordInput";
+import ROUTES from "../../routes/routes";
 
 function LoginForm() {
   return (

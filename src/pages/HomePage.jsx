@@ -1,5 +1,5 @@
-import About from "../components/About";
-import Heros from "../components/Heros";
+import ProblemSection from "../components/sections/ProblemSection";
+import HerosSection from "../components/sections/HerosSection";
 import Navbar from "../components/Navbar";
 import Wave from "../components/Wave";
 
@@ -8,10 +8,10 @@ export const HomePage = () => {
     <div className='flex flex-col'>
       <div className='relative page-default page-default-colors'>
         <Navbar />
-        <Heros />
+        <HerosSection />
         <Wave />
       </div>
-      <About />
+      <ProblemSection />
     </div>
   );
 };

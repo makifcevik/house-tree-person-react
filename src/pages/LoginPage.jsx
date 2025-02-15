@@ -1,6 +1,6 @@
 import React from "react";
-import FormWrapper from "../components/FormWrapper";
-import LoginForm from "../components/LoginForm";
+import FormWrapper from "../components/forms/FormWrapper";
+import LoginForm from "../components/forms/LoginForm";
 import Navbar from "../components/Navbar";
 import WelcomePanel from "../components/WelcomePanel";
 
