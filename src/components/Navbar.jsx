@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import BtnThemeToggler from "./buttons/BtnThemeToggler";
+import ROUTES from "../routes/routes";
 
 function Navbar() {
   return (
     <nav className='flex justify-between p-common'>
-      <Link to='/' className='flex gap-2'>
+      <Link to={ROUTES.HOME} className='flex gap-2'>
         <img src='Logo.svg' className='-translate-y-0.5'></img>
         <h1 className='text-theme-color'>
           House <span className='text-primary'>Tree</span> Person

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PasswordInput from "./PasswordInput";
 import BtnSignup from "./buttons/btnSignup";
 import BtnGoogleSignup from "./buttons/btnGoogleSignup";
+import ROUTES from "../routes/routes";
 
 function SignupForm() {
   return (
@@ -61,7 +62,7 @@ function SignupForm() {
         <BtnSignup />
         <span className='max-sm:text-sm'>
           Already have an account?
-          <Link className='underline ml-1' to='/login'>
+          <Link className='underline ml-1' to={ROUTES.LOGIN}>
             Sign in
           </Link>
         </span>

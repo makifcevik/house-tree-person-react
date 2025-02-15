@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import ROUTES from "../../routes/routes";
 
 function BtnGetStarted({ className }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/login");
+    navigate(ROUTES.SINGUP);
   };
 
   return (

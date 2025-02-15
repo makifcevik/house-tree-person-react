@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import BtnLogin from "./buttons/BtnLogin";
 import BtnGoogleLogin from "./buttons/BtnGoogleLogin";
 import PasswordInput from "./PasswordInput";
+import ROUTES from "../routes/routes";
 
 function LoginForm() {
   return (
@@ -30,7 +31,7 @@ function LoginForm() {
             Password
           </label>
           {/* TODO: Update link to forgot passoword page later*/}
-          <Link className='underline max-sm:text-sm' to='/'>
+          <Link className='underline max-sm:text-sm' to={ROUTES.SINGUP}>
             Forgot password?
           </Link>
         </div>
@@ -54,7 +55,7 @@ function LoginForm() {
         <BtnLogin />
         <span className='max-sm:text-sm'>
           Don't have an account?
-          <Link className='underline ml-1' to='/signup'>
+          <Link className='underline ml-1' to={ROUTES.SINGUP}>
             Sign up
           </Link>
         </span>
