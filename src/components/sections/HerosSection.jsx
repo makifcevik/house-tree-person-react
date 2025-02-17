@@ -18,7 +18,7 @@ function HerosSection() {
   return (
     <main className='flex flex-center'>
       <div className='flex flex-col flex-center section-highlights gap-5 mt-12 max-md:mt-40'>
-        <h1 className='anim-items-bottom section-header'>House Tree Person</h1>
+        <h1 className='anim-items-bottom section-header-sm'>House Tree Person</h1>
         <h3 className='anim-items-bottom text-gray mb-10'>{herosText}</h3>
         <BtnGetStarted className='anim-items-bottom' />
       </div>

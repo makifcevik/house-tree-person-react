@@ -6,7 +6,7 @@ function BtnNavLogin() {
   const navigate = useNavigate();
   return (
     <button
-      onClick={() => navigate(ROUTES.SINGUP)}
+      onClick={() => navigate(ROUTES.LOGIN)}
       className='btn-primary text-sm -translate-y-1 rounded-2xl px-4 py-2'
     >
       Login

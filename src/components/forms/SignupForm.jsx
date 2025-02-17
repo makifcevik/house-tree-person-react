@@ -8,7 +8,7 @@ import ROUTES from "../../routes/routes";
 function SignupForm() {
   return (
     <form className='flex flex-col gap-3 text-theme-color'>
-      <h1 className='text-4xl text-theme-color font-black mt-3'>Sign up</h1>
+      <h1 className='section-header-lg mt-3'>Sign up</h1>
 
       {/* Email */}
       <div className='flex flex-col gap-1'>

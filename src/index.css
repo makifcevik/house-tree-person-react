@@ -19,7 +19,15 @@ body {
     @apply bg-background-light dark:bg-background-dark
   }
 
-  .section-header {
+  .section-header-lg {
+    @apply text-theme-color text-4xl font-black
+  }
+
+  .section-header-md {
+    @apply text-theme-color text-3xl font-black
+  }
+
+  .section-header-sm {
     @apply text-theme-color text-2xl font-black
   }
 

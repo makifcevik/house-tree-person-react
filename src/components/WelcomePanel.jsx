@@ -23,7 +23,7 @@ function WelcomePanel({ className }) {
     >
       <div className='flex'>
         <img src='Logo.svg' />
-        <h1 className='section-header ml-2'>{welcomePanelText.header}</h1>
+        <h1 className='section-header-md ml-5'>{welcomePanelText.header}</h1>
       </div>
       <ul className='flex flex-col gap-6'>
         {welcomePanelText.features.map((feature, index) => (

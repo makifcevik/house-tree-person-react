@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { ProblemSectionText } from "../../constants";
+import { problemSectionText } from "../../constants";
 import Paper from "../ui/Paper";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -62,8 +62,8 @@ function ProblemSection() {
           ref={headerRef}
           className='flex flex-col md:w-2/3 text-center px-5 gap-5 mt-20'
         >
-          <h1 className='section-header'>{ProblemSectionText.header}</h1>
-          <h3 className='text-gray'>{ProblemSectionText.oneLiner}</h3>
+          <h1 className='section-header-md'>{problemSectionText.header}</h1>
+          <h3 className='text-gray'>{problemSectionText.oneLiner}</h3>
         </div>
       </div>
 
@@ -71,7 +71,7 @@ function ProblemSection() {
       <div className='flex justify-center'>
         {/* Bullet points */}
         <ul ref={cardsRef} className='grid lg:grid-cols-2 grid-cols-1 gap-5 w-4/5'>
-          {ProblemSectionText.problems.map((problem, index) => (
+          {problemSectionText.problems.map((problem, index) => (
             <Paper
               key={index}
               icon={problem.icon}

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { SolutionSectionText } from "../../constants";
+import { solutionSectionText } from "../../constants";
 import Paper from "../ui/Paper";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -11,14 +11,14 @@ function SolutionSection() {
   const headerRef = useRef();
   const cardsRef = useRef();
   const stepsRef = useRef();
-  const CTARef = useRef();
+  const solutionStepsHeaderRef = useRef();
 
   useGSAP(() => {
     const headerItems = gsap.utils.toArray(headerRef.current.children);
     const cards = gsap.utils.toArray(cardsRef.current.children);
     const steps = gsap.utils.toArray(stepsRef.current.children);
-    const CTAItems = gsap.utils.toArray(CTARef.current.children);
 
+    // Header section animation
     headerItems.forEach((item) => {
       gsap.fromTo(
         item,
@@ -38,6 +38,7 @@ function SolutionSection() {
       );
     });
 
+    // Cards animation
     cards.forEach((card) => {
       gsap.fromTo(
         card,
@@ -58,6 +59,21 @@ function SolutionSection() {
       );
     });
 
+    // Steps header animation
+    const solHeader = solutionStepsHeaderRef.current;
+    gsap.from(solHeader, {
+      opacity: 0,
+      y: 20,
+      delay: 0.2,
+      duration: 1,
+      scrollTrigger: {
+        trigger: solHeader,
+        start: "top 80%",
+        once: true,
+      },
+    });
+
+    // Steps animation
     steps.forEach((step) => {
       gsap.fromTo(
         step,
@@ -76,25 +92,6 @@ function SolutionSection() {
         }
       );
     });
-
-    CTAItems.forEach((cta) => {
-      gsap.fromTo(
-        cta,
-        { opacity: 0, y: 20 }, // Initial state
-        {
-          opacity: 1,
-          y: 0,
-          delay: 0.2,
-          duration: 1.5,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: cta,
-            start: "top 100%",
-            once: true,
-          },
-        }
-      );
-    });
   }, []);
 
   return (
@@ -105,8 +102,8 @@ function SolutionSection() {
           ref={headerRef}
           className='flex flex-col md:w-2/3 text-center px-5 gap-5 mt-20'
         >
-          <h1 className='section-header'>{SolutionSectionText.header}</h1>
-          <h3 className='text-gray'>{SolutionSectionText.intro}</h3>
+          <h1 className='section-header-md'>{solutionSectionText.header}</h1>
+          <h3 className='text-gray'>{solutionSectionText.intro}</h3>
         </div>
       </div>
       {/* Cards */}
@@ -115,7 +112,7 @@ function SolutionSection() {
           ref={cardsRef}
           className='grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-5 w-4/5'
         >
-          {SolutionSectionText.benefits.map((benefit, index) => (
+          {solutionSectionText.benefits.map((benefit, index) => (
             <Paper
               key={index}
               icon={benefit.icon}
@@ -128,10 +125,12 @@ function SolutionSection() {
         </div>
       </div>
       {/* Solution Steps */}
-      <div className='flex flex-col items-center mt-20 mb-8'>
-        <h2 className='section-header mb-8'>How It Works</h2>
+      <div className='flex flex-col items-center mt-20 mb-20'>
+        <h2 ref={solutionStepsHeaderRef} className='section-header-sm mb-8'>
+          {solutionSectionText.solutionSteps.header}
+        </h2>
         <div ref={stepsRef} className='relative flex flex-col gap-10 md:w-3/4 '>
-          {SolutionSectionText.solutionActions.map((step, index) => (
+          {solutionSectionText.solutionSteps.steps.map((step, index) => (
             <div
               key={index}
               className='flex items-center gap-5 p-5 rounded-lg shadow-xl 
@@ -146,16 +145,6 @@ function SolutionSection() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className='flex justify-center pb-5'>
-        <div ref={CTARef} className='text-white text-center px-8 py-5 rounded-lgg'>
-          <h2 className='section-header font-bold'>{SolutionSectionText.CTA}</h2>
-          <button className='mt-6 btn-primary px-5 py-2 rounded-2xl shadow-md hover:bg-gray-200 transition'>
-            Try it Now!
-          </button>
         </div>
       </div>
     </main>
