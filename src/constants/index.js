@@ -77,15 +77,15 @@ export const solutionSectionText = {
     header: "How It Works",
     steps: [
       {
-        header: "Upload Data",
+        header: "Upload HTP Image",
         text: "Securely input patient records or test results.",
       },
       {
-        header: "AI Analysis",
+        header: "HTP Classifier",
         text: "The model scans patterns and provides structured insights.",
       },
       {
-        header: "Expert Review",
+        header: "Feature Extraction",
         text: "Psychologists refine and validate AI-generated insights.",
       },
       {
