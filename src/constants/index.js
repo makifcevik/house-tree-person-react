@@ -73,27 +73,28 @@ export const solutionSectionText = {
       text: "Get trend predictions for better decision-making.",
     },
   ],
-  solutionSteps: {
-    header: "How It Works",
-    steps: [
-      {
-        header: "Upload HTP Image",
-        text: "Securely input patient records or test results.",
-      },
-      {
-        header: "HTP Classifier",
-        text: "The model scans patterns and provides structured insights.",
-      },
-      {
-        header: "Feature Extraction",
-        text: "Psychologists refine and validate AI-generated insights.",
-      },
-      {
-        header: "Final Decision",
-        text: "Combined AI + human expertise leads to better outcomes.",
-      },
-    ],
-  },
+};
+
+export const QuickDemoSectionText = {
+  header: "How It Works",
+  steps: [
+    {
+      header: "Upload HTP Image",
+      text: "Securely input patient records or test results.",
+    },
+    {
+      header: "HTP Classifier",
+      text: "The model scans patterns and provides structured insights.",
+    },
+    {
+      header: "Feature Extraction",
+      text: "Psychologists refine and validate AI-generated insights.",
+    },
+    {
+      header: "Final Decision",
+      text: "Combined AI + human expertise leads to better outcomes.",
+    },
+  ],
 };
 
 export const featureSectionText = {

@@ -7,6 +7,7 @@ import FeatureSection from "../components/sections/FeatureSection";
 import ApplicationsSection from "../components/sections/ApplicationsSection";
 import TeamSection from "../components/sections/TeamSection";
 import CallToActionSection from "../components/sections/CallToActionSection";
+import QuickDemoSection from "../components/sections/QuickDemoSection";
 
 export const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ export const HomePage = () => {
       </section>
       <ProblemSection />
       <SolutionSection />
+      <QuickDemoSection />
       <FeatureSection />
       <ApplicationsSection />
       <TeamSection />
