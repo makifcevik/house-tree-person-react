@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PasswordInput from "../PasswordInput";
+import PasswordInput from "../utils/PasswordInput";
 import BtnSignup from "../buttons/btnSignup";
 import BtnGoogleSignup from "../buttons/btnGoogleSignup";
 import ROUTES from "../../routes/routes";

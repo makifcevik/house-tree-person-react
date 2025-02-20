@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import { QuickDemoSectionText } from "../../constants";
+import DragDropUploader from "../utils/DragDropUploader";
+import Step from "../ui/Step";
+import ImageScan from "../ui/ImageScan";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const QuickDemoSection = () => {
+  const [image, setImage] = useState(null);
+
+  const steps = QuickDemoSectionText.steps;
+
   const stepsRef = useRef();
   const headerRef = useRef();
 
@@ -55,22 +62,22 @@ const QuickDemoSection = () => {
         <h2 ref={headerRef} className='section-header-sm mb-8'>
           {QuickDemoSectionText.header}
         </h2>
+        {/* Steps */}
         <div ref={stepsRef} className='relative flex flex-col gap-10 md:w-3/4 '>
-          {QuickDemoSectionText.steps.map((step, index) => (
-            <div
-              key={index}
-              className='flex items-center gap-5 p-5 rounded-lg shadow-xl 
-              bg-foreground-light dark:bg-foreground-dark'
-            >
-              <div className='text-4xl text-theme-color p-4 rounded-full'>
-                {index + 1}
-              </div>
-              <div>
-                <h3 className='text-theme-color font-semibold text-lg'>{step.header}</h3>
-                <p className='text-gray'>{step.text}</p>
-              </div>
-            </div>
-          ))}
+          {/* Upload Section*/}
+          <Step
+            index={1}
+            header={steps[0].header}
+            text={steps[0].text}
+            children={<DragDropUploader image={image} setImage={setImage} />}
+          />
+          {/* HTP Image Classifier Section */}
+          <Step
+            index={2}
+            header={steps[1].header}
+            text={steps[1].text}
+            children={<ImageScan image={image} />}
+          />
         </div>
       </main>
     </>
