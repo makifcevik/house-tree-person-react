@@ -1,13 +1,14 @@
 import React, { useRef } from "react";
-import { featureSectionText } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { graphIncreaseImg } from "../../utils";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function FeatureSection({ className }) {
+  const { t } = useTranslation();
   const headerRef = useRef();
   const featuresSectionRef = useRef();
   const imgRef = useRef();
@@ -89,18 +90,20 @@ function FeatureSection({ className }) {
         >
           <div ref={headerRef} className='flex'>
             <h1 className='section-header-lg font-bold ml-2'>
-              {featureSectionText.header}
+              {t("featureSectionText.header")}
             </h1>
           </div>
           <ul ref={featuresSectionRef} className='flex flex-col gap-6'>
-            {featureSectionText.features.map((feature, index) => (
-              <li key={index} className='anim-features text-gray flex align-middle'>
-                <div>
-                  <h2 className='text-theme-color mb-2'>{feature.header}</h2>
-                  <p className='text-gray'>{feature.text}</p>
-                </div>
-              </li>
-            ))}
+            {t("featureSectionText.features", { returnObjects: true }).map(
+              (feature, index) => (
+                <li key={index} className='anim-features text-gray flex align-middle'>
+                  <div>
+                    <h2 className='text-theme-color mb-2'>{feature.header}</h2>
+                    <p className='text-gray'>{feature.text}</p>
+                  </div>
+                </li>
+              )
+            )}
           </ul>
         </div>
         {/* Image section */}
@@ -110,7 +113,7 @@ function FeatureSection({ className }) {
       {/* Call to Action */}
       <div className='flex justify-center pb-5 mb-10'>
         <div ref={CTARef} className='text-white text-center px-8 py-5 rounded-lgg'>
-          <h2 className='section-header-sm font-bold'>{featureSectionText.CTA}</h2>
+          <h2 className='section-header-sm font-bold'>{t("featureSectionText.CTA")}</h2>
           <button className='mt-6 btn-primary px-5 py-2 rounded-2xl shadow-md hover:bg-gray-200 transition'>
             Try it Now!
           </button>

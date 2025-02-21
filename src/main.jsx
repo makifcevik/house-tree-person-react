@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import "@fontsource/poppins";
 import "@fontsource/roboto";
 import { BrowserRouter } from "react-router-dom";
+import "./utils/i18n";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { welcomePanelText } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useTranslation } from "react-i18next";
 
 function WelcomePanel({ className }) {
+  const { t } = useTranslation();
   useGSAP(() => {
     gsap.from("#anim", {
       x: -500,
@@ -23,10 +25,10 @@ function WelcomePanel({ className }) {
     >
       <div className='flex'>
         <img src='Logo.svg' />
-        <h1 className='section-header-md ml-5'>{welcomePanelText.header}</h1>
+        <h1 className='section-header-md ml-5'>{t("welcomePanelText.header")}</h1>
       </div>
       <ul className='flex flex-col gap-6'>
-        {welcomePanelText.features.map((feature, index) => (
+        {t("welcomePanelText.features", { returnObjects: true }).map((feature, index) => (
           <li key={index} className='text-gray flex align-middle'>
             <FontAwesomeIcon
               icon={faCheck}

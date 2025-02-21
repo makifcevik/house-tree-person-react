@@ -3,17 +3,16 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
-import { QuickDemoSectionText } from "../../constants";
 import DragDropUploader from "../utils/DragDropUploader";
 import Step from "../ui/Step";
 import ImageScan from "../ui/ImageScan";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const QuickDemoSection = () => {
+  const { t } = useTranslation();
   const [image, setImage] = useState(null);
-
-  const steps = QuickDemoSectionText.steps;
 
   const stepsRef = useRef();
   const headerRef = useRef();
@@ -60,23 +59,38 @@ const QuickDemoSection = () => {
       {/* Solution Steps */}
       <main className='flex flex-col bg-middleground-light dark:bg-middleground-dark items-center pt-10 pb-10'>
         <h2 ref={headerRef} className='section-header-sm mb-8'>
-          {QuickDemoSectionText.header}
+          {t("QuickDemoSectionText.header")}
         </h2>
         {/* Steps */}
         <div ref={stepsRef} className='relative flex flex-col gap-10 md:w-3/4 '>
-          {/* Upload Section*/}
+          {/* Step 1: Upload */}
           <Step
             index={1}
-            header={steps[0].header}
-            text={steps[0].text}
+            header={t("QuickDemoSectionText.steps.step1.header")}
+            text={t("QuickDemoSectionText.steps.step1.text")}
             children={<DragDropUploader image={image} setImage={setImage} />}
           />
-          {/* HTP Image Classifier Section */}
+
+          {/* Step 2: HTP Image Classifier */}
           <Step
             index={2}
-            header={steps[1].header}
-            text={steps[1].text}
+            header={t("QuickDemoSectionText.steps.step2.header")}
+            text={t("QuickDemoSectionText.steps.step2.text")}
             children={<ImageScan image={image} />}
+          />
+
+          {/* Step 3: Feature Extraction */}
+          <Step
+            index={3}
+            header={t("QuickDemoSectionText.steps.step3.header")}
+            text={t("QuickDemoSectionText.steps.step3.text")}
+          />
+
+          {/* Step 4: Final Decision */}
+          <Step
+            index={4}
+            header={t("QuickDemoSectionText.steps.step4.header")}
+            text={t("QuickDemoSectionText.steps.step4.text")}
           />
         </div>
       </main>

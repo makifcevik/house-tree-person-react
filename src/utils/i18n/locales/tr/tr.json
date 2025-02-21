@@ -1,0 +1,122 @@
+{
+  "title": "Ev Ağaç İnsan",
+  "herosText": "Burada projeden kısaca bahsedilecek ve belki bazı yönleri tanımlanacaktır. Projenin vizyonu burada belirtilmelidir.",
+  "welcomePanelText": {
+    "header": "HTP'ye Hoş Geldiniz!",
+    "features": [
+      {
+        "header": "Görsel Sınıflandırma",
+        "text": "Yapay zeka modeli, çeşitli sınıflandırmaları detaylandıran kapsamlı bir veri seti ile HTP çizim çiftleri üzerinde eğitilmiştir."
+      },
+      {
+        "header": "Genel Sınıflandırma",
+        "text": "Baskı, kesik çizgiler, kaotik çizgiler, kavisli çizgiler, boyut, konum, detay, yinelenen figürler, orantısız figürler, tekrar tekrar silinen figürler, döndürülmüş figürler, gölgeli figürler."
+      },
+      {
+        "header": "Özel Sınıflandırmalar",
+        "text": "Çizimler, sınıflandırmalarına bağlı olarak belirli özelliklere sahiptir: Ev, İnsan ve Ağaç."
+      }
+    ]
+  },
+  "problemSectionText": {
+    "header": "Modern Psikolojideki Zorluklar",
+    "oneLiner": "Uzmanlar, karmaşık vakaları ele almak, verileri analiz etmek ve doğru değerlendirmeler yapmak konusunda giderek artan zorluklarla karşılaşıyor.",
+    "problems": [
+      {
+        "icon": "📊",
+        "header": "Veri Yükü",
+        "text": "Büyük hacimli hasta verilerini manuel olarak analiz etmek zaman alıcıdır."
+      },
+      {
+        "icon": "🧠",
+        "header": "Teşhiste Öznellik",
+        "text": "Psikolojik değerlendirmeler büyük ölçüde bireysel yoruma dayanmaktadır."
+      },
+      {
+        "icon": "🕒",
+        "header": "Zaman Kısıtlamaları",
+        "text": "Uzmanlar, yüksek talep nedeniyle her vakaya yeterli zamanı ayırmakta zorlanıyor."
+      },
+      {
+        "icon": "🔍",
+        "header": "Yapay Zeka Destekli İçgörü Eksikliği",
+        "text": "Mevcut araçlar derinlemesine, veri odaklı analiz sağlamıyor."
+      }
+    ]
+  },
+  "solutionSectionText": {
+    "header": "Psikolojik Uzmanlığın Geleceği",
+    "intro": "Psikoloji uzmanlarının, kalıpları analiz eden, iş yükünü azaltan ve veri odaklı içgörüler sağlayan akıllı bir asistanı olsaydı ne olurdu? İşte tam olarak yapay zeka modelimiz bunu yapıyor!",
+    "benefits": [
+      {
+        "icon": "🚀",
+        "header": "Akıllı Veri Analizi",
+        "text": "Yapay zekamız büyük miktarda psikolojik veriyi saniyeler içinde işler."
+      },
+      {
+        "icon": "🧠",
+        "header": "Nesnel İçgörüler",
+        "text": "Yapay zeka destekli değerlendirmeler ile insan yanlılığını azaltın."
+      },
+      {
+        "icon": "⏳",
+        "header": "Zaman Verimliliği",
+        "text": "Hastalarla daha fazla vakit geçirin, manuel işler için daha az zaman harcayın."
+      },
+      {
+        "icon": "📊",
+        "header": "Öngörücü Yetkinlikler",
+        "text": "Daha iyi kararlar almak için trend tahminleri alın."
+      }
+    ]
+  },
+  "QuickDemoSectionText": {
+    "header": "Nasıl Çalışır",
+    "steps": {
+      "step1": {
+        "header": "HTP Görselini Yükleyin",
+        "text": "Hasta kayıtlarını veya test sonuçlarını güvenli bir şekilde girin."
+      },
+      "step2": {
+        "header": "HTP Sınıflandırıcısı",
+        "text": "Model desenleri tarar ve yapılandırılmış içgörüler sağlar."
+      },
+      "step3": {
+        "header": "Özellik Çıkarımı",
+        "text": "Psikologlar yapay zeka tarafından üretilen içgörüleri iyileştirir ve doğrular."
+      },
+      "step4": {
+        "header": "Son Karar",
+        "text": "Yapay zeka + insan uzmanlığı birleşerek daha iyi sonuçlar sağlar."
+      }
+    }
+  },
+  "featureSectionText": {
+    "header": "Yapay Zeka Destekli İçgörüler",
+    "Intro": "Modern psikolojik değerlendirmeler hassasiyet, hız ve nesnellik gerektirir. Yapay zeka destekli çözümümüz, kalıpları analiz ederek, iş yükünü azaltarak ve akıllı içgörüler sağlayarak uzman kararlarını geliştirir.",
+    "features": [
+      {
+        "header": "🔍 Gelişmiş Desen Tanıma",
+        "text": "Hasta verilerindeki psikolojik kalıpları otomatik olarak tanımlar, analiz süresini saatlerden saniyelere düşürür."
+      },
+      {
+        "header": "🧠 Önyargısız Değerlendirmeler",
+        "text": "Yapay zeka destekli, veri odaklı içgörüler sağlayarak öznel yorumlamayı en aza indirir."
+      },
+      {
+        "header": "⏳ Zaman Tasarruflu Otomasyon",
+        "text": "Tekrarlayan görevleri otomatikleştirerek, uzmanların hasta bakımına daha fazla odaklanmasını sağlar."
+      },
+      {
+        "header": "📊 Daha İyi Sonuçlar İçin Öngörücü Analitik",
+        "text": "Tarihsel verileri ve yapay zeka modellerini kullanarak trend tahminleri yapar, uzmanların daha bilinçli kararlar almasına yardımcı olur."
+      },
+      {
+        "header": "🔒 Güvenli ve Gizli İşleme",
+        "text": "Hassas hasta verilerini işlerken sıkı veri gizliliği ve tıbbi standartlara uyum sağlar."
+      }
+    ],
+    "CTA": "Nasıl çalıştığını görmek ister misiniz?"
+  },
+  "language": "TR"
+}

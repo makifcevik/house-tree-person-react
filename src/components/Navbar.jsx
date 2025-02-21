@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import BtnThemeToggler from "./buttons/BtnThemeToggler";
 import ROUTES from "../routes/routes";
 import BtnNavLogin from "./buttons/BtnNavLogin";
+import BtnLanguageToggler from "./buttons/BtnLanguageToggler";
 
 function Navbar() {
   return (
@@ -26,6 +27,7 @@ function Navbar() {
       <div className='flex lg:gap-5 gap-3'>
         <BtnThemeToggler />
         <BtnNavLogin />
+        <BtnLanguageToggler />
       </div>
     </nav>
   );

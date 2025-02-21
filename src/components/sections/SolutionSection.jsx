@@ -1,13 +1,14 @@
 import React, { useRef } from "react";
-import { solutionSectionText } from "../../constants";
 import Paper from "../ui/Paper";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function SolutionSection() {
+  const { t } = useTranslation();
   const headerRef = useRef();
   const cardsRef = useRef();
 
@@ -65,8 +66,8 @@ function SolutionSection() {
           ref={headerRef}
           className='flex flex-col md:w-2/3 text-center px-5 gap-5 mt-20'
         >
-          <h1 className='section-header-md'>{solutionSectionText.header}</h1>
-          <h3 className='text-gray'>{solutionSectionText.intro}</h3>
+          <h1 className='section-header-md'>{t("solutionSectionText.header")}</h1>
+          <h3 className='text-gray'>{t("solutionSectionText.intro")}</h3>
         </div>
       </div>
       {/* Cards */}
@@ -75,16 +76,18 @@ function SolutionSection() {
           ref={cardsRef}
           className='grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-5 w-4/5'
         >
-          {solutionSectionText.benefits.map((benefit, index) => (
-            <Paper
-              key={index}
-              icon={benefit.icon}
-              header={benefit.header}
-              text={benefit.text}
-              className='animation bg-middleground-light dark:bg-middleground-dark
+          {t("solutionSectionText.benefits", { returnObjects: true }).map(
+            (benefit, index) => (
+              <Paper
+                key={index}
+                icon={benefit.icon}
+                header={benefit.header}
+                text={benefit.text}
+                className='animation bg-middleground-light dark:bg-middleground-dark
               text-gray max-lg:mb-10'
-            />
-          ))}
+              />
+            )
+          )}
         </div>
       </div>
     </main>
