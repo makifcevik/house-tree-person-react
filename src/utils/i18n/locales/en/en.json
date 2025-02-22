@@ -108,6 +108,8 @@
       }
     ]
   },
+  "dragDropText": "Click or drag an image here",
+  "removeImage": "Remove",
   "QuickDemoSectionText": {
     "header": "How It Works",
     "steps": {

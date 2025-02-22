@@ -108,6 +108,8 @@
       }
     ]
   },
+  "dragDropText": "Buraya tıklayın veya bir resmi sürükleyip bırakın",
+  "removeImage": "Kaldır",
   "QuickDemoSectionText": {
     "header": "Nasıl Çalışır",
     "steps": {

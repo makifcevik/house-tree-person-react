@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { faCloudUploadAlt, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
 
 export default function DragDropUploader({ image, setImage }) {
+  const { t } = useTranslation();
   //const [image, setImage] = useState(null);
   const [dragActive, setDragActive] = useState(false);
 
@@ -66,9 +68,7 @@ export default function DragDropUploader({ image, setImage }) {
             size='3x'
             className='text-theme-color'
           />
-          <p className='mt-2 text-sm text-gray-500 dark:text-gray-300'>
-            Click or drag an image here
-          </p>
+          <p className='mt-2 text-sm text-gray'>{t("dragDropText")}</p>
         </label>
       )}
 
@@ -86,7 +86,7 @@ export default function DragDropUploader({ image, setImage }) {
               onClick={() => setImage(null)}
             >
               <FontAwesomeIcon icon={faTimesCircle} />
-              Remove
+              {t("removeImage")}
             </button>
           </div>
         </div>
