@@ -1,6 +1,19 @@
 {
   "title": "Ev Ağaç İnsan",
   "herosText": "Burada projeden kısaca bahsedilecek ve belki bazı yönleri tanımlanacaktır. Projenin vizyonu burada belirtilmelidir.",
+  "navItemsText": {
+    "item1": "Hakkında",
+    "item2": "Veri & Örnekler",
+    "item3": "Yayınlar",
+    "item4": "İletişim"
+  },
+  "btnText": {
+    "getStarted": "Hemen Başla",
+    "login": "Giriş",
+    "signup": "Kaydol",
+    "loginWithGoogle": "Google ile giriş yap",
+    "signupWithGoogle": "Google ile kayıt ol"
+  },
   "welcomePanelText": {
     "header": "HTP'ye Hoş Geldiniz!",
     "features": [
@@ -17,13 +30,6 @@
         "text": "Çizimler, sınıflandırmalarına bağlı olarak belirli özelliklere sahiptir: Ev, İnsan ve Ağaç."
       }
     ]
-  },
-  "btnText": {
-    "getStarted": "Hemen Başla",
-    "login": "Giriş yap",
-    "signup": "Kaydol",
-    "loginWithGoogle": "Google ile giriş yap",
-    "signupWithGoogle": "Google ile kayıt ol"
   },
   "loginFormText": {
     "header": "Giriş yap",

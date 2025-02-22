@@ -1,6 +1,19 @@
 {
   "title": "House Tree Person",
   "herosText": "Some text will be put here to briefly talk about the project and maybe describe some aspects of it. Vision of the project can be stated here.",
+  "navItemsText": {
+    "item1": "About",
+    "item2": "Data & Samples",
+    "item3": "Publications",
+    "item4": "Contact"
+  },
+  "btnText": {
+    "getStarted": "Get Started",
+    "login": "Login",
+    "signup": "Sign up",
+    "loginWithGoogle": "Login with Google",
+    "signupWithGoogle": "Sign up with Google"
+  },
   "welcomePanelText": {
     "header": "Welcome to HTP!",
     "features": [
@@ -17,13 +30,6 @@
         "text": "Sketches have specific attributes depending on their classifications: House, Person and Tree."
       }
     ]
-  },
-  "btnText": {
-    "getStarted": "Get Started",
-    "login": "Login",
-    "signup": "Sign up",
-    "loginWithGoogle": "Login with Google",
-    "signupWithGoogle": "Sign up with Google"
   },
   "loginFormText": {
     "header": "Sign in",

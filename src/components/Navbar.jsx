@@ -3,8 +3,10 @@ import BtnThemeToggler from "./buttons/BtnThemeToggler";
 import ROUTES from "../routes/routes";
 import BtnNavLogin from "./buttons/BtnNavLogin";
 import BtnLanguageToggler from "./buttons/BtnLanguageToggler";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  const { t } = useTranslation();
   return (
     <nav className='flex justify-between p-common align-middle '>
       {/* Logo&Header */}
@@ -18,10 +20,10 @@ function Navbar() {
       </div>
       {/* NavItems */}
       <div className='flex-center lg:gap-8 gap-5 text-theme-color text-sm'>
-        <h1 className='nav-item'>About</h1>
-        <h1 className='nav-item'>Data & Samples</h1>
-        <h1 className='nav-item'>Publications</h1>
-        <h1 className='nav-item'>Contact</h1>
+        <h1 className='nav-item'>{t("navItemsText.item1")}</h1>
+        <h1 className='nav-item'>{t("navItemsText.item2")}</h1>
+        <h1 className='nav-item'>{t("navItemsText.item3")}</h1>
+        <h1 className='nav-item'>{t("navItemsText.item4")}</h1>
       </div>
       {/* Buttons */}
       <div className='flex lg:gap-5 gap-3'>
