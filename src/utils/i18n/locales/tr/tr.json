@@ -18,6 +18,38 @@
       }
     ]
   },
+  "btnText": {
+    "getStarted": "Hemen Başla",
+    "login": "Giriş yap",
+    "signup": "Kaydol",
+    "loginWithGoogle": "Google ile giriş yap",
+    "signupWithGoogle": "Google ile kayıt ol"
+  },
+  "loginFormText": {
+    "header": "Giriş yap",
+    "email": "E-posta",
+    "emailPlaceholder": "örnek@örnek.com",
+    "password": "Şifre",
+    "passwordPlaceholder": "Şifrenizi girin",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "rememberMe": "Beni hatırla",
+    "noAccount": "Hesabınız yok mu?",
+    "referToSignup": "Kayıt ol",
+    "or": "veya"
+  },
+  "signupFormText": {
+    "header": "Kayıt ol",
+    "email": "E-posta",
+    "emailPlaceholder": "örnek@örnek.com",
+    "password": "Şifre",
+    "passwordPlaceholder": "Şifrenizi girin",
+    "passwordAgain": "Şifre tekrar",
+    "passwordAgainPlaceholder": "Şifrenizi tekrar girin",
+    "rememberMe": "Beni hatırla",
+    "hasAccount": "Zaten bir hesabınız var mı?",
+    "referToLogin": "Giriş yap",
+    "or": "veya"
+  },
   "problemSectionText": {
     "header": "Modern Psikolojideki Zorluklar",
     "oneLiner": "Uzmanlar, karmaşık vakaları ele almak, verileri analiz etmek ve doğru değerlendirmeler yapmak konusunda giderek artan zorluklarla karşılaşıyor.",

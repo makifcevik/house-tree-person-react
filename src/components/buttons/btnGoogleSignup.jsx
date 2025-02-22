@@ -1,12 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 
 function BtnGoogleSignup() {
+  const { t } = useTranslation();
   return (
     <button className='btn-secondary rounded-md py-2'>
       <FontAwesomeIcon icon={faGoogle} />
-      <span className='ml-2'>Sign up with Google</span>
+      <span className='ml-2'>{t("btnText.signupWithGoogle")}</span>
     </button>
   );
 }

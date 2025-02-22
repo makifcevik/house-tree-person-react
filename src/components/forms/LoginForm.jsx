@@ -4,23 +4,25 @@ import BtnLogin from "../buttons/BtnLogin";
 import BtnGoogleLogin from "../buttons/BtnGoogleLogin";
 import PasswordInput from "../utils/PasswordInput";
 import ROUTES from "../../routes/routes";
+import { useTranslation } from "react-i18next";
 
 function LoginForm() {
+  const { t } = useTranslation();
   return (
     <form className='flex flex-col gap-8 text-theme-color'>
-      <h1 className='section-header-lg mt-3'>Sign in</h1>
+      <h1 className='section-header-lg mt-3'>{t("loginFormText.header")}</h1>
 
       {/* Email */}
       <div className='flex flex-col gap-1'>
         <label className='text-gray max-sm:text-sm' htmlFor='email'>
-          Email
+          {t("loginFormText.email")}
         </label>
         <input
           className='form-input'
           id='email'
           type='email'
           name='email'
-          placeholder='example@example.com'
+          placeholder={t("loginFormText.emailPlaceholder")}
         ></input>
       </div>
 
@@ -28,14 +30,18 @@ function LoginForm() {
       <div className='flex flex-col gap-1'>
         <div className='flex justify-between'>
           <label className='text-gray max-sm:text-sm' htmlFor='password'>
-            Password
+            {t("loginFormText.password")}
           </label>
           {/* TODO: Update link to forgot passoword page later*/}
           <Link className='underline max-sm:text-sm' to={ROUTES.SINGUP}>
-            Forgot password?
+            {t("loginFormText.forgotPassword")}
           </Link>
         </div>
-        <PasswordInput id='password' name='password' placeholder='Enter your password' />
+        <PasswordInput
+          id='password'
+          name='password'
+          placeholder={t("loginFormText.passwordPlaceholder")}
+        />
       </div>
 
       {/* Remember me */}
@@ -47,22 +53,22 @@ function LoginForm() {
           name='rememberMe'
         />
         <label className='max-sm:text-sm' htmlFor='rememberMe'>
-          Remember me
+          {t("loginFormText.rememberMe")}
         </label>
       </div>
 
       <div className='flex flex-col gap-4 text-center'>
         <BtnLogin />
         <span className='max-sm:text-sm'>
-          Don't have an account?
+          {t("loginFormText.noAccount")}
           <Link className='underline ml-1' to={ROUTES.SINGUP}>
-            Sign up
+            {t("loginFormText.referToSignup")}
           </Link>
         </span>
 
         <div className='flex items-center'>
           <div className='flex-grow border-t border-gray-dark'></div>
-          <span className='px-3 text-gray-dark text-sm'>or</span>
+          <span className='px-3 text-gray-dark text-sm'>{t("loginFormText.or")}</span>
           <div className='flex-grow border-t border-gray-dark'></div>
         </div>
 

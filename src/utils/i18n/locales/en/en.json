@@ -18,6 +18,38 @@
       }
     ]
   },
+  "btnText": {
+    "getStarted": "Get Started",
+    "login": "Login",
+    "signup": "Sign up",
+    "loginWithGoogle": "Login with Google",
+    "signupWithGoogle": "Sign up with Google"
+  },
+  "loginFormText": {
+    "header": "Sign in",
+    "email": "Email",
+    "emailPlaceholder": "example@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "forgotPassword": "Forgot password?",
+    "rememberMe": "Remember me",
+    "noAccount": "Don't have an account?",
+    "referToSignup": "Sign up",
+    "or": "or"
+  },
+  "signupFormText": {
+    "header": "Sign up",
+    "email": "Email",
+    "emailPlaceholder": "example@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "passwordAgain": "Password again",
+    "passwordAgainPlaceholder": "Your password again",
+    "rememberMe": "Remember me",
+    "hasAccount": "Already have an account?",
+    "referToLogin": "Sign in",
+    "or": "or"
+  },
   "problemSectionText": {
     "header": "The Challenge in Modern Psychology",
     "oneLiner": "Professionals face increasing challenges in handling complex cases, analyzing data, and making accurate assessments.",
