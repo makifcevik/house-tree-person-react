@@ -7,6 +7,7 @@ import DragDropUploader from "../utils/DragDropUploader";
 import Step from "../ui/Step";
 import ImageScan from "../ui/ImageScan";
 import { useTranslation } from "react-i18next";
+import DemoResultsSection from "./DemoResultsSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,6 +85,7 @@ const QuickDemoSection = () => {
             index={3}
             header={t("QuickDemoSectionText.steps.step3.header")}
             text={t("QuickDemoSectionText.steps.step3.text")}
+            children={<ImageScan image={image} />}
           />
 
           {/* Step 4: Final Decision */}
@@ -91,6 +93,7 @@ const QuickDemoSection = () => {
             index={4}
             header={t("QuickDemoSectionText.steps.step4.header")}
             text={t("QuickDemoSectionText.steps.step4.text")}
+            children={<DemoResultsSection />}
           />
         </div>
       </main>
