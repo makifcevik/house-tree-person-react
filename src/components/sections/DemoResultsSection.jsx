@@ -1,5 +1,6 @@
 import React from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 const EXT_COLOR = "#B71C1C";
 const DEP_COLOR = "#303F9F";
@@ -16,11 +17,14 @@ const DemoResultsSection = () => {
         <div style={{ width: WIDTH, height: HEIGHT }}>
           <CircularProgressbar
             value={87}
+            text={`${87}%`} // text of the percent
             strokeWidth={14}
             styles={buildStyles({
               pathColor: EXT_COLOR,
               trailColor: TRAIL_COLOR,
               strokeLinecap: "butt",
+              textSize: "22px", // text size
+              textColor: "#808080", //color of text, You can delete after you read this :)
             })}
           />
         </div>
@@ -30,11 +34,14 @@ const DemoResultsSection = () => {
         <div style={{ width: WIDTH, height: HEIGHT }}>
           <CircularProgressbar
             value={99}
+            text={`${99}%`}
             strokeWidth={14}
             styles={buildStyles({
               pathColor: DEP_COLOR,
               trailColor: TRAIL_COLOR,
               strokeLinecap: "butt",
+              textSize: "22px",
+              textColor: "#808080",
             })}
           />
         </div>
@@ -44,11 +51,14 @@ const DemoResultsSection = () => {
         <div style={{ width: WIDTH, height: HEIGHT }}>
           <CircularProgressbar
             value={35}
+            text={`${35}%`}
             strokeWidth={14}
             styles={buildStyles({
               pathColor: ANX_COLOR,
               trailColor: TRAIL_COLOR,
               strokeLinecap: "butt",
+              textSize: "22px", // text size
+              textColor: "#808080",
             })}
           />
         </div>
