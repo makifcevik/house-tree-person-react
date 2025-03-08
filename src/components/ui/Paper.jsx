@@ -4,6 +4,7 @@ import gsap from "gsap";
 function Paper({ header, text, icon, className }) {
   const paperRef = useRef();
 
+  // !!! Disabled !!!
   const handleOnMouseEnter = () => {
     const paper = paperRef.current;
 
@@ -21,6 +22,7 @@ function Paper({ header, text, icon, className }) {
     });
   };
 
+  // !!! Disabled !!!
   const handleOnMouseLeave = () => {
     const paper = paperRef.current;
 
@@ -39,8 +41,8 @@ function Paper({ header, text, icon, className }) {
       className={`p-common rounded-xl border-2 border-black dark:border-white
        border-opacity-20 dark:border-opacity-20 shadow-sm dark:shadow-md shadow-black dark:shadow-black
         ${className}`}
-      onMouseEnter={handleOnMouseEnter}
-      onMouseLeave={handleOnMouseLeave}
+      // onMouseEnter={handleOnMouseEnter}
+      // onMouseLeave={handleOnMouseLeave}
     >
       <span className='text-3xl'>{icon}</span>
       <h5 className='text-theme-color text-lg my-4'>{header}</h5>

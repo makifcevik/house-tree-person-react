@@ -6,6 +6,8 @@ const EXT_COLOR = "#B71C1C";
 const DEP_COLOR = "#303F9F";
 const ANX_COLOR = "#F57C00";
 const TRAIL_COLOR = "#ddd";
+const TEXT_COLOR = "#94A0B8";
+const TEXT_SIZE = 22;
 const WIDTH = 80;
 const HEIGHT = 80;
 
@@ -23,8 +25,8 @@ const DemoResultsSection = () => {
               pathColor: EXT_COLOR,
               trailColor: TRAIL_COLOR,
               strokeLinecap: "butt",
-              textSize: "22px", // text size
-              textColor: "#808080", //color of text, You can delete after you read this :)
+              textSize: TEXT_SIZE,
+              textColor: TEXT_COLOR,
             })}
           />
         </div>
@@ -40,8 +42,8 @@ const DemoResultsSection = () => {
               pathColor: DEP_COLOR,
               trailColor: TRAIL_COLOR,
               strokeLinecap: "butt",
-              textSize: "22px",
-              textColor: "#808080",
+              textSize: TEXT_SIZE,
+              textColor: TEXT_COLOR,
             })}
           />
         </div>
@@ -57,8 +59,8 @@ const DemoResultsSection = () => {
               pathColor: ANX_COLOR,
               trailColor: TRAIL_COLOR,
               strokeLinecap: "butt",
-              textSize: "22px", // text size
-              textColor: "#808080",
+              textSize: TEXT_SIZE,
+              textColor: TEXT_COLOR,
             })}
           />
         </div>

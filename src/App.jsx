@@ -4,7 +4,7 @@ import { useRoutes } from "react-router-dom";
 import routesConfig from "./routes/routesConfig";
 
 export default function App() {
-  const [themeMode, setThemeMode] = useState(localStorage.getItem("theme") || "light");
+  const [themeMode, setThemeMode] = useState(localStorage.getItem("theme") || "dark");
 
   // Routing
   const routes = useRoutes(routesConfig);
