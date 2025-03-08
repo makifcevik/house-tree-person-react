@@ -33,7 +33,7 @@ function LoginForm() {
             {t("loginFormText.password")}
           </label>
           {/* TODO: Update link to forgot passoword page later*/}
-          <Link className='underline max-sm:text-sm' to={ROUTES.SINGUP}>
+          <Link className='underline max-sm:text-sm' to={ROUTES.SIGNUP}>
             {t("loginFormText.forgotPassword")}
           </Link>
         </div>
@@ -61,7 +61,7 @@ function LoginForm() {
         <BtnLogin />
         <span className='max-sm:text-sm'>
           {t("loginFormText.noAccount")}
-          <Link className='underline ml-1' to={ROUTES.SINGUP}>
+          <Link className='underline ml-1' to={ROUTES.SIGNUP}>
             {t("loginFormText.referToSignup")}
           </Link>
         </span>

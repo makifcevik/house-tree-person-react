@@ -5,7 +5,7 @@ import ROUTES from "./routes";
 
 const routesConfig = [
   { path: ROUTES.HOME, element: <HomePage /> },
-  { path: ROUTES.SINGUP, element: <SignupPage /> },
+  { path: ROUTES.SIGNUP, element: <SignupPage /> },
   { path: ROUTES.LOGIN, element: <LoginPage /> },
 ];
 

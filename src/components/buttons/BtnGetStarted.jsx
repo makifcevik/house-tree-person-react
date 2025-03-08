@@ -7,7 +7,7 @@ function BtnGetStarted({ className }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(ROUTES.SINGUP);
+    navigate(ROUTES.SIGNUP);
   };
 
   return (
