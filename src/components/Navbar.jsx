@@ -22,7 +22,9 @@ function Navbar() {
       <div className='flex-center lg:gap-8 gap-5 text-theme-color text-sm'>
         <h1 className='nav-item'>{t("navItemsText.item1")}</h1>
         <h1 className='nav-item'>{t("navItemsText.item2")}</h1>
-        <h1 className='nav-item'>{t("navItemsText.item3")}</h1>
+        <Link to={ROUTES.PUBLICATIONS} className='nav-item'>
+          {t("navItemsText.item3")}
+        </Link>
         <h1 className='nav-item'>{t("navItemsText.item4")}</h1>
       </div>
       {/* Buttons */}
