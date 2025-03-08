@@ -11,9 +11,8 @@ import QuickDemoSection from "../components/sections/QuickDemoSection";
 
 export const HomePage = () => {
   return (
-    <div className='flex flex-col'>
+    <div>
       <section className='relative page-default page-default-colors'>
-        <Navbar />
         <HerosSection />
         <Wave />
       </section>

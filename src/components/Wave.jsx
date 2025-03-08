@@ -26,8 +26,8 @@ function Wave() {
 
   return (
     <div>
-      <img src={waveFrontImg} className='w-full absolute bottom-0 z-10 max-md:hidden' />
-      <img src={waveBackImg} className='w-full absolute bottom-0 z-0 max-md:hidden' />
+      <img src={waveFrontImg} className='w-full absolute bottom-0 z-10 max-lg:hidden' />
+      <img src={waveBackImg} className='w-full absolute bottom-0 z-0 max-lg:hidden' />
     </div>
   );
 }

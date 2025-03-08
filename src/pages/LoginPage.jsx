@@ -6,8 +6,7 @@ import WelcomePanel from "../components/WelcomePanel";
 
 function LoginPage() {
   return (
-    <div className='page-default page-default-colors'>
-      <Navbar />
+    <div>
       <div className='flex flex-col lg:flex-row justify-center items-center gap-20'>
         <FormWrapper>
           <LoginForm />
