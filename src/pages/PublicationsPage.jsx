@@ -11,7 +11,7 @@ const PublicationsPage = () => {
       <section className='flex flex-col items-center'>
         <h1 className='section-header-lg p-common'>Our Publications</h1>
 
-        <div className='grid lg:w-4/5 md:w-5/6 p-common gap-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
+        <div className='grid lg:w-11/12 p-common gap-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
           <Card
             image={placeHolderHouseImg}
             alt={"House Image"}
