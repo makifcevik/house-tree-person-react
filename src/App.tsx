@@ -19,8 +19,8 @@ export default function App() {
 
   // Update themes on change
   useEffect(() => {
-    document.querySelector("html").classList.remove("dark", "light");
-    document.querySelector("html").classList.add(themeMode);
+    document.querySelector("html")?.classList.remove("dark", "light");
+    document.querySelector("html")?.classList.add(themeMode);
   }, [themeMode]);
 
   return <ThemeProvider value={{ themeMode, toggleTheme }}>{routes}</ThemeProvider>;

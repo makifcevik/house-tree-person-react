@@ -1,8 +1,13 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "../../routes/routes";
 import { useTranslation } from "react-i18next";
 
-function BtnGetStarted({ className }) {
+interface Props {
+  className: string;
+}
+
+function BtnGetStarted({ className }: Props) {
   const { t } = useTranslation();
   const navigate = useNavigate();
 

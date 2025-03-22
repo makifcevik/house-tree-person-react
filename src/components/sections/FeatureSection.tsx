@@ -2,17 +2,28 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { graphIncreaseImg } from "../../utils";
+import { graphIncreaseImg } from "../../utils/index.ts";
 import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function FeatureSection({ className }) {
+interface Props {
+  className?: string;
+}
+
+type Feature = {
+  header: string;
+  text: string;
+};
+
+function FeatureSection({ className }: Props) {
   const { t } = useTranslation();
-  const headerRef = useRef();
-  const featuresSectionRef = useRef();
-  const imgRef = useRef();
-  const CTARef = useRef();
+  const headerRef = useRef(null);
+  const featuresSectionRef = useRef(null);
+  const imgRef = useRef(null);
+  const CTARef = useRef<HTMLDivElement | null>(null);
+
+  const features = t("featureSectionText.features", { returnObjects: true }) as Feature[];
 
   useGSAP(() => {
     // Header animation
@@ -60,8 +71,8 @@ function FeatureSection({ className }) {
     });
 
     // CTA animation
-    const CTAItems = gsap.utils.toArray(CTARef.current.children);
-    CTAItems.forEach((cta) => {
+    const CTAItems = CTARef.current ? gsap.utils.toArray(CTARef.current.children) : [];
+    CTAItems.forEach((cta: any) => {
       gsap.fromTo(
         cta,
         { opacity: 0, y: 20 }, // Initial state
@@ -94,16 +105,14 @@ function FeatureSection({ className }) {
             </h1>
           </div>
           <ul ref={featuresSectionRef} className='flex flex-col gap-6'>
-            {t("featureSectionText.features", { returnObjects: true }).map(
-              (feature, index) => (
-                <li key={index} className='anim-features text-gray flex align-middle'>
-                  <div>
-                    <h2 className='text-theme-color mb-2'>{feature.header}</h2>
-                    <p className='text-gray'>{feature.text}</p>
-                  </div>
-                </li>
-              )
-            )}
+            {features.map((feature, index) => (
+              <li key={index} className='anim-features text-gray flex align-middle'>
+                <div>
+                  <h2 className='text-theme-color mb-2'>{feature.header}</h2>
+                  <p className='text-gray'>{feature.text}</p>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
         {/* Image section */}

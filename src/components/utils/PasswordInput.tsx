@@ -3,7 +3,13 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
-function PasswordInput({ id, name, placeholder }) {
+interface Props {
+  id: string; // Since it is input id (css)
+  name: string;
+  placeholder: string;
+}
+
+function PasswordInput({ id, name, placeholder }: Props) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (

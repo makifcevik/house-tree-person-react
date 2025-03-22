@@ -1,5 +1,5 @@
 import React from "react";
-import { placeHolderHouseImg } from "../utils";
+import { placeHolderHouseImg } from "../utils/index.ts";
 import Card from "../components/ui/Card";
 
 const PublicationsPage = () => {

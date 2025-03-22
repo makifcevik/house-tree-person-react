@@ -5,7 +5,16 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useTranslation } from "react-i18next";
 
-function WelcomePanel({ className }) {
+interface Props {
+  className: string;
+}
+
+type Feature = {
+  header: string;
+  text: string;
+};
+
+function WelcomePanel({ className }: Props) {
   const { t } = useTranslation();
   useGSAP(() => {
     gsap.from("#anim", {
@@ -17,6 +26,8 @@ function WelcomePanel({ className }) {
     });
   }, []);
 
+  const features = t("welcomePanelText.features", { returnObjects: true }) as Feature[];
+
   return (
     <div
       id='anim'
@@ -27,7 +38,7 @@ function WelcomePanel({ className }) {
         <h1 className='section-header-md ml-5'>{t("welcomePanelText.header")}</h1>
       </div>
       <ul className='flex flex-col gap-6'>
-        {t("welcomePanelText.features", { returnObjects: true }).map((feature, index) => (
+        {features.map((feature, index) => (
           <li key={index} className='text-gray flex align-middle'>
             <FontAwesomeIcon
               icon={faCheck}

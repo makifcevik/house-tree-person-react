@@ -1,6 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const Step = ({ index, header, text, children }) => {
+interface Props {
+  index: number;
+  header: string;
+  text: string;
+  children: ReactNode;
+}
+
+const Step = ({ index, header, text, children }: Props) => {
   return (
     <section
       className='flex items-center gap-5 max-lg:flex-col p-5 rounded-lg shadow-xl 

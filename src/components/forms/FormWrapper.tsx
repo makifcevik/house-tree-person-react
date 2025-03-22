@@ -1,8 +1,12 @@
-import React, { useRef } from "react";
+import React, { ReactNode, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-function FormWrapper({ children }) {
+interface Props {
+  children: ReactNode;
+}
+
+function FormWrapper({ children }: Props) {
   const wrapperRef = useRef(null); // Create a ref
 
   useGSAP(() => {

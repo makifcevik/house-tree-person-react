@@ -5,7 +5,7 @@ import {
   waveFrontDarkImg,
   waveBackLightImg,
   waveFrontLightImg,
-} from "../utils";
+} from "../utils/index.ts";
 
 function Wave() {
   const { themeMode } = useTheme();

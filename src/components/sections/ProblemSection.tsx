@@ -7,15 +7,25 @@ import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
+type Problem = {
+  icon: string;
+  header: string;
+  text: string;
+};
+
 function ProblemSection() {
   const { t } = useTranslation();
-  const cardsRef = useRef();
-  const headerRef = useRef();
+  const cardsRef = useRef<HTMLUListElement | null>(null);
+  const headerRef = useRef<HTMLDivElement | null>(null);
+
+  const problems = t("problemSectionText.problems", { returnObjects: true }) as Problem[];
 
   useGSAP(() => {
-    const papers = gsap.utils.toArray(cardsRef.current.children);
-    const headerItems = gsap.utils.toArray(headerRef.current.children);
-    papers.forEach((paper) => {
+    const papers = cardsRef.current ? gsap.utils.toArray(cardsRef.current.children) : [];
+    const headerItems = headerRef.current
+      ? gsap.utils.toArray(headerRef.current.children)
+      : [];
+    papers.forEach((paper: any) => {
       gsap.fromTo(
         paper,
         { opacity: 0, x: 350, rotation: -15 }, // Initial state
@@ -33,7 +43,7 @@ function ProblemSection() {
           },
         }
       );
-      headerItems.forEach((item) => {
+      headerItems.forEach((item: any) => {
         gsap.fromTo(
           item,
           { opacity: 0, y: 20 }, // Initial state
@@ -72,18 +82,16 @@ function ProblemSection() {
       <div className='flex justify-center'>
         {/* Bullet points */}
         <ul ref={cardsRef} className='grid lg:grid-cols-2 grid-cols-1 gap-5 w-4/5'>
-          {t("problemSectionText.problems", { returnObjects: true }).map(
-            (problem, index) => (
-              <Paper
-                key={index}
-                icon={problem.icon}
-                header={problem.header}
-                text={problem.text}
-                className='bg-foreground-light dark:bg-foreground-dark
+          {problems.map((problem, index) => (
+            <Paper
+              key={index}
+              icon={problem.icon}
+              header={problem.header}
+              text={problem.text}
+              className='bg-foreground-light dark:bg-foreground-dark
               text-gray mb-5 max-sm:mb-0'
-              />
-            )
-          )}
+            />
+          ))}
         </ul>
       </div>
     </main>
