@@ -3,13 +3,18 @@ import { faCloudUploadAlt, faTimesCircle } from "@fortawesome/free-solid-svg-ico
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "react-i18next";
 
-export default function DragDropUploader({ image, setImage }) {
+interface Props {
+  image: string;
+  setImage: any;
+}
+
+export default function DragDropUploader({ image, setImage }: Props) {
   const { t } = useTranslation();
   //const [image, setImage] = useState(null);
   const [dragActive, setDragActive] = useState(false);
 
   // Handle file selection
-  const handleFileChange = (event) => {
+  const handleFileChange = (event: any) => {
     const file = event.target.files[0];
     if (file && file.type.startsWith("image/")) {
       const reader = new FileReader();
@@ -19,7 +24,7 @@ export default function DragDropUploader({ image, setImage }) {
   };
 
   // Handle drag & drop
-  const handleDrop = (event) => {
+  const handleDrop = (event: any) => {
     event.preventDefault();
     setDragActive(false);
     const file = event.dataTransfer.files[0];

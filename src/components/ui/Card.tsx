@@ -1,6 +1,14 @@
 import React from "react";
 
-const Card = ({ image, alt, header, content, buttonText }) => {
+interface Props {
+  image: string;
+  alt: string;
+  header: string;
+  content: string;
+  buttonText: string;
+}
+
+const Card = ({ image, alt, header, content, buttonText }: Props) => {
   return (
     <div
       className='flex flex-col bg-foreground-light dark:bg-foreground-dark 

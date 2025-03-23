@@ -2,10 +2,14 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 
-const ImageScan = ({ image }) => {
-  const imageRef = useRef();
-  const scanRef = useRef();
-  const containerRef = useRef(); // Reference for correct positioning
+interface Props {
+  image: string;
+}
+
+const ImageScan = ({ image }: Props) => {
+  const imageRef = useRef(null);
+  const scanRef = useRef(null);
+  const containerRef = useRef(null); // Reference for correct positioning
 
   useGSAP(() => {
     if (scanRef.current) {
