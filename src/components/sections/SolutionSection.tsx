@@ -7,17 +7,28 @@ import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
+type Benefit = {
+  icon: string;
+  header: string;
+  text: string;
+};
+
 function SolutionSection() {
   const { t } = useTranslation();
-  const headerRef = useRef();
-  const cardsRef = useRef();
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const benefits = t("solutionSectionText.benefits", {
+    returnObjects: true,
+  }) as Benefit[];
 
   useGSAP(() => {
-    const headerItems = gsap.utils.toArray(headerRef.current.children);
-    const cards = gsap.utils.toArray(cardsRef.current.children);
+    const headerItems = headerRef.current
+      ? gsap.utils.toArray(headerRef.current.children)
+      : [];
+    const cards = cardsRef.current ? gsap.utils.toArray(cardsRef.current.children) : [];
 
     // Header section animation
-    headerItems.forEach((item) => {
+    headerItems.forEach((item: any) => {
       gsap.fromTo(
         item,
         { opacity: 0, y: 20 }, // Initial state
@@ -37,7 +48,7 @@ function SolutionSection() {
     });
 
     // Cards animation
-    cards.forEach((card) => {
+    cards.forEach((card: any) => {
       gsap.fromTo(
         card,
         { opacity: 0, x: -350, rotation: 15 }, // Initial state
@@ -76,18 +87,16 @@ function SolutionSection() {
           ref={cardsRef}
           className='grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-5 w-4/5'
         >
-          {t("solutionSectionText.benefits", { returnObjects: true }).map(
-            (benefit, index) => (
-              <Paper
-                key={index}
-                icon={benefit.icon}
-                header={benefit.header}
-                text={benefit.text}
-                className='animation bg-middleground-light dark:bg-middleground-dark
+          {benefits.map((benefit, index) => (
+            <Paper
+              key={index}
+              icon={benefit.icon}
+              header={benefit.header}
+              text={benefit.text}
+              className='animation bg-middleground-light dark:bg-middleground-dark
               text-gray max-lg:mb-10'
-              />
-            )
-          )}
+            />
+          ))}
         </div>
       </div>
     </main>

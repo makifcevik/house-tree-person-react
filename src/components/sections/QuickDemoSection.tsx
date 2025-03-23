@@ -15,11 +15,11 @@ const QuickDemoSection = () => {
   const { t } = useTranslation();
   const [image, setImage] = useState(null);
 
-  const stepsRef = useRef();
-  const headerRef = useRef();
+  const stepsRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLHeadingElement>(null);
 
   useGSAP(() => {
-    const steps = gsap.utils.toArray(stepsRef.current.children);
+    const steps = stepsRef.current ? gsap.utils.toArray(stepsRef.current.children) : [];
 
     // Steps header animation
     const header = headerRef.current;
@@ -36,7 +36,7 @@ const QuickDemoSection = () => {
     });
 
     // Steps animation
-    steps.forEach((step) => {
+    steps.forEach((step: any) => {
       gsap.fromTo(
         step,
         { opacity: 0, y: 90 }, // Initial state
