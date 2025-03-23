@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Paper from "../ui/Paper";
+import Paper from "../../../components/ui/Paper";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";

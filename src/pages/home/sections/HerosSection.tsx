@@ -1,9 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useTranslation } from "react-i18next";
-import Button from "../ui/Button";
+import Button from "../../../components/ui/Button";
 import { useNavigate } from "react-router-dom";
-import ROUTES from "../../routes/routes";
+import ROUTES from "../../../routes/routes";
 
 function HerosSection() {
   const { t } = useTranslation();

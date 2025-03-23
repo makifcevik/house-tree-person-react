@@ -3,9 +3,9 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
-import DragDropUploader from "../utils/DragDropUploader";
-import Step from "../ui/Step";
-import ImageScan from "../ui/ImageScan";
+import DragDropUploader from "../../../components/utils/DragDropUploader";
+import Step from "../../../components/ui/Step";
+import ImageScan from "../../../components/ui/ImageScan";
 import { useTranslation } from "react-i18next";
 import DemoResultsSection from "./DemoResultsSection";
 

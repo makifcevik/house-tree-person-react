@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { graphIncreaseImg } from "../../utils/index.ts";
+import { graphIncreaseImg } from "../../../utils/index.ts";
 import { useTranslation } from "react-i18next";
-import Button from "../ui/Button.tsx";
+import Button from "../../../components/ui/Button.tsx";
 
 gsap.registerPlugin(ScrollTrigger);
 

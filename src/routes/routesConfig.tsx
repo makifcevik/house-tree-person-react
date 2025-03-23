@@ -1,5 +1,5 @@
 import Layout from "../components/layout/Layout";
-import { HomePage } from "../pages/HomePage";
+import { HomePage } from "../pages/home/HomePage";
 import LoginPage from "../pages/LoginPage";
 import PublicationsPage from "../pages/PublicationsPage";
 import SignupPage from "../pages/SignupPage";
