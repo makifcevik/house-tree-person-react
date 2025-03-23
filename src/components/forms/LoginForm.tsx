@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BtnLogin from "../buttons/BtnLogin";
-import BtnGoogleLogin from "../buttons/BtnGoogleLogin";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import PasswordInput from "../utils/PasswordInput";
 import ROUTES from "../../routes/routes";
 import { useTranslation } from "react-i18next";
+import Button from "../ui/Button";
 
 function LoginForm() {
   const { t } = useTranslation();
@@ -58,7 +58,8 @@ function LoginForm() {
       </div>
 
       <div className='flex flex-col gap-4 text-center'>
-        <BtnLogin />
+        {/*<BtnLogin />*/}
+        <Button className='btn-primary rounded-md py-2' label={t("btnText.login")} />
         <span className='max-sm:text-sm'>
           {t("loginFormText.noAccount")}
           <Link className='underline ml-1' to={ROUTES.SIGNUP}>
@@ -72,7 +73,12 @@ function LoginForm() {
           <div className='flex-grow border-t border-gray-dark'></div>
         </div>
 
-        <BtnGoogleLogin />
+        {/*<BtnGoogleLogin />*/}
+        <Button
+          className='btn-secondary rounded-md py-2'
+          label={t("btnText.loginWithGoogle")}
+          icon={faGoogle}
+        />
       </div>
     </form>
   );

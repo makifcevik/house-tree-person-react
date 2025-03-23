@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BtnThemeToggler from "./buttons/BtnThemeToggler";
 import ROUTES from "../routes/routes";
-import BtnNavLogin from "./buttons/BtnNavLogin";
 import BtnLanguageToggler from "./buttons/BtnLanguageToggler";
 import { useTranslation } from "react-i18next";
+import Button from "./ui/Button";
 
 function Navbar() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
   return (
     <nav className='flex justify-between p-common align-middle '>
       {/* Logo&Header */}
@@ -30,7 +32,11 @@ function Navbar() {
       {/* Buttons */}
       <div className='flex lg:gap-5 gap-3'>
         <BtnThemeToggler />
-        <BtnNavLogin />
+        <Button
+          className='btn-primary text-sm -translate-y-1 rounded-2xl px-4 py-2'
+          label={t("btnText.login")}
+          onClick={() => navigate(ROUTES.LOGIN)}
+        />
         <BtnLanguageToggler />
       </div>
     </nav>

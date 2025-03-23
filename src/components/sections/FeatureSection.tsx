@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { graphIncreaseImg } from "../../utils/index.ts";
 import { useTranslation } from "react-i18next";
+import Button from "../ui/Button.tsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -123,9 +124,10 @@ function FeatureSection({ className }: Props) {
       <div className='flex justify-center pb-5 mb-10'>
         <div ref={CTARef} className='text-white text-center px-8 py-5 rounded-lgg'>
           <h2 className='section-header-sm font-bold'>{t("featureSectionText.CTA")}</h2>
-          <button className='mt-6 btn-primary px-5 py-2 rounded-2xl shadow-md hover:bg-gray-200 transition'>
-            Try it Now!
-          </button>
+          <Button
+            className='mt-6 btn-primary px-5 py-2 rounded-2xl shadow-md hover:bg-gray-200 transition'
+            label='Try it Now!'
+          />
         </div>
       </div>
     </main>
