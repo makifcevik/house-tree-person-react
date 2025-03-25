@@ -3,6 +3,7 @@ import { HomePage } from "../pages/home/HomePage";
 import LoginPage from "../pages/LoginPage";
 import PublicationsPage from "../pages/PublicationsPage";
 import SignupPage from "../pages/SignupPage";
+import UserTest from "../pages/UserTest";
 import ROUTES from "./routes";
 
 const routesConfig = [
@@ -14,6 +15,7 @@ const routesConfig = [
       { path: ROUTES.SIGNUP, element: <SignupPage /> },
       { path: ROUTES.LOGIN, element: <LoginPage /> },
       { path: ROUTES.PUBLICATIONS, element: <PublicationsPage /> },
+      { path: ROUTES.USERS, element: <UserTest /> },
     ],
   },
 ];

@@ -11,7 +11,7 @@ import "./utils/i18n/index.ts";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 5 * 60 * 1000, // 5 minutes caching
+      //staleTime: 5 * 60 * 1000, // 5 minutes caching
       retry: 2,
       refetchOnWindowFocus: false,
     },
