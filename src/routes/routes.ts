@@ -4,7 +4,11 @@ const ROUTES = {
   LOGIN: "/login",
   PUBLICATIONS: "/publications",
   USERS: "/users",
-  //USER_PROFILE: (id: number) => `/user/${id}`, // Dynamic routing for future
+  USER_PROFILE: "/users/:id",
+};
+
+const PATHS = {
+  USER_PROFILE: (id: bigint) => `/users/${id}`,
 };
 
 export default ROUTES;
