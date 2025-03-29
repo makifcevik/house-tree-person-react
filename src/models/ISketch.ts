@@ -1,7 +1,7 @@
 interface ISketch {
-  id: bigint;
-  uploaded_by: bigint;
-  drawn_by: bigint;
+  id: number;
+  uploaded_by: number;
+  drawn_by: number;
   pressure: number;
   interrupted_lines: number;
   chaotic_lines: number;

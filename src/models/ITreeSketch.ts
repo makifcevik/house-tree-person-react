@@ -1,6 +1,6 @@
 interface ITreeSketch {
-  id: bigint;
-  sketch_id: bigint;
+  id: number;
+  sketch_id: number;
   trunk: number;
   root: number;
   branches: number;

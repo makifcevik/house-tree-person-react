@@ -1,6 +1,6 @@
 interface IHouseSketch {
-  id: bigint;
-  sketch: bigint;
+  id: number;
+  sketch: number;
   chimney: number;
   smoke: number;
   door: number;

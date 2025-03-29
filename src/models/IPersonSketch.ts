@@ -1,6 +1,6 @@
 interface IPersonSketch {
-  id: bigint;
-  sketch_id: bigint;
+  id: number;
+  sketch_id: number;
   gender: number;
   head: number;
   hair: number;

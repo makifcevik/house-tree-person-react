@@ -1,5 +1,5 @@
 interface IPatient {
-  id: bigint;
+  id: number;
   id_initials: string;
   gender: string;
   age: number;
