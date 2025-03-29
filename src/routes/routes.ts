@@ -4,7 +4,7 @@ const ROUTES = {
   LOGIN: "/login",
   PUBLICATIONS: "/publications",
   USERS: "/users",
-  USER_PROFILE: (id: number) => `/user/${id}`, // Dynamic routing for future
+  //USER_PROFILE: (id: number) => `/user/${id}`, // Dynamic routing for future
 };
 
 export default ROUTES;
