@@ -22,7 +22,7 @@ const UserProfileTest = () => {
   console.log(user);
 
   if (isLoading) return <h1>Loading...</h1>;
-  if (isError) return <h1>AN ERROR OCCURRED!</h1>;
+  if (isError) return <h1>AN ERROR OCCURRED: {error.message}</h1>;
   if (!user) return <h1>No user found!</h1>;
 
   return (
