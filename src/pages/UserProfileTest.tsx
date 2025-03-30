@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import { getUser } from "../services/UserService";
+import { getUser } from "../services/userService";
 import IUser from "../models/IUser";
 import { useParams } from "react-router-dom";
 

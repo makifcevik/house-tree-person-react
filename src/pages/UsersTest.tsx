@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import { getAllUsers } from "../services/UserService";
+import { getAllUsers } from "../services/userService";
 import IUser from "../models/IUser";
 
 const UsersTest = () => {
