@@ -6,3 +6,28 @@ export const getAllSketches = async (): Promise<ISketch[]> => {
   const response = await axiosInstance.get<ISketch[]>(`${API_ROUTES.SKETCHES}`);
   return response.data;
 };
+
+export const getSketch = async (id: number): Promise<ISketch> => {
+  const response = await axiosInstance.get<ISketch>(`${API_ROUTES.SKETCHES}/${id}`);
+  return response.data;
+};
+
+export const createSketch = async (newSketch: ISketch): Promise<ISketch> => {
+  const response = await axiosInstance.post<ISketch>(API_ROUTES.SKETCHES, newSketch);
+  return response.data;
+};
+
+export const updateSketch = async (
+  id: number,
+  sketchData: Partial<ISketch>
+): Promise<ISketch> => {
+  const response = await axiosInstance.put<ISketch>(
+    `${API_ROUTES.SKETCHES}/${id}`,
+    sketchData
+  );
+  return response.data;
+};
+
+export const deleteSketch = async (id: number): Promise<void> => {
+  await axiosInstance.delete(`${API_ROUTES.SKETCHES}/${id}`);
+};
