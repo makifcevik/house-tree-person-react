@@ -4,6 +4,7 @@ const API_ROUTES = {
   HOUSE_SKETCHES: "/house_sketches",
   PERSON_SKETCHES: "/person_sketches",
   TREE_SKETCHES: "/tree_sketches",
+  PATIENTS: "/patients",
 };
 
 export default API_ROUTES;
