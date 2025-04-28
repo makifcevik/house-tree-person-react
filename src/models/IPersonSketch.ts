@@ -8,7 +8,7 @@ interface IPersonSketch {
   ears: number;
   nose: number;
   mouth: number;
-  body: number;
+  //body: number;
   neck: number;
   arms: number;
   hands: number;
