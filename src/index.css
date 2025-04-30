@@ -119,3 +119,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utils {
+  .p-common {
+    @apply px-5 py-3
+  }
+}

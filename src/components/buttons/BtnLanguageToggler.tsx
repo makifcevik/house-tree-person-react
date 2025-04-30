@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Button } from "../ui/button";
 
 const BtnLanguageToggler = () => {
   const { t, i18n } = useTranslation();
@@ -11,12 +12,9 @@ const BtnLanguageToggler = () => {
   };
 
   return (
-    <button
-      className='btn-secondary px-3 py-1 rounded-full -translate-y-1'
-      onClick={toggleLanguage}
-    >
+    <Button variant={"outline"} onClick={toggleLanguage}>
       {t("language")}
-    </button>
+    </Button>
   );
 };
 
