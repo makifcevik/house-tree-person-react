@@ -3,7 +3,7 @@ import BtnThemeToggler from "./buttons/BtnThemeToggler";
 import ROUTES from "../routes/routes";
 import BtnLanguageToggler from "./buttons/BtnLanguageToggler";
 import { useTranslation } from "react-i18next";
-import Button from "./ui/Button";
+import { Button } from "@/components/ui/button";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -34,9 +34,10 @@ function Navbar() {
         <BtnThemeToggler />
         <Button
           className='btn-primary text-sm -translate-y-1 rounded-2xl px-4 py-2'
-          label={t("btnText.login")}
           onClick={() => navigate(ROUTES.LOGIN)}
-        />
+        >
+          {t("btnText.login")}
+        </Button>
         <BtnLanguageToggler />
       </div>
     </nav>
