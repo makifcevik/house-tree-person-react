@@ -22,14 +22,14 @@ function HerosSection() {
   }, []);
 
   return (
-    <Section className='text-center'>
+    <Section spacing='xl' className='text-center'>
       <Typography variant='h1' className='anim mb-5 text-primary'>
         {t("homePage.title")}
       </Typography>
       <Typography variant='lead'>
         <TypewriterText text={t("homePage.oneLiner")} />
       </Typography>
-      <Container className='grid grid-cols-3 max-md:hidden gap-5 my-5'>
+      <Container className='grid grid-cols-3 max-md:hidden gap-5 mt-10'>
         <img
           src={placeHolderHouseImg}
           alt='house image'
