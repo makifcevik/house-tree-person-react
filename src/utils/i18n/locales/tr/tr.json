@@ -7,5 +7,10 @@
     "item4": "Örnek Veri",
     "item5": "Yayınlar",
     "item6": "İletişim"
+  },
+  "homePage": {
+    "title": "Ev Ağaç İnsan (HTP)",
+    "oneLiner": "Çocuklar, duygularını kelimelerle ifade edemeyebilir. Psikoloji ve yapay zekâyı bir arada kullanarak HTP (Ev-Ağaç-İnsan) çizimlerini analiz ediyor; kaygı, depresyon ve saldırganlık gibi gizli stres işaretlerini tespit ederek klinisyenlere daha etkili değerlendirme imkânı sunuyoruz.",
+    "Hello": ""
   }
 }

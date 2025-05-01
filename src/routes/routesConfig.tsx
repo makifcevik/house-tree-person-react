@@ -13,7 +13,7 @@ const routesConfig = [
     path: "/",
     element: <Layout />,
     children: [
-      { path: ROUTES.HOME, element: <TestPage /> },
+      { path: ROUTES.HOME, element: <HomePage /> },
       // { path: ROUTES.HOME, element: <HomePage /> },
       // { path: ROUTES.SIGNUP, element: <SignupPage /> },
       // { path: ROUTES.LOGIN, element: <LoginPage /> },

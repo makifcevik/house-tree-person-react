@@ -7,5 +7,10 @@
     "item4": "Sample Data",
     "item5": "Publications",
     "item6": "Contact"
+  },
+  "homePage": {
+    "title": "House Tree Person (HTP)",
+    "oneLiner": "Children express emotions in ways words can’t. Using AI and psychology together, we analyze HTP drawings to identify hidden signs of distress—helping clinicians assess depression, anxiety, and aggression in children more effectively.",
+    "Hello": ""
   }
 }
