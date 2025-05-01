@@ -3,15 +3,19 @@
   "navbar": {
     "item1": "Home",
     "item2": "About",
-    "item3": "Psychological Features",
-    "item4": "Sample Data",
-    "item5": "Publications",
-    "item6": "Contact"
+    "item3": "Demo",
+    "item4": "Psychological Features",
+    "item5": "Sample Data",
+    "item6": "Publications",
+    "item7": "Contact"
   },
   "homePage": {
     "title": "House Tree Person (HTP)",
-    "oneLiner": "Children express emotions in ways words can’t. Using AI and psychology together, we analyze HTP drawings to identify hidden signs of distress—helping clinicians assess depression, anxiety, and aggression in children more effectively.",
-    "about": [
+    "oneLiner": "Children express emotions in ways words can’t. Using AI and psychology together, we analyze HTP drawings to identify hidden signs of distress—helping clinicians assess depression, anxiety, and aggression in children more effectively."
+  },
+  "aboutPage": {
+    "title": "About House Tree Person (HTP)",
+    "paragraphs": [
       "The House-Tree-Person (Buck, 1948) is a projective test developed by John Buck (1948) and Emanuel Hammer (1958). The test is extensively used in different contexts to assess personality related issues. The test is very useful in clinical settings because it takes very little time to complete (5 to 10 minutes) and is easy to administer to a wide range of patients across all age spans (age 3 onwards). It is found to be especially helpful with shy, inhibited or nonverbal children who have difficulty expressing their internal worlds via verbal means.",
       "However, to date, there is not a pragmatic assessment protocol accepted by the entire research community to evaluate the HTP test. That is, while is generally accepted the idea that a selection of emotional indicators extracted from the pictures could differentiate patients with or without emotional problems, research in the psychological field is still inconclusive regarding the best set of indicators, which better correlates to emotional difficulties. This work focuses on emotional markers in HTP drawings for depressive, aggressive, or/and anxious problems of children and proposes an interdisciplinary approach to tackle this issue.",
       "This Website is supported by a Tubitak 3005 project, which aims to use Computer Vision (CV), Machine Learning (ML), Deep Learning (DL) and Large Language Models (LLM) techniques to automatically extract the critical emotional indicators from the HTP drawings. Subsequently, Artificial Intelligence (AI) methods will search for the most discriminant combination of those emotional traits.",

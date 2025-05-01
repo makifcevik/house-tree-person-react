@@ -1,5 +1,7 @@
+import AboutPage from "@/pages/AboutPage";
 import Layout from "../components/layout/Layout";
 import { HomePage } from "../pages/home/HomePage";
+import DemoPage from "../pages/DemoPage";
 import LoginPage from "../pages/LoginPage";
 import PublicationsPage from "../pages/PublicationsPage";
 import SignupPage from "../pages/SignupPage";
@@ -14,7 +16,8 @@ const routesConfig = [
     element: <Layout />,
     children: [
       { path: ROUTES.HOME, element: <HomePage /> },
-      // { path: ROUTES.HOME, element: <HomePage /> },
+      { path: ROUTES.ABOUT, element: <AboutPage /> },
+      { path: ROUTES.DEMO, element: <DemoPage /> },
       // { path: ROUTES.SIGNUP, element: <SignupPage /> },
       // { path: ROUTES.LOGIN, element: <LoginPage /> },
       // { path: ROUTES.PUBLICATIONS, element: <PublicationsPage /> },

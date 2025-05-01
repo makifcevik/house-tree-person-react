@@ -3,7 +3,7 @@ import BtnThemeToggler from "./buttons/BtnThemeToggler";
 import ROUTES from "../routes/routes";
 import BtnLanguageToggler from "./buttons/BtnLanguageToggler";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -23,13 +23,13 @@ function Navbar() {
       {/* NavItems */}
       <div className='flex items-center gap-2'>
         <Button variant='link' asChild>
-          <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item1")}</Link>
+          <Link to={ROUTES.HOME}>{t("navbar.item1")}</Link>
         </Button>
         <Button variant='link' asChild>
-          <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item2")}</Link>
+          <Link to={ROUTES.ABOUT}>{t("navbar.item2")}</Link>
         </Button>
         <Button variant='link' asChild>
-          <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item3")}</Link>
+          <Link to={ROUTES.DEMO}>{t("navbar.item3")}</Link>
         </Button>
         <Button variant='link' asChild>
           <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item4")}</Link>
@@ -39,6 +39,9 @@ function Navbar() {
         </Button>
         <Button variant='link' asChild>
           <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item6")}</Link>
+        </Button>
+        <Button variant='link' asChild>
+          <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item7")}</Link>
         </Button>
       </div>
 

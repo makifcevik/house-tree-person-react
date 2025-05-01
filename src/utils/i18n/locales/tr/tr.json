@@ -3,15 +3,19 @@
   "navbar": {
     "item1": "Ana Sayfa",
     "item2": "Hakkında",
-    "item3": "Psikolojik Özellikler",
-    "item4": "Örnek Veri",
-    "item5": "Yayınlar",
-    "item6": "İletişim"
+    "item3": "Demo",
+    "item4": "Psikolojik Özellikler",
+    "item5": "Örnek Veri",
+    "item6": "Yayınlar",
+    "item7": "İletişim"
   },
   "homePage": {
     "title": "Ev Ağaç İnsan (HTP)",
-    "oneLiner": "Çocuklar, duygularını kelimelerle ifade edemeyebilir. Psikoloji ve yapay zekâyı bir arada kullanarak HTP (Ev-Ağaç-İnsan) çizimlerini analiz ediyor; kaygı, depresyon ve saldırganlık gibi gizli stres işaretlerini tespit ederek klinisyenlere daha etkili değerlendirme imkânı sunuyoruz.",
-    "about": [
+    "oneLiner": "Çocuklar, duygularını kelimelerle ifade edemeyebilir. Psikoloji ve yapay zekâyı bir arada kullanarak HTP (Ev-Ağaç-İnsan) çizimlerini analiz ediyor; kaygı, depresyon ve saldırganlık gibi gizli stres işaretlerini tespit ederek klinisyenlere daha etkili değerlendirme imkânı sunuyoruz."
+  },
+  "aboutPage": {
+    "title": "Ev Ağaç İnsan (HTP) Hakkında",
+    "paragraphs": [
     "Ev-Ağaç-İnsan (HTP) Testi, John Buck (1948) ve Emanuel Hammer (1958) tarafından geliştirilen projektif bir kişilik değerlendirme yöntemidir. Klinik ortamlarda yaygın olarak kullanılan bu test, uygulamasının kısa sürmesi (5-10 dakika) ve 3 yaş üstü her yaş grubuna kolayca uyarlanabilmesi nedeniyle özellikle çekingen, içe dönük veya sözel ifade güçlüğü çeken çocukların iç dünyalarını anlamada etkilidir.",
     "Ancak, HTP testinin değerlendirilmesinde araştırmacılar arasında ortak kabul gören pratik bir protokol henüz bulunmamaktadır. Çizimlerden çıkarılan duygusal göstergelerin, sorunları tespit edebileceği genel olarak kabul edilse de, hangi göstergelerin en anlamlı ilişkiyi kurduğu konusu psikoloji alanında halen tartışmalıdır. Bu proje, çocuklardaki depresyon, kaygı ve saldırganlık gibi sorunlara işaret eden çizim özelliklerini disiplinlerarası bir yaklaşımla inceliyor.",
     "Bu website, TÜBİTAK 3005 projesi kapsamında desteklenmektedir. Projede, Bilgisayarlı Görü (CV), Makine Öğrenmesi (ML), Derin Öğrenme (DL) ve Büyük Dil Modelleri (LLM) teknikleri kullanılarak HTP çizimlerindeki kritik duygusal göstergeler otomatik olarak çıkarılıyor. Ardından, Yapay Zekâ (AI) yöntemleriyle bu göstergelerin en ayırt edici kombinasyonları araştırılıyor.",
@@ -19,6 +23,6 @@
     "Proje özellikle, içe yönelimli (kaygı, depresyon) ve dışa yönelimli (saldırganlık) sorunlar gösteren okul çağı çocuklarına odaklanarak, çizim özellikleri ile problem türleri arasındaki ilişkiyi ortaya çıkarmayı hedefliyor.",
     "Kısacası, bu proje psikoloji ve bilgisayar mühendisliğinin kesişiminde yer alan yenilikçi bir çalışmadır.",
     "Detaylı bilgi ve demo için aşağıdaki sayfayı ziyaret edebilirsiniz."
-]
+    ]
   }
 }
