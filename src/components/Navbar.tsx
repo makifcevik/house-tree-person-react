@@ -3,7 +3,7 @@ import BtnThemeToggler from "./buttons/BtnThemeToggler";
 import ROUTES from "../routes/routes";
 import BtnLanguageToggler from "./buttons/BtnLanguageToggler";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -32,16 +32,16 @@ function Navbar() {
           <Link to={ROUTES.DEMO}>{t("navbar.item3")}</Link>
         </Button>
         <Button variant='link' asChild>
-          <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item4")}</Link>
+          <Link to={ROUTES.PUBLICATIONS_AND_REFERENCES}>{t("navbar.item4")}</Link>
         </Button>
         <Button variant='link' asChild>
-          <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item5")}</Link>
+          <Link to={ROUTES.PUBLICATIONS_AND_REFERENCES}>{t("navbar.item5")}</Link>
         </Button>
         <Button variant='link' asChild>
-          <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item6")}</Link>
+          <Link to={ROUTES.PUBLICATIONS_AND_REFERENCES}>{t("navbar.item6")}</Link>
         </Button>
         <Button variant='link' asChild>
-          <Link to={ROUTES.PUBLICATIONS}>{t("navbar.item7")}</Link>
+          <Link to={ROUTES.PUBLICATIONS_AND_REFERENCES}>{t("navbar.item7")}</Link>
         </Button>
       </div>
 

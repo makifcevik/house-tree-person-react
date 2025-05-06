@@ -4,7 +4,7 @@ const ROUTES = {
   DEMO: "/demo",
   SIGNUP: "/signup",
   LOGIN: "/login",
-  PUBLICATIONS: "/publications",
+  PUBLICATIONS_AND_REFERENCES: "/publicationsAndReferences",
   USERS: "/users",
   USER_PROFILE: "/users/:id",
 };

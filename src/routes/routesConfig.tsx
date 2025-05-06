@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 import { HomePage } from "../pages/home/HomePage";
 import DemoPage from "../pages/DemoPage";
 import LoginPage from "../pages/LoginPage";
-import PublicationsPage from "../pages/PublicationsPage";
+import PublicationsAndReferencesPage from "../pages/PublicationsAndReferencesPage";
 import SignupPage from "../pages/SignupPage";
 import TestPage from "../pages/TestPage";
 import UserProfileTest from "../pages/UserProfileTest";
@@ -20,7 +20,10 @@ const routesConfig = [
       { path: ROUTES.DEMO, element: <DemoPage /> },
       // { path: ROUTES.SIGNUP, element: <SignupPage /> },
       // { path: ROUTES.LOGIN, element: <LoginPage /> },
-      // { path: ROUTES.PUBLICATIONS, element: <PublicationsPage /> },
+      {
+        path: ROUTES.PUBLICATIONS_AND_REFERENCES,
+        element: <PublicationsAndReferencesPage />,
+      },
       // { path: ROUTES.USERS, element: <UsersTest /> },
       // { path: ROUTES.USER_PROFILE, element: <UserProfileTest /> },
     ],
