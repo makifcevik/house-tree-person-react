@@ -5,6 +5,7 @@ const ROUTES = {
   SIGNUP: "/signup",
   LOGIN: "/login",
   PUBLICATIONS_AND_REFERENCES: "/publicationsAndReferences",
+  CONTACT: "/contact",
   USERS: "/users",
   USER_PROFILE: "/users/:id",
 };

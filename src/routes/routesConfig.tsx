@@ -9,6 +9,7 @@ import TestPage from "../pages/TestPage";
 import UserProfileTest from "../pages/UserProfileTest";
 import UsersTest from "../pages/UsersTest";
 import ROUTES from "./routes";
+import ContactPage from "@/pages/ContactPage";
 
 const routesConfig = [
   {
@@ -24,6 +25,7 @@ const routesConfig = [
         path: ROUTES.PUBLICATIONS_AND_REFERENCES,
         element: <PublicationsAndReferencesPage />,
       },
+      { path: ROUTES.CONTACT, element: <ContactPage /> },
       // { path: ROUTES.USERS, element: <UsersTest /> },
       // { path: ROUTES.USER_PROFILE, element: <UserProfileTest /> },
     ],

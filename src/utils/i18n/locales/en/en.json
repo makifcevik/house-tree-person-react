@@ -32,5 +32,13 @@
       "Overall, this project belongs to the intersection area between psychology and computer engineering.",
       "A deeper introduction to the HTP test together with a demo is at the next page."
     ]
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "contactInfo": "We can have some basic guidlines here? Or some other text related to contact?",
+    "contactList": [
+      {"role": "AI?", "name": "Assoc. Prof. Elena?", "email": "elena.sonmez@bilgi.edu.tr"},
+      {"role": "Psychology?", "name": "Prof. Sibel?", "email": "example@bilgi.edu.tr"}
+    ]
   }
 }
