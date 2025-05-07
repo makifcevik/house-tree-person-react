@@ -33,9 +33,67 @@
       "A deeper introduction to the HTP test together with a demo is at the next page."
     ]
   },
+  "psychologicalFeaturesPage": {
+    "title": "Psychological Features",
+    "description": "A short description about what they are and how/why they are used...",
+    "CTA": {
+      "text": "Want to see real examples on sample data images?",
+      "buttonText": "See Sample Data"
+    },
+    "types": {
+      "generalFeatures" : {
+        "title": "General Features",
+        "description": "A short description about what they are and how/why they are used...", 
+        "features": [
+          {"name": "feature1", "description": "description about the feature goes here..."},
+          {"name": "feature2", "description": "description about the feature goes here..."},
+          {"name": "feature3", "description": "description about the feature goes here..."},
+          {"name": "feature4", "description": "description about the feature goes here..."},
+          {"name": "feature5", "description": "description about the feature goes here..."}
+        ],
+        "caption": "Table of general psychological features"
+      },
+      "houseFeatures" : {
+        "title": "House Features",
+        "description": "A short description about what they are and how/why they are used...", 
+        "features": [
+          {"name": "feature1", "description": "description about the feature goes here..."},
+          {"name": "feature2", "description": "description about the feature goes here..."},
+          {"name": "feature3", "description": "description about the feature goes here..."},
+          {"name": "feature4", "description": "description about the feature goes here..."},
+          {"name": "feature5", "description": "description about the feature goes here..."}
+        ],
+        "caption": "Table of house features" 
+      },
+      "treeFeatures" : {
+        "title": "Tree Features",
+        "description": "A short description about what they are and how/why they are used...", 
+        "features": [
+          {"name": "feature1", "description": "description about the feature goes here..."},
+          {"name": "feature2", "description": "description about the feature goes here..."},
+          {"name": "feature3", "description": "description about the feature goes here..."},
+          {"name": "feature4", "description": "description about the feature goes here..."},
+          {"name": "feature5", "description": "description about the feature goes here..."}
+        ],
+        "caption": "Table of tree features" 
+      },
+      "personFeatures" : {
+        "title": "Person Features",
+        "description": "A short description about what they are and how/why they are used...", 
+        "features": [
+          {"name": "feature1", "description": "description about the feature goes here..."},
+          {"name": "feature2", "description": "description about the feature goes here..."},
+          {"name": "feature3", "description": "description about the feature goes here..."},
+          {"name": "feature4", "description": "description about the feature goes here..."},
+          {"name": "feature5", "description": "description about the feature goes here..."}
+        ],
+        "caption": "Table of person features" 
+      }
+    }
+  },
   "contactPage": {
     "title": "Contact Us",
-    "contactInfo": "We can have some basic guidlines here? Or some other text related to contact?",
+    "contactInfo": "We can have some basic guidelines here? Or some other text related to contact?",
     "contactList": [
       {"role": "AI?", "name": "Assoc. Prof. Elena?", "email": "elena.sonmez@bilgi.edu.tr"},
       {"role": "Psychology?", "name": "Prof. Sibel?", "email": "example@bilgi.edu.tr"}

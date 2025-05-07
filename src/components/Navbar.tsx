@@ -32,7 +32,7 @@ function Navbar() {
           <Link to={ROUTES.DEMO}>{t("navbar.item3")}</Link>
         </Button>
         <Button variant='link' asChild>
-          <Link to={ROUTES.PUBLICATIONS_AND_REFERENCES}>{t("navbar.item4")}</Link>
+          <Link to={ROUTES.PSYCHOLOGICAL_FEATURES}>{t("navbar.item4")}</Link>
         </Button>
         <Button variant='link' asChild>
           <Link to={ROUTES.PUBLICATIONS_AND_REFERENCES}>{t("navbar.item5")}</Link>
