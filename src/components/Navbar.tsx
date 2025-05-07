@@ -35,7 +35,7 @@ function Navbar() {
           <Link to={ROUTES.PSYCHOLOGICAL_FEATURES}>{t("navbar.item4")}</Link>
         </Button>
         <Button variant='link' asChild>
-          <Link to={ROUTES.PUBLICATIONS_AND_REFERENCES}>{t("navbar.item5")}</Link>
+          <Link to={ROUTES.SAMPLE_DATA}>{t("navbar.item5")}</Link>
         </Button>
         <Button variant='link' asChild>
           <Link to={ROUTES.PUBLICATIONS_AND_REFERENCES}>{t("navbar.item6")}</Link>

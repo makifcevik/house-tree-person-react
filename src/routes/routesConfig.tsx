@@ -11,6 +11,7 @@ import UsersTest from "../pages/UsersTest";
 import ROUTES from "./routes";
 import ContactPage from "@/pages/ContactPage";
 import PsychologicalFeaturesPage from "@/pages/features/PsychologicalFeaturesPage";
+import SampleDataPage from "@/pages/SampleDataPage";
 
 const routesConfig = [
   {
@@ -27,6 +28,7 @@ const routesConfig = [
         element: <PublicationsAndReferencesPage />,
       },
       { path: ROUTES.PSYCHOLOGICAL_FEATURES, element: <PsychologicalFeaturesPage /> },
+      { path: ROUTES.SAMPLE_DATA, element: <SampleDataPage /> },
       { path: ROUTES.CONTACT, element: <ContactPage /> },
       // { path: ROUTES.USERS, element: <UsersTest /> },
       // { path: ROUTES.USER_PROFILE, element: <UserProfileTest /> },
