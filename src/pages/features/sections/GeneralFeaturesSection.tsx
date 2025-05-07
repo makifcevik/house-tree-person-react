@@ -15,6 +15,7 @@ import { useTranslation } from "react-i18next";
 
 interface GeneralFeatures {
   name: string;
+  range: string;
   description: string;
 }
 
@@ -37,6 +38,7 @@ const GeneralFeaturesSection = () => {
           <TableHeader>
             <TableRow>
               <TableHead>Name</TableHead>
+              <TableHead>Value Range</TableHead>
               <TableHead>Description</TableHead>
             </TableRow>
           </TableHeader>
@@ -44,6 +46,7 @@ const GeneralFeaturesSection = () => {
             {features.map((feature, index) => (
               <TableRow key={index}>
                 <TableCell>{feature.name}</TableCell>
+                <TableCell>{feature.range}</TableCell>
                 <TableCell>{feature.description}</TableCell>
               </TableRow>
             ))}
