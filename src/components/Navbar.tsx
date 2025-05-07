@@ -45,8 +45,11 @@ function Navbar() {
         </Button>
       </div>
 
-      {/* Buttons (Theme & Language) */}
+      {/* Buttons (Login, Theme, Language) */}
       <div className='flex items-center gap-2'>
+        <Button>
+          <Link to={ROUTES.LOGIN}>Login</Link>
+        </Button>
         <BtnThemeToggler />
         <BtnLanguageToggler />
       </div>

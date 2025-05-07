@@ -22,7 +22,7 @@ const routesConfig = [
       { path: ROUTES.ABOUT, element: <AboutPage /> },
       { path: ROUTES.DEMO, element: <DemoPage /> },
       // { path: ROUTES.SIGNUP, element: <SignupPage /> },
-      // { path: ROUTES.LOGIN, element: <LoginPage /> },
+      { path: ROUTES.LOGIN, element: <LoginPage /> },
       {
         path: ROUTES.PUBLICATIONS_AND_REFERENCES,
         element: <PublicationsAndReferencesPage />,
