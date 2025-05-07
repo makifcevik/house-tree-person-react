@@ -1,91 +1,128 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PasswordInput from "../utils/PasswordInput";
-import ROUTES from "../../routes/routes";
 import { useTranslation } from "react-i18next";
-import Button from "../ui/Button";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/ui/Button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
-function SignupForm() {
+const signupSchema = z
+  .object({
+    name: z.string().min(3, "Name must be at least 3 characters"),
+    email: z.string().email("Invalid email address"),
+    password: z.string().min(8, "Password must be at least 8 characters"),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords don't match",
+    path: ["confirmPassword"], // Show error on confirmPassword field
+  });
+
+type SignupFormData = z.infer<typeof signupSchema>;
+
+export function SignupForm() {
   const { t } = useTranslation();
+
+  const form = useForm<SignupFormData>({
+    resolver: zodResolver(signupSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+  });
+
+  const onSubmit = (data: SignupFormData) => {
+    console.log("Signup data:", data);
+    // TODO: Add signup logic
+  };
+
   return (
-    <form className='flex flex-col gap-3 text-theme-color'>
-      <h1 className='section-header-lg mt-3'>{t("signupFormText.header")}</h1>
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
+        {/* Name Field */}
+        <FormField
+          control={form.control}
+          name='name'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder='Enter your name' {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-      {/* Email */}
-      <div className='flex flex-col gap-1'>
-        <label className='text-gray max-sm:text-sm' htmlFor='email'>
-          {t("signupFormText.email")}
-        </label>
-        <input
-          className='form-input'
-          id='email'
-          type='email'
+        {/* Email Field */}
+        <FormField
+          control={form.control}
           name='email'
-          placeholder={t("signupFormText.emailPlaceholder")}
-        ></input>
-      </div>
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input placeholder='Enter your email' {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-      {/* Password */}
-      <div className='flex flex-col gap-1'>
-        <label className='text-gray max-sm:text-sm' htmlFor='password'>
-          {t("signupFormText.password")}
-        </label>
-        <PasswordInput
-          id='password'
+        {/* Password Field */}
+        <FormField
+          control={form.control}
           name='password'
-          placeholder={t("signupFormText.passwordPlaceholder")}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Password</FormLabel>
+              <FormControl>
+                <Input type='password' placeholder='••••••••' {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
-      </div>
 
-      {/* Password Again */}
-      <div className='flex flex-col gap-1'>
-        <label className='text-gray max-sm:text-sm' htmlFor='passwordAgain'>
-          {t("signupFormText.passwordAgain")}
-        </label>
-        <PasswordInput
-          id='passwordAgain'
-          name='passwordAgain'
-          placeholder={t("signupFormText.passwordAgainPlaceholder")}
+        {/* Confirm Password Field */}
+        <FormField
+          control={form.control}
+          name='confirmPassword'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Confirm Password</FormLabel>
+              <FormControl>
+                <Input type='password' placeholder='••••••••' {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
-      </div>
 
-      {/* Remember me */}
-      <div className='flex align-middle ml-1'>
-        <input
-          className='scale-150 mr-3'
-          id='rememberMe'
-          type='checkbox'
-          name='rememberMe'
-        />
-        <label className='max-sm:text-sm' htmlFor='rememberMe'>
-          {t("signupFormText.rememberMe")}
-        </label>
-      </div>
+        <Button type='submit' className='w-full'>
+          Sign up
+        </Button>
 
-      {/* Buttons Section */}
-      <div className='flex flex-col gap-3 text-center'>
-        <Button className='btn-primary rounded-md py-2' label={t("btnText.signup")} />
-        <span className='max-sm:text-sm'>
-          {t("signupFormText.hasAccount")}
-          <Link className='underline ml-1' to={ROUTES.LOGIN}>
-            {t("signupFormText.referToLogin")}
+        <div className='flex-grow border-t border-gray-dark'></div>
+
+        <div className='text-center text-sm'>
+          Already have an account?{" "}
+          <Link to='/login' className='text-primary font-bold hover:underline'>
+            Login
           </Link>
-        </span>
-
-        <div className='flex items-center'>
-          <div className='flex-grow border-t border-gray-dark'></div>
-          <span className='px-3 text-gray-dark text-sm'>{t("signupFormText.or")}</span>
-          <div className='flex-grow border-t border-gray-dark'></div>
         </div>
-        <Button
-          className='btn-secondary rounded-md py-2'
-          label={t("btnText.signupWithGoogle")}
-          icon={faGoogle}
-        />
-      </div>
-    </form>
+      </form>
+    </Form>
   );
 }
-
-export default SignupForm;
