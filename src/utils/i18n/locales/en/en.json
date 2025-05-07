@@ -33,6 +33,16 @@
       "A deeper introduction to the HTP test together with a demo is at the next page."
     ]
   },
+  "demoPage": {
+    "title": "Demo",
+    "description": "A short guideline about how to use it, what to expect as result and other details...",
+    "evaluation": {
+      "title": "Image Class",
+      "externalization": "Externalization",
+      "internalization": "Internalization",
+      "depression": "Depression"
+    }
+  },
   "psychologicalFeaturesPage": {
     "title": "Psychological Features",
     "description": "A short description about what they are and how/why they are used...",
