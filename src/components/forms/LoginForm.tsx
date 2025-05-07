@@ -12,6 +12,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "../ui/form";
 import { Input } from "../ui/input";
 import ROUTES from "@/routes/routes";
@@ -52,6 +53,7 @@ function LoginForm() {
               <FormControl>
                 <Input placeholder='example@example.com' {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -66,6 +68,7 @@ function LoginForm() {
               <FormControl>
                 <Input type='password' placeholder='••••••••' {...field}></Input>
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
