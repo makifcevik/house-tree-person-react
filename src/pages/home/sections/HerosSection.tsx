@@ -3,6 +3,8 @@ import { Section } from "@/components/ui/Section";
 import { TypewriterText } from "@/components/ui/TypewriterText";
 import { Typography } from "@/components/ui/Typography";
 import { placeHolderHouseImg } from "@/utils";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useTranslation } from "react-i18next";
@@ -22,7 +24,7 @@ function HerosSection() {
   }, []);
 
   return (
-    <Section spacing='xl' className='text-center'>
+    <Section spacing='sm' className='text-center mt-5'>
       <Typography variant='h1' className='anim mb-5 text-primary'>
         {t("homePage.title")}
       </Typography>
@@ -46,6 +48,12 @@ function HerosSection() {
           className='anim h-full w-full rounded-lg dark:brightness-90'
         />
       </Container>
+      {/*
+      <FontAwesomeIcon
+        icon={faChevronDown}
+        className='text-3xl font-bold mt-7 text-primary'
+      />
+      */}
     </Section>
   );
 }

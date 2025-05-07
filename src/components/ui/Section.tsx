@@ -5,11 +5,12 @@ import { Container } from "./Container";
 interface Props {
   children: ReactNode;
   className?: string;
-  spacing?: "sm" | "md" | "lg" | "xl";
+  spacing?: "xs" | "sm" | "md" | "lg" | "xl";
 }
 
 export function Section({ children, className, spacing = "md" }: Props) {
   const spacingClasses = {
+    xs: "py-4",
     sm: "py-8",
     md: "py-12",
     lg: "py-16",

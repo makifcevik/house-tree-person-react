@@ -11,7 +11,15 @@
   },
   "homePage": {
     "title": "House Tree Person (HTP)",
-    "oneLiner": "Children express emotions in ways words can’t. Using AI and psychology together, we analyze HTP drawings to identify hidden signs of distress—helping clinicians assess depression, anxiety, and aggression in children more effectively."
+    "oneLiner": "A picture is worth 1000 words. This Website analyzes HTP drawings of school-age children, to identify hidden signs of distress—supporting clinicians to assess depression, anxiety, and aggression behavior.",
+    "defineHTP": {
+      "title": "What Are HTP Drawings?",
+      "description": "We can, very briefly, define what HTP images are and how they are utilized. Like, as a very short paragraph."
+    },
+    "definePsychologicalFeatures": {
+      "title": "What Are Psychological Features?",
+      "description": "We can, very briefly, define what psychological features are and how they are utilized. Like, as a very short paragraph."
+    }
   },
   "aboutPage": {
     "title": "About House Tree Person (HTP)",
