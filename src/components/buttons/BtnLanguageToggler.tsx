@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "../ui/button";
+import { Button } from "../ui/Button";
 
 const BtnLanguageToggler = () => {
+  const [language, setLanguage] = useState(localStorage.getItem("language") || "en");
   const { t, i18n } = useTranslation();
 
+  useEffect(() => {
+    i18n.changeLanguage(language);
+    localStorage.setItem("language", language);
+  }, [language, i18n]);
+
   const toggleLanguage = () => {
-    const currentLanguage = i18n.language;
-    const newLanguage = currentLanguage === "en" ? "tr" : "en";
-    i18n.changeLanguage(newLanguage);
+    setLanguage((prev) => (prev === "en" ? "tr" : "en"));
   };
 
   return (
