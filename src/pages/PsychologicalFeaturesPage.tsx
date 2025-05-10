@@ -1,15 +1,15 @@
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import React from "react";
-import GeneralFeaturesSection from "./sections/GeneralFeaturesSection";
-import HouseFeaturesSection from "./sections/HouseFeaturesSection";
-import TreeFeaturesSection from "./sections/TreeFeaturesSection";
-import PersonFeaturesSection from "./sections/PersonFeaturesSection";
 import { Typography } from "@/components/ui/Typography";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/Button";
 import { Link } from "react-router-dom";
 import ROUTES from "@/routes/routes";
+import GeneralFeaturesSection from "@/components/features/GeneralFeaturesSection";
+import HouseFeaturesSection from "@/components/features/HouseFeaturesSection";
+import TreeFeaturesSection from "@/components/features/TreeFeaturesSection";
+import PersonFeaturesSection from "@/components/features/PersonFeaturesSection";
 
 const PsychologicalFeaturesPage = () => {
   const { t } = useTranslation();

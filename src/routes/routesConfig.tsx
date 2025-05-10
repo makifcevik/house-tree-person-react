@@ -10,7 +10,7 @@ import UserProfileTest from "../pages/UserProfileTest";
 import UsersTest from "../pages/UsersTest";
 import ROUTES from "./routes";
 import ContactPage from "@/pages/ContactPage";
-import PsychologicalFeaturesPage from "@/pages/features/PsychologicalFeaturesPage";
+import PsychologicalFeaturesPage from "@/pages/PsychologicalFeaturesPage";
 import SampleDataPage from "@/pages/SampleDataPage";
 
 const routesConfig = [
