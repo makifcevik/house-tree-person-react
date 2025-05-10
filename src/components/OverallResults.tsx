@@ -25,22 +25,31 @@ const OverallResults = ({ imageClass, extValue, intValue, depValue }: Props) => 
           <Typography variant='lead'>{imageClass}</Typography>
         </div>
         <div>
-          <Typography variant='h3' className='mb-3'>
-            {t("overallEvaluation.externalization")}
-          </Typography>
-          <Progress value={extValue} indicatorClassName={EXTERNALIZATION_COLOR} />
+          <Typography variant='h3'>{t("overallEvaluation.externalization")}</Typography>
+          <div className='flex flex-row align-middle items-center'>
+            <Progress value={extValue} indicatorClassName={EXTERNALIZATION_COLOR} />
+            <Typography variant='lead' className='ml-8'>
+              {extValue}%
+            </Typography>
+          </div>
         </div>
         <div>
-          <Typography variant='h3' className='mb-3'>
-            {t("overallEvaluation.internalization")}
-          </Typography>
-          <Progress value={intValue} indicatorClassName={INTERNALIZATION_COLOR} />
+          <Typography variant='h3'>{t("overallEvaluation.internalization")}</Typography>
+          <div className='flex flex-row align-middle items-center'>
+            <Progress value={intValue} indicatorClassName={INTERNALIZATION_COLOR} />
+            <Typography variant='lead' className='ml-8'>
+              {intValue}%
+            </Typography>
+          </div>
         </div>
         <div>
-          <Typography variant='h3' className='mb-3'>
-            {t("overallEvaluation.depression")}
-          </Typography>
-          <Progress value={depValue} indicatorClassName={DEPRESSION_COLOR} />
+          <Typography variant='h3'>{t("overallEvaluation.depression")}</Typography>
+          <div className='flex flex-row align-middle items-center'>
+            <Progress value={depValue} indicatorClassName={DEPRESSION_COLOR} />
+            <Typography variant='lead' className='ml-8'>
+              {depValue}%
+            </Typography>
+          </div>
         </div>
       </CardContent>
     </Card>
