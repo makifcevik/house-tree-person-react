@@ -36,13 +36,7 @@
   },
   "demoPage": {
     "title": "Demo",
-    "description": "A short guideline about how to use it, what to expect as result and other details...",
-    "evaluation": {
-      "title": "Image Class",
-      "externalization": "Externalization",
-      "internalization": "Internalization",
-      "depression": "Depression"
-    }
+    "description": "A short guideline about how to use it, what to expect as result and other details..."
   },
   "psychologicalFeaturesPage": {
     "title": "Psychological Features",
@@ -109,5 +103,11 @@
       {"role": "AI?", "name": "Assoc. Prof. Elena?", "email": "elena.sonmez@bilgi.edu.tr"},
       {"role": "Psychology?", "name": "Prof. Sibel?", "email": "example@bilgi.edu.tr"}
     ]
+  },
+  "overallEvaluation": {
+      "title": "Image Class",
+      "externalization": "Externalization",
+      "internalization": "Internalization",
+      "depression": "Depression"
   }
 }
