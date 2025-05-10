@@ -22,7 +22,7 @@ const OverallResults = ({ imageClass, extValue, intValue, depValue }: Props) => 
       <CardContent className='flex flex-col gap-4 lg:mx-12'>
         <div className='mb-2 mt-4'>
           <Typography variant='h3'>{t("overallEvaluation.title")}</Typography>
-          <Typography variant='lead'>House</Typography>
+          <Typography variant='lead'>{imageClass}</Typography>
         </div>
         <div>
           <Typography variant='h3' className='mb-3'>

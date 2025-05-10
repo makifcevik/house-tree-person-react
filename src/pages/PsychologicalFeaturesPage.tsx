@@ -6,10 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/Button";
 import { Link } from "react-router-dom";
 import ROUTES from "@/routes/routes";
-import GeneralFeaturesSection from "@/components/features/GeneralFeaturesSection";
-import HouseFeaturesSection from "@/components/features/HouseFeaturesSection";
-import TreeFeaturesSection from "@/components/features/TreeFeaturesSection";
-import PersonFeaturesSection from "@/components/features/PersonFeaturesSection";
+import FeaturesTable from "@/components/features/FeaturesTable";
 
 const PsychologicalFeaturesPage = () => {
   const { t } = useTranslation();
@@ -20,10 +17,14 @@ const PsychologicalFeaturesPage = () => {
         <Typography variant='blockquote' className='mt-5'>
           {t("psychologicalFeaturesPage.description")}
         </Typography>
-        <GeneralFeaturesSection />
-        <HouseFeaturesSection />
-        <TreeFeaturesSection />
-        <PersonFeaturesSection />
+        <Section>
+          <Container>
+            <FeaturesTable type='general' className='mb-12' />
+            <FeaturesTable type='house' className='mb-12' />
+            <FeaturesTable type='tree' className='mb-12' />
+            <FeaturesTable type='person' />
+          </Container>
+        </Section>
         <div className='flex flex-col gap-5 text-center items-center justify-center mt-5 mb-20'>
           <Typography variant='h3'>{t("psychologicalFeaturesPage.CTA.text")}</Typography>
           <Button>
