@@ -1,86 +1,94 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-import PasswordInput from "../utils/PasswordInput";
-import ROUTES from "../../routes/routes";
 import { useTranslation } from "react-i18next";
-import Button from "../ui/Button";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "../ui/Button";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../ui/form";
+import { Input } from "../ui/input";
+import ROUTES from "@/routes/routes";
+
+const loginSchema = z.object({
+  email: z.string().email("Invalid email!"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+});
+
+type LoginFormData = z.infer<typeof loginSchema>;
 
 function LoginForm() {
   const { t } = useTranslation();
+
+  const form = useForm<LoginFormData>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  const onSubmit = (data: LoginFormData) => {
+    console.log(data);
+    // TODO: Add login logic
+  };
+
   return (
-    <form className='flex flex-col gap-8 text-theme-color'>
-      <h1 className='section-header-lg mt-3'>{t("loginFormText.header")}</h1>
-
-      {/* Email */}
-      <div className='flex flex-col gap-1'>
-        <label className='text-gray max-sm:text-sm' htmlFor='email'>
-          {t("loginFormText.email")}
-        </label>
-        <input
-          className='form-input'
-          id='email'
-          type='email'
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
+        {/* Email field */}
+        <FormField
+          control={form.control}
           name='email'
-          placeholder={t("loginFormText.emailPlaceholder")}
-        ></input>
-      </div>
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input placeholder='example@example.com' {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-      {/* Password */}
-      <div className='flex flex-col gap-1'>
-        <div className='flex justify-between'>
-          <label className='text-gray max-sm:text-sm' htmlFor='password'>
-            {t("loginFormText.password")}
-          </label>
-          {/* TODO: Update link to forgot passoword page later*/}
-          <Link className='underline max-sm:text-sm' to={ROUTES.SIGNUP}>
-            {t("loginFormText.forgotPassword")}
-          </Link>
-        </div>
-        <PasswordInput
-          id='password'
+        {/* Password field */}
+        <FormField
+          control={form.control}
           name='password'
-          placeholder={t("loginFormText.passwordPlaceholder")}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Password</FormLabel>
+              <FormControl>
+                <Input type='password' placeholder='••••••••' {...field}></Input>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
-      </div>
 
-      {/* Remember me */}
-      <div className='flex align-middle ml-1'>
-        <input
-          className='scale-150 mr-3'
-          id='rememberMe'
-          type='checkbox'
-          name='rememberMe'
-        />
-        <label className='max-sm:text-sm' htmlFor='rememberMe'>
-          {t("loginFormText.rememberMe")}
-        </label>
-      </div>
+        {/* Button Login */}
+        <Button type='submit' className='w-full'>
+          Login
+        </Button>
 
-      <div className='flex flex-col gap-4 text-center'>
-        {/*<BtnLogin />*/}
-        <Button className='btn-primary rounded-md py-2' label={t("btnText.login")} />
-        <span className='max-sm:text-sm'>
-          {t("loginFormText.noAccount")}
-          <Link className='underline ml-1' to={ROUTES.SIGNUP}>
-            {t("loginFormText.referToSignup")}
+        <div className='flex-grow border-t border-gray-dark'></div>
+
+        {/* Signup link */}
+        <div className='text-center text-sm'>
+          Don't have an account yet?{" "}
+          <Link to={ROUTES.SIGNUP} className='text-primary font-bold hover:underline'>
+            Sign up
           </Link>
-        </span>
-
-        <div className='flex items-center'>
-          <div className='flex-grow border-t border-gray-dark'></div>
-          <span className='px-3 text-gray-dark text-sm'>{t("loginFormText.or")}</span>
-          <div className='flex-grow border-t border-gray-dark'></div>
         </div>
-
-        {/*<BtnGoogleLogin />*/}
-        <Button
-          className='btn-secondary rounded-md py-2'
-          label={t("btnText.loginWithGoogle")}
-          icon={faGoogle}
-        />
-      </div>
-    </form>
+      </form>
+    </Form>
   );
 }
 

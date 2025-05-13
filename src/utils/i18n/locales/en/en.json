@@ -1,162 +1,113 @@
 {
-  "title": "House Tree Person",
-  "herosText": "Some text will be put here to briefly talk about the project and maybe describe some aspects of it. Vision of the project can be stated here.",
-  "navItemsText": {
-    "item1": "About",
-    "item2": "Data & Samples",
-    "item3": "Publications",
-    "item4": "Contact"
+  "language": "EN",
+  "navbar": {
+    "item1": "Home",
+    "item2": "About",
+    "item3": "Demo",
+    "item4": "Psychological Features",
+    "item5": "Sample Data",
+    "item6": "Publications & References",
+    "item7": "Contact",
+    "login": "Login"
   },
-  "btnText": {
-    "getStarted": "Get Started",
-    "login": "Login",
-    "signup": "Sign up",
-    "loginWithGoogle": "Login with Google",
-    "signupWithGoogle": "Sign up with Google"
-  },
-  "welcomePanelText": {
-    "header": "Welcome to HTP!",
-    "features": [
-      {
-        "header": "Image Classification",
-        "text": "The AI model is trained on pairs of HTP drawings with a comprehensive data detailing various classifications."
-      },
-      {
-        "header": "General Classification",
-        "text": "Pressure, interrupted lines, chaotic lines, curved lines, size, location, detail, duplicated figures, disproportionate figures, repeatedly erased figures, rotated figures, shaded figures."
-      },
-      {
-        "header": "Specific Classifications",
-        "text": "Sketches have specific attributes depending on their classifications: House, Person and Tree."
-      }
-    ]
-  },
-  "loginFormText": {
-    "header": "Sign in",
-    "email": "Email",
-    "emailPlaceholder": "example@example.com",
-    "password": "Password",
-    "passwordPlaceholder": "Enter your password",
-    "forgotPassword": "Forgot password?",
-    "rememberMe": "Remember me",
-    "noAccount": "Don't have an account?",
-    "referToSignup": "Sign up",
-    "or": "or"
-  },
-  "signupFormText": {
-    "header": "Sign up",
-    "email": "Email",
-    "emailPlaceholder": "example@example.com",
-    "password": "Password",
-    "passwordPlaceholder": "Enter your password",
-    "passwordAgain": "Password again",
-    "passwordAgainPlaceholder": "Your password again",
-    "rememberMe": "Remember me",
-    "hasAccount": "Already have an account?",
-    "referToLogin": "Sign in",
-    "or": "or"
-  },
-  "problemSectionText": {
-    "header": "The Challenge in Modern Psychology",
-    "oneLiner": "Professionals face increasing challenges in handling complex cases, analyzing data, and making accurate assessments.",
-    "problems": [
-      {
-        "icon": "📊",
-        "header": "Data Overload",
-        "text": "Manually analyzing large volumes of patient data is time-consuming."
-      },
-      {
-        "icon": "🧠",
-        "header": "Subjectivity in Diagnosis",
-        "text": "Psychological assessments depend heavily on individual interpretation."
-      },
-      {
-        "icon": "🕒",
-        "header": "Time Constraints",
-        "text": "Experts struggle to dedicate enough time to each case due to high demand."
-      },
-      {
-        "icon": "🔍",
-        "header": "Lack of AI-Assisted Insights",
-        "text": "Current tools do not provide deep, data-driven analysis."
-      }
-    ]
-  },
-  "solutionSectionText": {
-    "header": "The Future of Psychological Expertise",
-    "intro": "What if psychology experts had an intelligent assistant that helps analyze patterns, reduce workload, and provide data-driven insights? That’s exactly what our AI model does!",
-    "benefits": [
-      {
-        "icon": "🚀",
-        "header": "Smart Data Analysis",
-        "text": "Our AI processes large amounts of psychological data in seconds."
-      },
-      {
-        "icon": "🧠",
-        "header": "Objective Insights",
-        "text": "Reduce human bias with AI-supported evaluations."
-      },
-      {
-        "icon": "⏳",
-        "header": "Time Efficiency",
-        "text": "Spend more time on patients, less on manual work."
-      },
-      {
-        "icon": "📊",
-        "header": "Predictive Capabilities",
-        "text": "Get trend predictions for better decision-making."
-      }
-    ]
-  },
-  "dragDropText": "Click or drag an image here",
-  "removeImage": "Remove",
-  "QuickDemoSectionText": {
-    "header": "How It Works",
-    "steps": {
-      "step1": {
-        "header": "Upload HTP Image",
-        "text": "Securely input patient records or test results."
-      },
-      "step2": {
-        "header": "HTP Classifier",
-        "text": "The model scans patterns and provides structured insights."
-      },
-      "step3": {
-        "header": "Feature Extraction",
-        "text": "Psychologists refine and validate AI-generated insights."
-      },
-      "step4": {
-        "header": "Final Decision",
-        "text": "Combined AI + human expertise leads to better outcomes."
-      }
+  "homePage": {
+    "title": "House Tree Person (HTP)",
+    "oneLiner": "A picture is worth 1000 words. This Website analyzes HTP drawings of school-age children, to identify hidden signs of distress—supporting clinicians to assess depression, anxiety, and aggression behavior.",
+    "defineHTP": {
+      "title": "What Are HTP Drawings?",
+      "description": "We can, very briefly, define what HTP images are and how they are utilized. Like, as a very short paragraph."
+    },
+    "definePsychologicalFeatures": {
+      "title": "What Are Psychological Features?",
+      "description": "We can, very briefly, define what psychological features are and how they are utilized. Like, as a very short paragraph."
     }
   },
-  "featureSectionText": {
-    "header": "AI-Powered Insights",
-    "Intro": "Modern psychological assessments demand precision, speed, and objectivity. Our AI-driven solution enhances expert decision-making by analyzing patterns, reducing workload, and providing intelligent insights.",
-    "features": [
-      {
-        "header": "🔍 Advanced Pattern Recognition",
-        "text": "Automatically identifies psychological patterns in patient data, reducing analysis time from hours to seconds."
-      },
-      {
-        "header": "🧠 Bias-Free Evaluations",
-        "text": "Minimizes subjective interpretation by providing AI-supported, data-driven insights for expert validation."
-      },
-      {
-        "header": "⏳ Time-Saving Automation",
-        "text": "Automates repetitive tasks, allowing professionals to focus on patient care rather than manual data analysis."
-      },
-      {
-        "header": "📊 Predictive Analytics for Better Outcomes",
-        "text": "Utilizes historical data and AI models to predict trends, helping experts make more informed decisions."
-      },
-      {
-        "header": "🔒 Secure & Confidential Processing",
-        "text": "Ensures strict data privacy and compliance with medical standards while handling sensitive patient records."
-      }
-    ],
-    "CTA": "Want to see how it works?"
+  "aboutPage": {
+    "title": "About House Tree Person (HTP)",
+    "paragraphs": [
+      "The House-Tree-Person (Buck, 1948) is a projective test developed by John Buck (1948) and Emanuel Hammer (1958). The test is extensively used in different contexts to assess personality related issues. The test is very useful in clinical settings because it takes very little time to complete (5 to 10 minutes) and is easy to administer to a wide range of patients across all age spans (age 3 onwards). It is found to be especially helpful with shy, inhibited or nonverbal children who have difficulty expressing their internal worlds via verbal means.",
+      "However, to date, there is not a pragmatic assessment protocol accepted by the entire research community to evaluate the HTP test. That is, while is generally accepted the idea that a selection of emotional indicators extracted from the pictures could differentiate patients with or without emotional problems, research in the psychological field is still inconclusive regarding the best set of indicators, which better correlates to emotional difficulties. This work focuses on emotional markers in HTP drawings for depressive, aggressive, or/and anxious problems of children and proposes an interdisciplinary approach to tackle this issue.",
+      "This Website is supported by a Tubitak 3005 project, which aims to use Computer Vision (CV), Machine Learning (ML), Deep Learning (DL) and Large Language Models (LLM) techniques to automatically extract the critical emotional indicators from the HTP drawings. Subsequently, Artificial Intelligence (AI) methods will search for the most discriminant combination of those emotional traits.",
+      "The final aim of the project is to develop a tool to detect the best combination of emotional indicators in the drawings to support the overall diagnostic assessments. That is, the aim is not to make definitive diagnoses based on the drawings but to alert clinicians to certain patterns of emotional indicators that would warrant further assessment and testing.",
+      "More in detail, this project focuses on school-age children who have presented with internalizing (e.g., anxiety and depression) and externalizing (e.g., aggression) problems, and it attempts to determine the associations between drawing features and problem types, i.e. to find out the best combination of drawing features to assess the patient’s emotional problems nonverbally.",
+      "Overall, this project belongs to the intersection area between psychology and computer engineering.",
+      "A deeper introduction to the HTP test together with a demo is at the next page."
+    ]
   },
-  "language": "EN"
+  "demoPage": {
+    "title": "Demo",
+    "description": "A short guideline about how to use it, what to expect as result and other details..."
+  },
+  "psychologicalFeaturesPage": {
+    "title": "Psychological Features",
+    "description": "A short description about what they are and how/why they are used...",
+    "CTA": {
+      "text": "Want to see real examples on sample data images?",
+      "buttonText": "See Sample Data"
+    }
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "contactInfo": "We can have some basic guidelines here? Or some other text related to contact?",
+    "contactList": [
+      {"role": "AI?", "name": "Assoc. Prof. Elena?", "email": "elena.sonmez@bilgi.edu.tr"},
+      {"role": "Psychology?", "name": "Prof. Sibel?", "email": "example@bilgi.edu.tr"}
+    ]
+  },
+  "overallEvaluation": {
+      "title": "Image Class",
+      "externalization": "Externalization",
+      "internalization": "Internalization",
+      "depression": "Depression"
+  },
+  "featuresTable": {
+      "general" : {
+        "title": "General Features",
+        "description": "A short description about what they are and how/why they are used...", 
+        "features": [
+          {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
+        ],
+        "caption": "Table of general psychological features"
+      },
+      "house" : {
+        "title": "House Features",
+        "description": "A short description about what they are and how/why they are used...", 
+        "features": [
+          {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
+        ],
+        "caption": "Table of house features" 
+      },
+      "tree" : {
+        "title": "Tree Features",
+        "description": "A short description about what they are and how/why they are used...", 
+        "features": [
+          {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
+        ],
+        "caption": "Table of tree features" 
+      },
+      "person" : {
+        "title": "Person Features",
+        "description": "A short description about what they are and how/why they are used...", 
+        "features": [
+          {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
+          {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
+        ],
+        "caption": "Table of person features" 
+      }
+    }
 }

@@ -1,11 +1,11 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./index.css";
 import App from "./App.tsx";
 import "@fontsource/poppins";
 import "@fontsource/roboto";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useLocation } from "react-router-dom";
 import "./utils/i18n/index.ts";
 
 const queryClient = new QueryClient({
@@ -18,12 +18,23 @@ const queryClient = new QueryClient({
   },
 });
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const rootElement = document.getElementById("root") as HTMLElement;
 
 createRoot(rootElement).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
+        <ScrollToTop />
         <App />
       </BrowserRouter>
     </QueryClientProvider>

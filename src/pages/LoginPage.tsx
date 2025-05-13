@@ -1,19 +1,24 @@
 import React from "react";
-import FormWrapper from "../components/forms/FormWrapper";
 import LoginForm from "../components/forms/LoginForm";
-import Navbar from "../components/Navbar";
-import WelcomePanel from "../components/WelcomePanel";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
+import { Typography } from "@/components/ui/Typography";
+import { Card, CardContent } from "@/components/ui/Card";
 
 function LoginPage() {
   return (
-    <div>
-      <div className='flex flex-col lg:flex-row justify-center items-center gap-20'>
-        <FormWrapper>
-          <LoginForm />
-        </FormWrapper>
-        <WelcomePanel className='order-last lg:order-first' />
-      </div>
-    </div>
+    <Section spacing='xl'>
+      <Container className='max-w-[400px]'>
+        <Card>
+          <CardContent>
+            <Typography variant='h1' className='mt-2 mb-16'>
+              Login
+            </Typography>
+            <LoginForm />
+          </CardContent>
+        </Card>
+      </Container>
+    </Section>
   );
 }
 
