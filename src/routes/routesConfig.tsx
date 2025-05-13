@@ -30,8 +30,8 @@ const routesConfig = [
       { path: ROUTES.PSYCHOLOGICAL_FEATURES, element: <PsychologicalFeaturesPage /> },
       { path: ROUTES.SAMPLE_DATA, element: <SampleDataPage /> },
       { path: ROUTES.CONTACT, element: <ContactPage /> },
-      // { path: ROUTES.USERS, element: <UsersTest /> },
-      // { path: ROUTES.USER_PROFILE, element: <UserProfileTest /> },
+      { path: ROUTES.USERS, element: <UsersTest /> },
+      { path: ROUTES.USER_PROFILE, element: <UserProfileTest /> },
     ],
   },
 ];
