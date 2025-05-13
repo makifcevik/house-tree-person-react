@@ -12,13 +12,16 @@ import ROUTES from "./routes";
 import ContactPage from "@/pages/ContactPage";
 import PsychologicalFeaturesPage from "@/pages/PsychologicalFeaturesPage";
 import SampleDataPage from "@/pages/SampleDataPage";
+import path from "path";
+import NotFoundPage from "@/pages/NotFoundPage";
+import { Navigate } from "react-router-dom";
 
 const routesConfig = [
   {
     path: "/",
     element: <Layout />,
     children: [
-      { path: ROUTES.HOME, element: <HomePage /> },
+      { index: true, path: ROUTES.HOME, element: <HomePage /> },
       { path: ROUTES.ABOUT, element: <AboutPage /> },
       { path: ROUTES.DEMO, element: <DemoPage /> },
       { path: ROUTES.SIGNUP, element: <SignupPage /> },
@@ -32,6 +35,8 @@ const routesConfig = [
       { path: ROUTES.CONTACT, element: <ContactPage /> },
       { path: ROUTES.USERS, element: <UsersTest /> },
       { path: ROUTES.USER_PROFILE, element: <UserProfileTest /> },
+      { path: "/404", element: <NotFoundPage /> },
+      { path: "*", element: <Navigate to='/404' replace /> },
     ],
   },
 ];
