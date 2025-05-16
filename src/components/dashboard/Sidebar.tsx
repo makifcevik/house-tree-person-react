@@ -21,7 +21,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen }) => {
   const navigate = useNavigate();
   return (
     <nav
-      className='dark:bg-input/20 border-r-2 flex flex-col transition-width duration-300 ease-in-out py-6 px-4 fixed h-screen -z-10'
+      className='dark:bg-input/20 border-r-2 flex flex-col transition-width duration-300 ease-in-out py-6 px-4 fixed h-screen'
       style={{ width: isSidebarOpen ? 240 : 0 }}
     >
       {isSidebarOpen && (
