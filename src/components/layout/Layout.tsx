@@ -4,9 +4,9 @@ import Navbar from "../Navbar";
 
 const Layout = () => {
   return (
-    <div className='relative flex flex-col page-default page-default-colors'>
+    <div>
       <Navbar />
-      <div className='overflow-auto'>
+      <div>
         <Outlet />
       </div>
     </div>
