@@ -2,7 +2,6 @@ import {
   faHome,
   faUserAlt,
   faCog,
-  faBars,
   faChartBar,
   faDatabase,
   faUsers,
@@ -16,15 +15,14 @@ import ROUTES from "@/routes/routes";
 
 interface SidebarProps {
   isSidebarOpen: boolean;
-  toggleSidebar: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen }) => {
   const navigate = useNavigate();
   return (
     <nav
-      className='dark:bg-input/20 border-r-2 flex flex-col transition-width duration-300 ease-in-out py-6 px-4'
-      style={{ width: isSidebarOpen ? 240 : 0 }} // wider when open, narrow when closed
+      className='dark:bg-input/20 border-r-2 flex flex-col transition-width duration-300 ease-in-out py-6 px-4 fixed h-screen -z-10'
+      style={{ width: isSidebarOpen ? 240 : 0 }}
     >
       {isSidebarOpen && (
         <div className='flex flex-col space-y-2 '>
