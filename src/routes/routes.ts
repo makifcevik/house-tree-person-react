@@ -10,6 +10,7 @@ const ROUTES = {
   CONTACT: "/contact",
   USERS: "/users",
   USER_PROFILE: "/users/:id",
+  ADMIN_DASHBOARD: "/admin_dashboard",
 };
 
 const PATHS = {

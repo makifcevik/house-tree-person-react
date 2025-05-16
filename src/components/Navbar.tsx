@@ -4,6 +4,8 @@ import ROUTES from "../routes/routes";
 import BtnLanguageToggler from "./buttons/BtnLanguageToggler";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWrench } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -51,6 +53,11 @@ function Navbar() {
           <Link to={ROUTES.LOGIN}>Login</Link>
         </Button>
         <BtnThemeToggler />
+        <Button variant='outline' asChild>
+          <Link to={ROUTES.ADMIN_DASHBOARD}>
+            <FontAwesomeIcon icon={faWrench} />
+          </Link>
+        </Button>
         <BtnLanguageToggler />
       </div>
     </nav>

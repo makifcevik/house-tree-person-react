@@ -15,6 +15,7 @@ import SampleDataPage from "@/pages/SampleDataPage";
 import path from "path";
 import NotFoundPage from "@/pages/NotFoundPage";
 import { Navigate } from "react-router-dom";
+import AdminDashboard from "@/pages/AdminDashboard";
 
 const routesConfig = [
   {
@@ -39,6 +40,7 @@ const routesConfig = [
       { path: "*", element: <Navigate to='/404' replace /> },
     ],
   },
+  { path: ROUTES.ADMIN_DASHBOARD, element: <AdminDashboard /> },
 ];
 
 export default routesConfig;
