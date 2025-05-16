@@ -26,7 +26,7 @@ const SidebarDropdown = ({ icon, label, children, defaultOpen = true }: Props) =
           <FontAwesomeIcon icon={icon} />
           <Typography variant='p'>{label}</Typography>
         </div>
-        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+        <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
       </div>
 
       {isOpen && <ul className='pl-6 transition-all'>{children}</ul>}
