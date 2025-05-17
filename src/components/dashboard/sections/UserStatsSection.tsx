@@ -1,6 +1,6 @@
 import React from "react";
 import { InteractiveVerticalBarChart } from "../charts/InteractiveVerticalBarChart";
-import { chartData1, chartData2, chartDataDayByDay } from "@/constants/data";
+import { chartData1, chartData2, visitAndRegisterDataDayByDay } from "@/constants/data";
 import { RadialChart } from "../charts/RadialChart";
 import { HorizontalBarChart } from "../charts/HorizontalBarChart";
 
@@ -28,22 +28,22 @@ const UserStatsSection = () => {
         description='January, June 2025'
         data={chartData2}
         dataKey='value'
-        trend={{ value: "100%", direction: "up" }}
+        trend={{ value: "50%", direction: "down" }}
         footerText='Showing total registeries for the last 6 months'
       />
       <RadialChart
         title='User Registeries'
         description='Last 6 Months'
-        label='Downloads'
+        label='Registeries'
         data={[{ value: 298 }]}
-        trend={{ value: "100%", direction: "up" }}
+        trend={{ value: "50%", direction: "down" }}
         footerText='Showing total registeries for the last 6 months'
       />
       <div className='lg:col-span-2 col-span-1'>
         <InteractiveVerticalBarChart
           title='Website Traffic'
           description='Last 3 Months of Visitor Data'
-          data={chartDataDayByDay}
+          data={visitAndRegisterDataDayByDay}
           dataKeys={[
             { key: "visits", label: "Visits", color: "hsl(var(--chart-1))" },
             {

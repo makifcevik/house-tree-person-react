@@ -3,18 +3,19 @@ import Sidebar from "@/components/dashboard/sidebar/Sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTable } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/Button";
-import { Typography } from "@/components/ui/Typography";
 import BtnThemeToggler from "@/components/buttons/BtnThemeToggler";
 import BtnLanguageToggler from "@/components/buttons/BtnLanguageToggler";
-import { HorizontalBarChart } from "@/components/dashboard/charts/HorizontalBarChart";
-import { RadialChart } from "@/components/dashboard/charts/RadialChart";
-import { InteractiveVerticalBarChart } from "@/components/dashboard/charts/InteractiveVerticalBarChart";
-import { chartData1, chartData2, chartDataDayByDay } from "@/constants/data";
 import UserStatsSection from "@/components/dashboard/sections/UserStatsSection";
+import DatabaseStatsSection from "@/components/dashboard/sections/DatabaseStatsSection";
+
+type DashboardSection = "userStats" | "databaseStats";
 
 const AdminDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [activeSection, setActiveSection] = useState<DashboardSection | null>(
+    "userStats"
+  );
 
   const toggleSidebarOnResize = () => {
     const newWidth = window.innerWidth;
@@ -39,7 +40,7 @@ const AdminDashboard = () => {
 
   return (
     <div className='flex'>
-      <Sidebar isSidebarOpen={isSidebarOpen} />
+      <Sidebar isSidebarOpen={isSidebarOpen} setActiveSection={setActiveSection} />
 
       {/* Main content area with margin to account for sidebar */}
       <div
@@ -60,7 +61,8 @@ const AdminDashboard = () => {
         </div>
 
         <main>
-          <UserStatsSection />
+          {activeSection === "userStats" && <UserStatsSection />}
+          {activeSection === "databaseStats" && <DatabaseStatsSection />}
         </main>
       </div>
     </div>

@@ -15,9 +15,10 @@ import ROUTES from "@/routes/routes";
 
 interface SidebarProps {
   isSidebarOpen: boolean;
+  setActiveSection: any;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, setActiveSection }) => {
   const navigate = useNavigate();
   return (
     <nav
@@ -37,8 +38,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen }) => {
             />
           </div>
           <SidebarDropdown icon={faChartBar} label='Statistics'>
-            <SidebarSubItem icon={faUserAlt} label='User' />
-            <SidebarSubItem icon={faDatabase} label='Database' />
+            <SidebarSubItem
+              icon={faUserAlt}
+              label='User'
+              onClick={() => setActiveSection("userStats")}
+            />
+            <SidebarSubItem
+              icon={faDatabase}
+              label='Database'
+              onClick={() => setActiveSection("databaseStats")}
+            />
           </SidebarDropdown>
           <SidebarDropdown icon={faCog} label='Manage'>
             <SidebarSubItem icon={faUsers} label='Users' />
