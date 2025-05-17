@@ -7,7 +7,7 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import SidebarItem from "./SidebarItem";
-import { Typography } from "../ui/Typography";
+import { Typography } from "../../ui/Typography";
 import SidebarDropdown from "./SidebarDropdown";
 import SidebarSubItem from "./SidebarSubItem";
 import { useNavigate } from "react-router-dom";

@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { Typography } from "../ui/Typography";
+import { Typography } from "../../ui/Typography";
 
 interface Props {
   icon: IconDefinition;
@@ -9,10 +9,10 @@ interface Props {
   onClick?: () => void;
 }
 
-const SidebarItem = ({ icon, label, onClick }: Props) => {
+const SidebarSubItem = ({ icon, label, onClick }: Props) => {
   return (
     <li
-      className='flex items-center gap-4 px-3 py-2 hover:bg-accent cursor-pointer rounded-2xl'
+      className='py-2 px-3 flex items-center gap-2 hover:bg-accent cursor-pointer rounded-2xl'
       onClick={onClick}
     >
       <FontAwesomeIcon icon={icon} />
@@ -21,4 +21,4 @@ const SidebarItem = ({ icon, label, onClick }: Props) => {
   );
 };
 
-export default SidebarItem;
+export default SidebarSubItem;

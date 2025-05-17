@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontawesomeObject, IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { Typography } from "../ui/Typography";
+import { Typography } from "../../ui/Typography";
 
 interface Props {
   icon: IconDefinition;
