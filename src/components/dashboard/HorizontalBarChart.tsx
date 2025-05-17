@@ -17,21 +17,28 @@ import {
 } from "@/components/ui/chart";
 
 interface Props {
-  label: string;
   title: string;
   description?: string;
   data: any;
   dataKey: string;
+  trend?: {
+    value: string;
+    direction: "up" | "down";
+  };
+  footerText?: string;
 }
 
-export function HorizontalBarChart({ label, title, description, data, dataKey }: Props) {
+export function HorizontalBarChart({
+  title,
+  description,
+  data,
+  dataKey,
+  trend,
+  footerText,
+}: Props) {
   const chartConfig = {
-    desktop: {
-      label: label,
+    bar: {
       color: "hsl(var(--chart-1))",
-    },
-    label: {
-      color: "hsl(var(--background))",
     },
   } satisfies ChartConfig;
 
@@ -66,12 +73,7 @@ export function HorizontalBarChart({ label, title, description, data, dataKey }:
               cursor={false}
               content={<ChartTooltipContent indicator='line' />}
             />
-            <Bar
-              dataKey={dataKey}
-              layout='vertical'
-              fill='var(--color-desktop)'
-              radius={4}
-            >
+            <Bar dataKey={dataKey} layout='vertical' fill='var(--color-bar)' radius={4}>
               <LabelList
                 dataKey='month'
                 position='insideLeft'
@@ -91,12 +93,23 @@ export function HorizontalBarChart({ label, title, description, data, dataKey }:
         </ChartContainer>
       </CardContent>
       <CardFooter className='flex-col items-start gap-2 text-sm'>
-        <div className='flex gap-2 font-medium leading-none'>
-          Trending up by 5.2% this month <TrendingUp className='h-4 w-4' />
-        </div>
-        <div className='leading-none text-muted-foreground'>
-          Showing total visitors for the last 6 months
-        </div>
+        {trend && (
+          <div className='flex items-center gap-2 font-medium leading-none'>
+            {trend.direction === "up" ? (
+              <>
+                Trending up by {trend.value} <TrendingUp className='h-4 w-4' />
+              </>
+            ) : (
+              <>
+                Trending down by {trend.value}
+                <TrendingUp className='h-4 w-4 transform rotate-180' />
+              </>
+            )}
+          </div>
+        )}
+        {footerText && (
+          <div className='leading-none text-muted-foreground'>{footerText}</div>
+        )}
       </CardFooter>
     </Card>
   );

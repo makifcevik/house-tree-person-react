@@ -62,20 +62,36 @@ const AdminDashboard = () => {
           <div className='grid grid-cols-1 lg:grid-cols-2 xl:gap-x-8 gap-x-2 gap-y-5 my-8 mx-10'>
             <HorizontalBarChart
               title='User Visits'
-              label='User Count'
               description='January, June 2025'
               data={chartData1}
-              dataKey='amount'
+              dataKey='value'
+              trend={{ value: "2.4%", direction: "up" }}
+              footerText='Showing total visits for the last 6 months'
             />
-            <RadialChart />
+            <RadialChart
+              title='Total Visits'
+              description='Last 6 Months'
+              label='Visits'
+              data={[{ value: 1224 }]}
+              trend={{ value: "2.4%", direction: "up" }}
+              footerText='Showing total visits for the last 6 months'
+            />
             <HorizontalBarChart
-              title='User Registiries'
-              label='User Count'
+              title='User Registeries'
               description='January, June 2025'
               data={chartData2}
-              dataKey='amount'
+              dataKey='value'
+              trend={{ value: "100%", direction: "up" }}
+              footerText='Showing total registeries for the last 6 months'
             />
-            <RadialChart />
+            <RadialChart
+              title='User Registeries'
+              description='Last 6 Months'
+              label='Downloads'
+              data={[{ value: 298 }]}
+              trend={{ value: "100%", direction: "up" }}
+              footerText='Showing total registeries for the last 6 months'
+            />
             <div className='lg:col-span-2 col-span-1'>
               <InteractiveVerticalBarChart />
             </div>
