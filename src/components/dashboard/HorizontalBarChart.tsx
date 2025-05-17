@@ -15,41 +15,37 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-];
 
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
-  label: {
-    color: "hsl(var(--background))",
-  },
-} satisfies ChartConfig;
+interface Props {
+  label: string;
+  title: string;
+  description?: string;
+  data: any;
+  dataKey: string;
+}
 
-export function HorizontalBarChart() {
+export function HorizontalBarChart({ label, title, description, data, dataKey }: Props) {
+  const chartConfig = {
+    desktop: {
+      label: label,
+      color: "hsl(var(--chart-1))",
+    },
+    label: {
+      color: "hsl(var(--background))",
+    },
+  } satisfies ChartConfig;
+
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Bar Chart - Custom Label</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
           <BarChart
             accessibilityLayer
-            data={chartData}
+            data={data}
             layout='vertical'
             margin={{
               right: 16,
@@ -65,13 +61,13 @@ export function HorizontalBarChart() {
               tickFormatter={(value) => value.slice(0, 3)}
               hide
             />
-            <XAxis dataKey='desktop' type='number' hide />
+            <XAxis dataKey={dataKey} type='number' hide />
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent indicator='line' />}
             />
             <Bar
-              dataKey='desktop'
+              dataKey={dataKey}
               layout='vertical'
               fill='var(--color-desktop)'
               radius={4}
@@ -84,7 +80,7 @@ export function HorizontalBarChart() {
                 fontSize={12}
               />
               <LabelList
-                dataKey='desktop'
+                dataKey={dataKey}
                 position='right'
                 offset={8}
                 className='fill-foreground'

@@ -9,6 +9,7 @@ import BtnLanguageToggler from "@/components/buttons/BtnLanguageToggler";
 import { HorizontalBarChart } from "@/components/dashboard/HorizontalBarChart";
 import { RadialChart } from "@/components/dashboard/RadialChart";
 import { InteractiveVerticalBarChart } from "@/components/dashboard/InteractiveVerticalBarChart";
+import { chartData1, chartData2 } from "@/constants/data";
 
 const AdminDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -59,9 +60,21 @@ const AdminDashboard = () => {
 
         <main className='flex flex-col'>
           <div className='grid grid-cols-1 lg:grid-cols-2 xl:gap-x-8 gap-x-2 gap-y-5 my-8 mx-10'>
-            <HorizontalBarChart />
+            <HorizontalBarChart
+              title='User Visits'
+              label='User Count'
+              description='January, June 2025'
+              data={chartData1}
+              dataKey='amount'
+            />
             <RadialChart />
-            <HorizontalBarChart />
+            <HorizontalBarChart
+              title='User Registiries'
+              label='User Count'
+              description='January, June 2025'
+              data={chartData2}
+              dataKey='amount'
+            />
             <RadialChart />
             <div className='lg:col-span-2 col-span-1'>
               <InteractiveVerticalBarChart />
