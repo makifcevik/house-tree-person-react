@@ -9,7 +9,7 @@ import BtnLanguageToggler from "@/components/buttons/BtnLanguageToggler";
 import { HorizontalBarChart } from "@/components/dashboard/HorizontalBarChart";
 import { RadialChart } from "@/components/dashboard/RadialChart";
 import { InteractiveVerticalBarChart } from "@/components/dashboard/InteractiveVerticalBarChart";
-import { chartData1, chartData2 } from "@/constants/data";
+import { chartData1, chartData2, chartDataDayByDay } from "@/constants/data";
 
 const AdminDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -93,7 +93,20 @@ const AdminDashboard = () => {
               footerText='Showing total registeries for the last 6 months'
             />
             <div className='lg:col-span-2 col-span-1'>
-              <InteractiveVerticalBarChart />
+              <InteractiveVerticalBarChart
+                title='Website Traffic'
+                description='Last 3 Months of Visitor Data'
+                data={chartDataDayByDay}
+                dataKeys={[
+                  { key: "visits", label: "Visits", color: "hsl(var(--chart-1))" },
+                  {
+                    key: "registeries",
+                    label: "Registeries",
+                    color: "hsl(var(--chart-2))",
+                  },
+                ]}
+                dateKey='date'
+              />
             </div>
           </div>
         </main>
