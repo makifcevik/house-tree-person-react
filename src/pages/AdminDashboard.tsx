@@ -7,13 +7,12 @@ import BtnThemeToggler from "@/components/buttons/BtnThemeToggler";
 import BtnLanguageToggler from "@/components/buttons/BtnLanguageToggler";
 import UserStatsSection from "@/components/dashboard/sections/UserStatsSection";
 import DatabaseStatsSection from "@/components/dashboard/sections/DatabaseStatsSection";
-
-type DashboardSection = "userStats" | "databaseStats";
+import { DashboardSectionType } from "@/types";
 
 const AdminDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [activeSection, setActiveSection] = useState<DashboardSection | null>(
+  const [activeSection, setActiveSection] = useState<DashboardSectionType | null>(
     "userStats"
   );
 
@@ -40,7 +39,11 @@ const AdminDashboard = () => {
 
   return (
     <div className='flex'>
-      <Sidebar isSidebarOpen={isSidebarOpen} setActiveSection={setActiveSection} />
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
 
       {/* Main content area with margin to account for sidebar */}
       <div

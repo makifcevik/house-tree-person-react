@@ -12,13 +12,19 @@ import SidebarDropdown from "./SidebarDropdown";
 import SidebarSubItem from "./SidebarSubItem";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "@/routes/routes";
+import { DashboardSectionType } from "@/types";
 
 interface SidebarProps {
   isSidebarOpen: boolean;
+  activeSection: DashboardSectionType | null;
   setActiveSection: any;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, setActiveSection }) => {
+const Sidebar: React.FC<SidebarProps> = ({
+  isSidebarOpen,
+  activeSection,
+  setActiveSection,
+}) => {
   const navigate = useNavigate();
   return (
     <nav
@@ -41,11 +47,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, setActiveSection }) =>
             <SidebarSubItem
               icon={faUserAlt}
               label='User'
+              isActive={activeSection === "userStats"}
               onClick={() => setActiveSection("userStats")}
             />
             <SidebarSubItem
               icon={faDatabase}
               label='Database'
+              isActive={activeSection === "databaseStats"}
               onClick={() => setActiveSection("databaseStats")}
             />
           </SidebarDropdown>
