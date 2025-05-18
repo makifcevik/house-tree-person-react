@@ -17,7 +17,7 @@ import { DashboardSectionType } from "@/types";
 interface SidebarProps {
   isSidebarOpen: boolean;
   activeSection: DashboardSectionType | null;
-  setActiveSection: any;
+  setActiveSection: React.Dispatch<React.SetStateAction<DashboardSectionType | null>>;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
@@ -58,8 +58,18 @@ const Sidebar: React.FC<SidebarProps> = ({
             />
           </SidebarDropdown>
           <SidebarDropdown icon={faCog} label='Manage'>
-            <SidebarSubItem icon={faUsers} label='Users' />
-            <SidebarSubItem icon={faDatabase} label='Database' />
+            <SidebarSubItem
+              icon={faUsers}
+              label='Users'
+              isActive={activeSection === "manageUsers"}
+              onClick={() => setActiveSection("manageUsers")}
+            />
+            <SidebarSubItem
+              icon={faDatabase}
+              label='Database'
+              isActive={activeSection === "manageDatabase"}
+              onClick={() => setActiveSection("manageDatabase")}
+            />
           </SidebarDropdown>
         </div>
       )}

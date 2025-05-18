@@ -8,6 +8,8 @@ import BtnLanguageToggler from "@/components/buttons/BtnLanguageToggler";
 import UserStatsSection from "@/components/dashboard/sections/UserStatsSection";
 import DatabaseStatsSection from "@/components/dashboard/sections/DatabaseStatsSection";
 import { DashboardSectionType } from "@/types";
+import ManageUsersSection from "@/components/dashboard/sections/ManageUsersSection";
+import ManageDatabaseSection from "@/components/dashboard/sections/ManageDatabaseSection";
 
 const AdminDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -66,6 +68,8 @@ const AdminDashboard = () => {
         <main>
           {activeSection === "userStats" && <UserStatsSection />}
           {activeSection === "databaseStats" && <DatabaseStatsSection />}
+          {activeSection === "manageUsers" && <ManageUsersSection />}
+          {activeSection === "manageDatabase" && <ManageDatabaseSection />}
         </main>
       </div>
     </div>
