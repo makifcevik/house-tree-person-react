@@ -3,7 +3,7 @@ import OverallResults from "@/components/OverallResults";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Typography } from "@/components/ui/Typography";
-import { placeHolderHouseImg } from "@/utils";
+import { Img_Person_M_BMY_0051_132018 } from "@/utils";
 import React from "react";
 
 const EXTERNALIZATION_VALUE = 92;
@@ -33,7 +33,10 @@ const SampleDataPage = () => {
           Results of the evaluation of the sample data image will be shown on this page.
         </Typography>
         <div className='flex md:flex-row flex-col gap-5'>
-          <img src={placeHolderHouseImg} className='max-h-[360px] w-auto rounded-3xl' />
+          <img
+            src={Img_Person_M_BMY_0051_132018}
+            className='max-h-[360px] w-auto rounded-3xl'
+          />
           <OverallResults
             imageClass={IMAGE_CLASS}
             extValue={EXTERNALIZATION_VALUE}

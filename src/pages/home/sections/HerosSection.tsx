@@ -2,9 +2,11 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { TypewriterText } from "@/components/ui/TypewriterText";
 import { Typography } from "@/components/ui/Typography";
-import { placeHolderHouseImg } from "@/utils";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  Img_House_TO_0021_122016,
+  Img_Person_M_TO_0022_122016,
+  Img_Tree_TO_0019_122016,
+} from "@/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useTranslation } from "react-i18next";
@@ -33,21 +35,24 @@ function HerosSection() {
       </Typography>
       <Container className='grid grid-cols-3 max-md:hidden gap-5 mt-10'>
         <img
-          src={placeHolderHouseImg}
+          src={Img_House_TO_0021_122016}
           alt='house image'
-          className='anim h-full w-full rounded-lg dark:brightness-90'
+          className='anim h-[360px] w-[360px] rounded-lg dark:brightness-90'
         />
         <img
-          src={placeHolderHouseImg}
+          src={Img_Tree_TO_0019_122016}
           alt='house image'
-          className='anim h-full w-full rounded-lg dark:brightness-90'
+          className='anim h-[360px] w-[360px] rounded-lg dark:brightness-90'
         />
         <img
-          src={placeHolderHouseImg}
+          src={Img_Person_M_TO_0022_122016}
           alt='house image'
-          className='anim h-full w-full rounded-lg dark:brightness-90'
+          className='anim h-[360px] w-[360px] rounded-lg dark:brightness-90'
         />
       </Container>
+      <Typography variant='muted' className='max-md:hidden mt-3'>
+        {t("homePage.noiseWarning")}
+      </Typography>
       {/*
       <FontAwesomeIcon
         icon={faChevronDown}

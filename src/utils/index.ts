@@ -1,3 +1,21 @@
 import placeHolderHouse from "/assets/PlaceHolderHouse.jpg";
+import noisy_0001_102016_EY_Tree from "/assets/htp/noisy_0001_102016_EY_Tree.png";
+import noisy_0016_112019_AA_House from "/assets/htp/noisy_0016_112019_AA_House.png";
+import noisy_0019_122016_TO_Tree from "/assets/htp/noisy_0019_122016_TO_Tree.png";
+import noisy_0021_122016_TO_House from "/assets/htp/noisy_0021_122016_TO_House.png";
+import noisy_0022_122016_TO_Person_M from "/assets/htp/noisy_0022_122016_TO_Person_M.png";
+import noisy_0033_122018_AST_Person_F from "/assets/htp/noisy_0033_122018_AST_Person_F.png";
+import noisy_0051_132018_BMY_Person_M from "/assets/htp/noisy_0051_132018_BMY_Person_M.png";
+import noisy_0088_152019_CEO_House from "/assets/htp/noisy_0088_152019_CEO_House.png";
+import noisy_0174_201803_SD_Tree from "/assets/htp/noisy_0174_201803_SD_Tree.png";
 
-export const placeHolderHouseImg = placeHolderHouse;
+export const ImgPlaceHolderHouse = placeHolderHouse;
+export const Img_Tree_EY_0001_102016 = noisy_0001_102016_EY_Tree;
+export const Img_House_AA_0016_112019 = noisy_0016_112019_AA_House;
+export const Img_Tree_TO_0019_122016 = noisy_0019_122016_TO_Tree;
+export const Img_House_TO_0021_122016 = noisy_0021_122016_TO_House;
+export const Img_Person_M_TO_0022_122016 = noisy_0022_122016_TO_Person_M;
+export const Img_Person_F_AST_0033_122018 = noisy_0033_122018_AST_Person_F;
+export const Img_Person_M_BMY_0051_132018 = noisy_0051_132018_BMY_Person_M;
+export const Img_House_CEO_0088_152019 = noisy_0088_152019_CEO_House;
+export const Img_Tree_SD_0174_201803 = noisy_0174_201803_SD_Tree;
