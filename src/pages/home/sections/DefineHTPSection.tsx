@@ -10,7 +10,7 @@ const DefineHTPSection = () => {
     <Section spacing='xs'>
       <Container>
         <Typography variant='h2'>{t("homePage.defineHTP.title")}</Typography>
-        <Typography variant='blockquote' className='my-5'>
+        <Typography variant='lead' className='my-5'>
           {t("homePage.defineHTP.description")}
         </Typography>
       </Container>

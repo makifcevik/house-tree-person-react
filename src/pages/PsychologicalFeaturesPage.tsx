@@ -10,13 +10,32 @@ import FeaturesTable from "@/components/features/FeaturesTable";
 
 const PsychologicalFeaturesPage = () => {
   const { t } = useTranslation();
+
+  const TEXT_LOC = "psychologicalFeaturesPage.";
+  const list1 = t(TEXT_LOC + "description.list1", { returnObjects: true }) as string[];
+  const list2 = t(TEXT_LOC + "description.list2", { returnObjects: true }) as string[];
+
   return (
     <Section>
       <Container className='flex flex-col'>
-        <Typography variant='h1'>{t("psychologicalFeaturesPage.title")}</Typography>
-        <Typography variant='blockquote' className='mt-5'>
-          {t("psychologicalFeaturesPage.description")}
+        {/* DESCRIPTION */}
+        <Typography variant='h1'>{t(TEXT_LOC + "title")}</Typography>
+        <Typography variant='lead' className='mt-8'>
+          {t(TEXT_LOC + "description.paragraph1")}
         </Typography>
+        <Typography.List className='ml-20 text-lg text-muted-foreground'>
+          {list1.map((item, index) => (
+            <Typography.ListItem key={index}>{item}</Typography.ListItem>
+          ))}
+        </Typography.List>
+        <Typography variant='lead'>{t(TEXT_LOC + "description.paragraph2")}</Typography>
+        <Typography.List className='ml-20 text-lg text-muted-foreground'>
+          {list2.map((item, index) => (
+            <Typography.ListItem key={index}>{item}</Typography.ListItem>
+          ))}
+        </Typography.List>
+        <Typography variant='lead'>{t(TEXT_LOC + "description.paragraph3")}</Typography>
+        {/* TABLES */}
         <Section>
           <Container>
             <FeaturesTable type='general' className='mb-12' />
@@ -25,6 +44,7 @@ const PsychologicalFeaturesPage = () => {
             <FeaturesTable type='person' />
           </Container>
         </Section>
+        {/* CTA */}
         <div className='flex flex-col gap-5 text-center items-center justify-center mt-5 mb-20'>
           <Typography variant='h3'>{t("psychologicalFeaturesPage.CTA.text")}</Typography>
           <Button>

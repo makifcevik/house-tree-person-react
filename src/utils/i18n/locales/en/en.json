@@ -14,12 +14,15 @@
     "title": "House Tree Person (HTP)",
     "oneLiner": "A picture is worth 1000 words. This Website analyzes HTP drawings of school-age children, to identify hidden signs of distress—supporting clinicians to assess depression, anxiety, and aggression behavior.",
     "defineHTP": {
-      "title": "What Are HTP Drawings?",
-      "description": "We can, very briefly, define what HTP images are and how they are utilized. Like, as a very short paragraph."
+      "title": "What Is The HTP Test?",
+      "description": "The HTP test is a projective personality test. During the test, the therapist asks to the child to draw a sketch of a House, a Tree, a Person of the same gender, and a Person of opposite gender on a white A4 paper.  Psychologists interpret those sketches following the guidelines on general and individual characteristics, Buck (1948), Hammer (1958), Koppitz (1968) and, more recently, Burns (2009)."
     },
     "definePsychologicalFeatures": {
       "title": "What Are Psychological Features?",
-      "description": "We can, very briefly, define what psychological features are and how they are utilized. Like, as a very short paragraph."
+      "descriptionParagraphs": [
+        "Projective drawings like the House-Tree-Person test analyze children's artwork for emotional indicators. Heavy pressure or large drawings may suggest aggression; light pressure or small drawings could indicate insecurity. Off-center placement often relates to anxiety, while house details (e.g., missing doors/windows) may reflect withdrawal or emotional guardedness.",
+        "While these interpretations guide assessment, empirical support remains limited, requiring cautious application in clinical practice."
+      ] 
     }
   },
   "aboutPage": {
@@ -40,7 +43,21 @@
   },
   "psychologicalFeaturesPage": {
     "title": "Psychological Features",
-    "description": "A short description about what they are and how/why they are used...",
+    "description": {
+      "paragraph1": "Psychological features are based on hypothesis regarding projective drawings techniques. As example, Burns (2009) summarizes some general hypothesis, such as:",
+      "list1": [
+        "Unusually (heavy pen pressure, large drawings, …) suggests tense individuals, aggressivity, i.e. externalization issue",
+        "Unusually (light pen pressure, small drawings, …) reveals inadequately feelings, sense of inferiority, i.e. internalization issue",
+        "Central placement of the HTP drawing mirrors normal, secure person; while out of centre (off) of the HTP drawing reveals feeling of insecurity, i.e. internalization issue"
+      ],
+      "paragraph2": "Furthermore, every HTP item has also specific characteristics; e.g. in the drawing of House:",
+      "list2": [
+        "Emphasis on the chimney, i.e. large size, reveals overconcern with psychological warmth at home, while its omission suggests feeling of lack of psychological warmth at home (Buck, 1948)",
+        "Absence of door reveals psychological inaccessibility (Buck, 1948), a very small/large door suggests shyness/social accessibility",
+        "Absence of windows reveals withdrawn and possible paranoid tendencies, i.e. internalization issue"
+      ],
+      "paragraph3": "In a similar way, specific characteristics for the drawing of Tree and Person have been suggested and numerous attempts have been made to develop valid scoring systems to assess emotional indicators in HTP data. However, to date, research is still inconclusive regarding the importance of emotional indicators in the drawings and their associations with child psychopathology."
+    },
     "CTA": {
       "text": "Want to see real examples on sample data images?",
       "buttonText": "See Sample Data"
