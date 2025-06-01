@@ -50,7 +50,7 @@ function Navbar() {
       {/* Buttons (Login, Theme, Language) */}
       <div className='flex items-center gap-2'>
         <Button>
-          <Link to={ROUTES.LOGIN}>Login</Link>
+          <Link to={ROUTES.LOGIN}>{t("formPages.login")}</Link>
         </Button>
         <BtnThemeToggler />
         <Button variant='outline' asChild>
