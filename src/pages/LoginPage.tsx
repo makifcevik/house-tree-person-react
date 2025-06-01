@@ -3,7 +3,7 @@ import LoginForm from "../components/forms/LoginForm";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Typography } from "@/components/ui/Typography";
-import { Card, CardContent } from "@/components/ui/Card";
+import { Card, CardContent } from "@/components/ui/card";
 
 function LoginPage() {
   return (

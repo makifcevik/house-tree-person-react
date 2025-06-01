@@ -1,13 +1,11 @@
-import DefineHTPSection from "./sections/DefineHTPSection";
-import DefinePsychologicalFeaturesSection from "./sections/DefinePsychologicalFeaturesSection";
+import DefinitionSection from "./sections/DefinitionSection";
 import HerosSection from "./sections/HerosSection";
 
 export const HomePage = () => {
   return (
     <div className='flex flex-col'>
       <HerosSection />
-      <DefineHTPSection />
-      <DefinePsychologicalFeaturesSection />
+      <DefinitionSection />
     </div>
   );
 };

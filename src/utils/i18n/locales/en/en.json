@@ -14,16 +14,18 @@
     "title": "House Tree Person (HTP)",
     "oneLiner": "A picture is worth 1000 words. This Website analyzes HTP drawings of school-age children, to identify hidden signs of distress—supporting clinicians to assess depression, anxiety, and aggression behavior.",
     "noiseWarning": "The displayed pictures have been modified by adding noise to preserve anonymity",
-    "defineHTP": {
+    "definitionSection": {
+      "HTPTest": {
       "title": "What Is The HTP Test?",
       "description": "The HTP test is a projective personality test. During the test, the therapist asks to the child to draw a sketch of a House, a Tree, a Person of the same gender, and a Person of opposite gender on a white A4 paper.  Psychologists interpret those sketches following the guidelines on general and individual characteristics, Buck (1948), Hammer (1958), Koppitz (1968) and, more recently, Burns (2009)."
     },
-    "definePsychologicalFeatures": {
+    "psychologicalFeatures": {
       "title": "What Are Psychological Features?",
       "descriptionParagraphs": [
         "Projective drawings like the House-Tree-Person test analyze children's artwork for emotional indicators. Heavy pressure or large drawings may suggest aggression; light pressure or small drawings could indicate insecurity. Off-center placement often relates to anxiety, while house details (e.g., missing doors/windows) may reflect withdrawal or emotional guardedness.",
         "While these interpretations guide assessment, empirical support remains limited, requiring cautious application in clinical practice."
       ] 
+    }
     }
   },
   "aboutPage": {
