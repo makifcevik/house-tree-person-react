@@ -91,6 +91,19 @@
       {"role": "Psychology?", "name": "Prof. Sibel?", "email": "example@bilgi.edu.tr"}
     ]
   },
+  "formPages": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+    "email": "Email",
+    "emailPlaceholder": "example@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "confirmPassword": "Confirm Password",
+    "CTAToLogin": "Already have an account?",
+    "CTAToSignup": "Don't have an account yet?"
+  },
   "overallEvaluation": {
       "title": "Image Class"
   },

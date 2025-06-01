@@ -22,6 +22,8 @@ const loginSchema = z.object({
   password: z.string().min(8, "Password must be at least 8 characters"),
 });
 
+const TEXT_LOC = "formPages.";
+
 type LoginFormData = z.infer<typeof loginSchema>;
 
 function LoginForm() {
@@ -49,9 +51,9 @@ function LoginForm() {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>{t(TEXT_LOC + "email")}</FormLabel>
               <FormControl>
-                <Input placeholder='example@example.com' {...field} />
+                <Input placeholder={t(TEXT_LOC + "emailPlaceholder")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -64,9 +66,13 @@ function LoginForm() {
           name='password'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password</FormLabel>
+              <FormLabel>{t(TEXT_LOC + "password")}</FormLabel>
               <FormControl>
-                <Input type='password' placeholder='••••••••' {...field}></Input>
+                <Input
+                  type='password'
+                  placeholder={t(TEXT_LOC + "passwordPlaceholder")}
+                  {...field}
+                ></Input>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -75,16 +81,16 @@ function LoginForm() {
 
         {/* Button Login */}
         <Button type='submit' className='w-full'>
-          Login
+          {t(TEXT_LOC + "login")}
         </Button>
 
         <div className='flex-grow border-t border-gray-dark'></div>
 
         {/* Signup link */}
         <div className='text-center text-sm'>
-          Don't have an account yet?{" "}
+          {t(TEXT_LOC + "CTAToSignup")}{" "}
           <Link to={ROUTES.SIGNUP} className='text-primary font-bold hover:underline'>
-            Sign up
+            {t(TEXT_LOC + "signup")}
           </Link>
         </div>
       </form>

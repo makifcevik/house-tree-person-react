@@ -27,6 +27,8 @@ const signupSchema = z
     path: ["confirmPassword"], // Show error on confirmPassword field
   });
 
+const TEXT_LOC = "formPages.";
+
 type SignupFormData = z.infer<typeof signupSchema>;
 
 export function SignupForm() {
@@ -56,9 +58,9 @@ export function SignupForm() {
           name='name'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>{t(TEXT_LOC + "name")}</FormLabel>
               <FormControl>
-                <Input placeholder='Enter your name' {...field} />
+                <Input placeholder={t(TEXT_LOC + "namePlaceholder")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -71,9 +73,9 @@ export function SignupForm() {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>{t(TEXT_LOC + "email")}</FormLabel>
               <FormControl>
-                <Input placeholder='Enter your email' {...field} />
+                <Input placeholder={t(TEXT_LOC + "emailPlaceholder")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -86,9 +88,13 @@ export function SignupForm() {
           name='password'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password</FormLabel>
+              <FormLabel>{t(TEXT_LOC + "password")}</FormLabel>
               <FormControl>
-                <Input type='password' placeholder='••••••••' {...field} />
+                <Input
+                  type='password'
+                  placeholder={t(TEXT_LOC + "passwordPlaceholder")}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -101,9 +107,13 @@ export function SignupForm() {
           name='confirmPassword'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Confirm Password</FormLabel>
+              <FormLabel>{t(TEXT_LOC + "confirmPassword")}</FormLabel>
               <FormControl>
-                <Input type='password' placeholder='••••••••' {...field} />
+                <Input
+                  type='password'
+                  placeholder={t(TEXT_LOC + "passwordPlaceholder")}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -111,15 +121,15 @@ export function SignupForm() {
         />
 
         <Button type='submit' className='w-full'>
-          Sign up
+          {t(TEXT_LOC + "signup")}
         </Button>
 
         <div className='flex-grow border-t border-gray-dark'></div>
 
         <div className='text-center text-sm'>
-          Already have an account?{" "}
+          {t(TEXT_LOC + "CTAToLogin")}{" "}
           <Link to='/login' className='text-primary font-bold hover:underline'>
-            Login
+            {t(TEXT_LOC + "login")}
           </Link>
         </div>
       </form>
