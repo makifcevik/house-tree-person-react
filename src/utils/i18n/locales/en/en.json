@@ -90,6 +90,12 @@
   "contactPage": {
     "title": "Contact Us",
     "contactInfo": "We can have some basic guidelines here? Or some other text related to contact?",
+    "tableCaption": "List of contacts",
+    "columnNames": {
+      "role": "Role",
+      "name": "Name",
+      "email": "Email"
+    },
     "contactList": [
       {"role": "AI?", "name": "Assoc. Prof. Elena?", "email": "elena.sonmez@bilgi.edu.tr"},
       {"role": "Psychology?", "name": "Prof. Sibel?", "email": "example@bilgi.edu.tr"}
@@ -106,59 +112,69 @@
     "passwordPlaceholder": "••••••••",
     "confirmPassword": "Confirm Password",
     "CTAToLogin": "Already have an account?",
-    "CTAToSignup": "Don't have an account yet?"
+    "CTAToSignup": "Don't have an account yet?",
+    "nameTooShort": "Name must be at least 2 characters!",
+    "invalidEmail": "Invalid email!",
+    "passwordTooShort": "Password must be at least 8 characters!",
+    "passwordsDifferent": "Passwords don't match!"
   },
   "overallEvaluation": {
       "title": "Image Class"
   },
   "featuresTable": {
-      "general" : {
-        "title": "General Features",
-        "description": "A short description about what they are and how/why they are used...", 
-        "features": [
-          {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
-        ],
-        "caption": "Table of general psychological features"
-      },
-      "house" : {
-        "title": "House Features",
-        "description": "A short description about what they are and how/why they are used...", 
-        "features": [
-          {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
-        ],
-        "caption": "Table of house features" 
-      },
-      "tree" : {
-        "title": "Tree Features",
-        "description": "A short description about what they are and how/why they are used...", 
-        "features": [
-          {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
-        ],
-        "caption": "Table of tree features" 
-      },
-      "person" : {
-        "title": "Person Features",
-        "description": "A short description about what they are and how/why they are used...", 
-        "features": [
-          {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
-          {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
-        ],
-        "caption": "Table of person features" 
-      }
+    "columnNames": {
+      "name": "Name",
+      "range": "Value Range",
+      "value": "Value",
+      "description": "Description"
+    },
+    "general" : {
+      "title": "General Features",
+      "description": "A short description about what they are and how/why they are used...", 
+      "features": [
+        {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
+      ],
+      "caption": "Table of general psychological features"
+    },
+    "house" : {
+      "title": "House Features",
+      "description": "A short description about what they are and how/why they are used...", 
+      "features": [
+        {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
+      ],
+      "caption": "Table of house features" 
+    },
+    "tree" : {
+      "title": "Tree Features",
+      "description": "A short description about what they are and how/why they are used...", 
+      "features": [
+        {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
+      ],
+      "caption": "Table of tree features" 
+    },
+    "person" : {
+      "title": "Person Features",
+      "description": "A short description about what they are and how/why they are used...", 
+      "features": [
+        {"name": "feature1", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature2", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature3", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature4", "range": "[0-5]", "description": "description about the feature goes here..."},
+        {"name": "feature5", "range": "[0-5]", "description": "description about the feature goes here..."}
+      ],
+      "caption": "Table of person features" 
     }
+  }
 }

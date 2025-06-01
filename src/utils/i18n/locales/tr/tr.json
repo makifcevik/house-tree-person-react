@@ -90,6 +90,12 @@
   "contactPage": {
     "title": "Bize Ulaşın",
     "contactInfo": "Buraya bazı temel bilgileri koyabilir miyiz? Veya iletişimle ilgili başka bir metin?",
+    "tableCaption": "İletişim listesi",
+    "columnNames": {
+      "role": "Rol",
+      "name": "İsim",
+      "email": "E-posta"
+    },
     "contactList": [
       {"role": "AI?", "name": "Doç. Dr. Elena?", "email": "elena.sonmez@bilgi.edu.tr"},
       {"role": "Psikoloji?", "name": "Prof. Dr. Sibel?", "email": "example@bilgi.edu.tr"}
@@ -106,59 +112,69 @@
     "passwordPlaceholder": "••••••••",
     "confirmPassword": "Şifreyi Onayla",
     "CTAToLogin": "Zaten bir hesabınız var mı?",
-    "CTAToSignup": "Henüz bir hesabınız yok mu?"
+    "CTAToSignup": "Henüz bir hesabınız yok mu?",
+    "nameTooShort": "İsim en az 2 karakter uzunluğunda olmalı!",
+    "invalidEmail": "Geçersiz e-posta!",
+    "passwordTooShort": "Şifre en az 8 karakterden oluşmalı!",
+    "passwordsDifferent": "Şifreler eşleşmiyor!"
   },
   "overallEvaluation": {
       "title": "Görsel Sınıfı"
   },
   "featuresTable": {
-      "general" : {
-        "title": "Genel Özellikler",
-        "description": "Ne oldukları ve nasıl/neden kullanıldıkları hakkında kısa bir açıklama...", 
-        "features": [
-          {"name": "özellik1", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik2", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik3", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik4", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik5", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."}
-        ],
-        "caption": "Genel psikolojik özellikler tablosu"
-      },
-      "house" : {
-        "title": "Ev Özellikleri",
-        "description": "Ne oldukları ve nasıl/neden kullanıldıkları hakkında kısa bir açıklama...", 
-        "features": [
-          {"name": "özellik1", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik2", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik3", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik4", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik5", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."}
-        ],
-        "caption": "Ev özellikleri tablosu" 
-      },
-      "tree" : {
-        "title": "Ağaç Özellikleri",
-        "description": "Ne oldukları ve nasıl/neden kullanıldıkları hakkında kısa bir açıklama...", 
-        "features": [
-          {"name": "özellik1", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik2", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik3", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik4", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik5", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."}
-        ],
-        "caption": "Ağaç özellikleri tablosu" 
-      },
-      "person" : {
-        "title": "İnsan Özellikleri",
-        "description": "Ne oldukları ve nasıl/neden kullanıldıkları hakkında kısa bir açıklama...", 
-        "features": [
-          {"name": "özellik1", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik2", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik3", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik4", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
-          {"name": "özellik5", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."}
-        ],
-        "caption": "İnsan özellikleri tablosu" 
-      }
+    "columnNames": {
+      "name": "İsim",
+      "range": "Değer Aralığı",
+      "value": "Değer",
+      "description": "Tanım"
+    },
+    "general" : {
+      "title": "Genel Özellikler",
+      "description": "Ne oldukları ve nasıl/neden kullanıldıkları hakkında kısa bir açıklama...", 
+      "features": [
+        {"name": "özellik1", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik2", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik3", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik4", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik5", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."}
+      ],
+      "caption": "Genel psikolojik özellikler tablosu"
+    },
+    "house" : {
+      "title": "Ev Özellikleri",
+      "description": "Ne oldukları ve nasıl/neden kullanıldıkları hakkında kısa bir açıklama...", 
+      "features": [
+        {"name": "özellik1", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik2", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik3", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik4", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik5", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."}
+      ],
+      "caption": "Ev özellikleri tablosu" 
+    },
+    "tree" : {
+      "title": "Ağaç Özellikleri",
+      "description": "Ne oldukları ve nasıl/neden kullanıldıkları hakkında kısa bir açıklama...", 
+      "features": [
+        {"name": "özellik1", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik2", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik3", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik4", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik5", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."}
+      ],
+      "caption": "Ağaç özellikleri tablosu" 
+    },
+    "person" : {
+      "title": "İnsan Özellikleri",
+      "description": "Ne oldukları ve nasıl/neden kullanıldıkları hakkında kısa bir açıklama...", 
+      "features": [
+        {"name": "özellik1", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik2", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik3", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik4", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."},
+        {"name": "özellik5", "range": "[0-5]", "description": "özellik hakkında açıklama buraya gelir..."}
+      ],
+      "caption": "İnsan özellikleri tablosu" 
     }
+  }
 }

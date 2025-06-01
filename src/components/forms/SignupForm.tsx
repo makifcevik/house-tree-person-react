@@ -15,24 +15,23 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-const signupSchema = z
-  .object({
-    name: z.string().min(3, "Name must be at least 3 characters"),
-    email: z.string().email("Invalid email address"),
-    password: z.string().min(8, "Password must be at least 8 characters"),
-    confirmPassword: z.string(),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords don't match",
-    path: ["confirmPassword"], // Show error on confirmPassword field
-  });
-
 const TEXT_LOC = "formPages.";
-
-type SignupFormData = z.infer<typeof signupSchema>;
 
 export function SignupForm() {
   const { t } = useTranslation();
+  const signupSchema = z
+    .object({
+      name: z.string().min(2, t(TEXT_LOC + "nameTooShort")),
+      email: z.string().email(t(TEXT_LOC + "invalidEmail")),
+      password: z.string().min(8, t(TEXT_LOC + "passwordTooShort")),
+      confirmPassword: z.string(),
+    })
+    .refine((data) => data.password === data.confirmPassword, {
+      message: t(TEXT_LOC + "passwordsDifferent"),
+      path: ["confirmPassword"], // Show error on confirmPassword field
+    });
+
+  type SignupFormData = z.infer<typeof signupSchema>;
 
   const form = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema),

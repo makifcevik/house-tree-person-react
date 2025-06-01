@@ -17,17 +17,17 @@ import {
 import { Input } from "../ui/input";
 import ROUTES from "@/routes/routes";
 
-const loginSchema = z.object({
-  email: z.string().email("Invalid email!"),
-  password: z.string().min(8, "Password must be at least 8 characters"),
-});
-
 const TEXT_LOC = "formPages.";
-
-type LoginFormData = z.infer<typeof loginSchema>;
 
 function LoginForm() {
   const { t } = useTranslation();
+
+  const loginSchema = z.object({
+    email: z.string().email(t(TEXT_LOC + "invalidEmail")),
+    password: z.string().min(8, t(TEXT_LOC + "passwordTooShort")),
+  });
+
+  type LoginFormData = z.infer<typeof loginSchema>;
 
   const form = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),

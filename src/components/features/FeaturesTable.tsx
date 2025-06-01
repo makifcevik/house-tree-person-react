@@ -48,10 +48,12 @@ const FeaturesTable = ({ type, featureValues, className }: Props) => {
         <TableCaption>{t(TEXT_LOC + `caption`)}</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead>Name</TableHead>
-            {featureValues && <TableHead>Value</TableHead>}
-            <TableHead>Value Range</TableHead>
-            <TableHead>Description</TableHead>
+            <TableHead>{t("featuresTable.columnNames.name")}</TableHead>
+            {featureValues && (
+              <TableHead>{t("featuresTable.columnNames.value")}</TableHead>
+            )}
+            <TableHead>{t("featuresTable.columnNames.range")}</TableHead>
+            <TableHead>{t("featuresTable.columnNames.description")}</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>

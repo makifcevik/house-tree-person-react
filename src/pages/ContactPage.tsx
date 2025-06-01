@@ -31,12 +31,12 @@ const ContactPage = () => {
           {t("contactPage.contactInfo")}
         </Typography>
         <Table className='mt-15'>
-          <TableCaption>List of contacts</TableCaption>
+          <TableCaption>{t("contactPage.tableCaption")}</TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead>Role</TableHead>
-              <TableHead>Name</TableHead>
-              <TableHead>Email</TableHead>
+              <TableHead>{t("contactPage.columnNames.role")}</TableHead>
+              <TableHead>{t("contactPage.columnNames.name")}</TableHead>
+              <TableHead>{t("contactPage.columnNames.email")}</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
