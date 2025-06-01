@@ -41,12 +41,12 @@ function HerosSection() {
         />
         <img
           src={Img_Tree_TO_0019_122016}
-          alt='house image'
+          alt='tree image'
           className='anim h-[360px] w-[360px] rounded-lg dark:brightness-90'
         />
         <img
           src={Img_Person_M_TO_0022_122016}
-          alt='house image'
+          alt='person image'
           className='anim h-[360px] w-[360px] rounded-lg dark:brightness-90'
         />
       </Container>
