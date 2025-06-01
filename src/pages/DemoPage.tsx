@@ -17,7 +17,6 @@ import { ImageCarousel } from "@/components/ui/ImageCarousel";
 const EXTERNALIZATION_VALUE = 33;
 const INTERNALIZATION_VALUE = 63;
 const DEPRESSION_VALUE = 13;
-const IMAGE_CLASS = "House";
 
 const images = [
   { src: Img_House_AA_0016_112019, alt: "House Image" },
@@ -52,7 +51,7 @@ const DemoPage = () => {
           />
 
           <OverallResults
-            imageClass={IMAGE_CLASS}
+            imageClass='house'
             extValue={EXTERNALIZATION_VALUE}
             intValue={INTERNALIZATION_VALUE}
             depValue={DEPRESSION_VALUE}

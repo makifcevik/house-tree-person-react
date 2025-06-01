@@ -13,11 +13,14 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { useTranslation } from "react-i18next";
 
 const ITEMS_PER_PAGE = 5;
 const VISIBLE_PAGES = 3;
+const TEXT_LOC = "publicationsAndReferencesPage.";
 
 const PublicationsAndReferencesPage = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"publications" | "references">(
     "publications"
   );
@@ -76,8 +79,8 @@ const PublicationsAndReferencesPage = () => {
           onValueChange={handleTabChange}
         >
           <TabsList className='grid w-full grid-cols-2'>
-            <TabsTrigger value='publications'>Publications</TabsTrigger>
-            <TabsTrigger value='references'>References</TabsTrigger>
+            <TabsTrigger value='publications'>{t(TEXT_LOC + "publications")}</TabsTrigger>
+            <TabsTrigger value='references'>{t(TEXT_LOC + "references")}</TabsTrigger>
           </TabsList>
           <TabsContent value='publications'>
             {currentItems.map((item, index) => (

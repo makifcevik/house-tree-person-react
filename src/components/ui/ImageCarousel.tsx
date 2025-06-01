@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { useTranslation } from "react-i18next";
 
 interface ImageCarouselProps {
   images: { src: string; alt: string }[];
@@ -19,6 +20,8 @@ export function ImageCarousel({
   imageSize = "aspect-square",
   thumbnailSize = "h-16 w-16",
 }: ImageCarouselProps) {
+  const { t } = useTranslation();
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
@@ -96,7 +99,7 @@ export function ImageCarousel({
       </div>
 
       {/* Select Button */}
-      <Button onClick={handleSelect}>Select This Image</Button>
+      <Button onClick={handleSelect}>{t("demoPage.selectImageButton")}</Button>
     </div>
   );
 }

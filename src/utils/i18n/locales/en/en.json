@@ -10,6 +10,18 @@
     "item7": "Contact",
     "login": "Login"
   },
+  "HTPDictionary": {
+    "imageClasses": {
+      "house": "House",
+      "tree": "Tree",
+      "person": "Person"
+    },
+    "evaluation": {
+      "externalization": "Externalization",
+      "internalization": "Internalization",
+      "depression": "Depression"
+    }
+  },
   "homePage": {
     "title": "House Tree Person (HTP)",
     "oneLiner": "A picture is worth 1000 words. This Website analyzes HTP drawings of school-age children, to identify hidden signs of distress—supporting clinicians to assess depression, anxiety, and aggression behavior.",
@@ -42,7 +54,8 @@
   },
   "demoPage": {
     "title": "Demo",
-    "description": "A short guideline about how to use it, what to expect as result and other details..."
+    "description": "A short guideline about how to use it, what to expect as result and other details...",
+    "selectImageButton": "Select This Image"
   },
   "psychologicalFeaturesPage": {
     "title": "Psychological Features",
@@ -66,6 +79,10 @@
       "buttonText": "See Sample Data"
     }
   },
+  "publicationsAndReferencesPage": {
+    "publications": "Publications",
+    "references": "References"
+  },
   "contactPage": {
     "title": "Contact Us",
     "contactInfo": "We can have some basic guidelines here? Or some other text related to contact?",
@@ -75,10 +92,7 @@
     ]
   },
   "overallEvaluation": {
-      "title": "Image Class",
-      "externalization": "Externalization",
-      "internalization": "Internalization",
-      "depression": "Depression"
+      "title": "Image Class"
   },
   "featuresTable": {
       "general" : {

@@ -9,7 +9,6 @@ import React from "react";
 const EXTERNALIZATION_VALUE = 92;
 const INTERNALIZATION_VALUE = 27;
 const DEPRESSION_VALUE = 55;
-const IMAGE_CLASS = "Person";
 
 interface featureValues {
   name: string;
@@ -38,7 +37,7 @@ const SampleDataPage = () => {
             className='max-h-[360px] w-auto rounded-3xl'
           />
           <OverallResults
-            imageClass={IMAGE_CLASS}
+            imageClass='person'
             extValue={EXTERNALIZATION_VALUE}
             intValue={INTERNALIZATION_VALUE}
             depValue={DEPRESSION_VALUE}
