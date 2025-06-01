@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Typography } from "@/components/ui/Typography";
 import { Img_Person_M_BMY_0051_132018 } from "@/utils";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const EXTERNALIZATION_VALUE = 92;
 const INTERNALIZATION_VALUE = 27;
@@ -23,13 +24,17 @@ const placeHolderFeatureValues: featureValues[] = [
   { name: "feature5", value: 0 },
 ];
 
+const TEXT_LOC = "sampleDataPage.";
+
 const SampleDataPage = () => {
+  const { t } = useTranslation();
+
   return (
     <Section>
       <Container>
-        <Typography variant='h1'>Sample Data</Typography>
+        <Typography variant='h1'>{t(TEXT_LOC + "title")}</Typography>
         <Typography variant='blockquote' className='mt-5 mb-10'>
-          Results of the evaluation of the sample data image will be shown on this page.
+          {t(TEXT_LOC + "description")}
         </Typography>
         <div className='flex md:flex-row flex-col gap-5'>
           <img

@@ -57,6 +57,10 @@
     "description": "A short guideline about how to use it, what to expect as result and other details...",
     "selectImageButton": "Select This Image"
   },
+  "sampleDataPage": {
+    "title": "Sample Data",
+    "description": "Results of the evaluation of the sample data image will be shown on this page."
+  },
   "psychologicalFeaturesPage": {
     "title": "Psychological Features",
     "description": {
