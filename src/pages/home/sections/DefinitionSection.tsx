@@ -32,6 +32,17 @@ const DefinitionSection = () => {
     gsap.from(".ani2", {
       scrollTrigger: ".ani2",
       opacity: 0,
+      delay: 0.5,
+      duration: 4,
+      stagger: 0.8,
+      ease: "power2.out",
+    });
+  }, []);
+
+  useGSAP(() => {
+    gsap.from(".ani3", {
+      scrollTrigger: ".ani3",
+      opacity: 0,
       x: -20,
       delay: 0.3,
       duration: 1.5,
@@ -40,8 +51,8 @@ const DefinitionSection = () => {
   }, []);
 
   useGSAP(() => {
-    gsap.from(".ani3", {
-      scrollTrigger: ".ani3",
+    gsap.from(".ani4", {
+      scrollTrigger: ".ani4",
       opacity: 0,
       delay: 0.5,
       duration: 4,
@@ -57,22 +68,19 @@ const DefinitionSection = () => {
         <div className='ani'>
           <Typography variant='h2'>{t(TEXT_LOC + "HTPTest.title")}</Typography>
         </div>
-        <div id='htp-test-description'>
+        <div className='ani2'>
           <Typography variant='lead' className='my-5'>
-            <TypewriterText
-              text={t(TEXT_LOC + "HTPTest.description")}
-              triggerElement='#htp-test-description'
-            />
+            {t(TEXT_LOC + "HTPTest.description")}
           </Typography>
         </div>
         {/* Define Psychological Features */}
-        <div className='ani2'>
+        <div className='ani3'>
           <Typography variant='h2'>
             {t(TEXT_LOC + "psychologicalFeatures.title")}
           </Typography>
         </div>
         {PARAGRAPHS.map((paragraph, index) => (
-          <div key={index} className='ani3'>
+          <div key={index} className='ani4'>
             <Typography variant='lead' className='my-5'>
               {paragraph}
             </Typography>
