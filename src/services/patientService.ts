@@ -1,6 +1,6 @@
 import IPatient from "../models/IPatient";
 import API_ROUTES from "../routes/apiRoutes";
-import axiosInstance from "./axiosInstance";
+import { axiosInstance } from "./axiosInstance";
 
 export const getAllPatients = async (): Promise<IPatient[]> => {
   const response = await axiosInstance.get<IPatient[]>(`${API_ROUTES.PATIENTS}`);

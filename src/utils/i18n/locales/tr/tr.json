@@ -14,7 +14,8 @@
     "imageClasses": {
       "house": "Ev",
       "tree": "Ağaç",
-      "person": "İnsan"
+      "person": "İnsan",
+      "processing": "İşleniyor"
     },
     "evaluation": {
       "externalization": "Dışsallaştırma",

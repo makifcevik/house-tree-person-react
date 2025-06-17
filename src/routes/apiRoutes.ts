@@ -5,6 +5,7 @@ const API_ROUTES = {
   PERSON_SKETCHES: "/person_sketches",
   TREE_SKETCHES: "/tree_sketches",
   PATIENTS: "/patients",
+  CLASSIFY_IMAGE: "/predict_HTP_class",
 };
 
 export default API_ROUTES;

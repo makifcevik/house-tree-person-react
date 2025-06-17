@@ -9,7 +9,7 @@ const INTERNALIZATION_COLOR = "bg-blue-700";
 const DEPRESSION_COLOR = "bg-amber-500";
 
 interface Props {
-  imageClass: "house" | "tree" | "person";
+  imageClass: "house" | "tree" | "person" | "processing";
   extValue: number;
   intValue: number;
   depValue: number;

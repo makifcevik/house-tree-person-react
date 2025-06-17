@@ -13,6 +13,8 @@ import {
   Img_Tree_SD_0174_201803,
 } from "@/utils";
 import { ImageCarousel } from "@/components/ui/ImageCarousel";
+import { classifyImage } from "@/services/htpService";
+import IHTPCLassifier from "@/models/IHTPClassifier";
 
 const EXTERNALIZATION_VALUE = 33;
 const INTERNALIZATION_VALUE = 63;
@@ -30,8 +32,28 @@ const DemoPage = () => {
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const handleSelection = (selected: any) => {
-    console.log("Selected:", selected);
+  const [result, setResult] = useState<IHTPCLassifier | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSelection = async (imageUrl: string) => {
+    setSelectedImage(imageUrl);
+    console.log(imageUrl);
+
+    try {
+      setLoading(true);
+      // Use the imageUrl parameter directly instead of selectedImage state
+      const response = await fetch(imageUrl);
+      const blob = await response.blob();
+      const file = new File([blob], "selected-image.jpg", { type: blob.type });
+
+      const result = await classifyImage(file);
+      setResult(result);
+    } catch (err) {
+      console.error("Image processing failed", err);
+    } finally {
+      setLoading(false);
+    }
+    console.log(result);
   };
 
   return (
@@ -51,7 +73,7 @@ const DemoPage = () => {
           />
 
           <OverallResults
-            imageClass='house'
+            imageClass={loading ? "processing" : result?.predicted_class}
             extValue={EXTERNALIZATION_VALUE}
             intValue={INTERNALIZATION_VALUE}
             depValue={DEPRESSION_VALUE}

@@ -14,7 +14,8 @@
     "imageClasses": {
       "house": "House",
       "tree": "Tree",
-      "person": "Person"
+      "person": "Person",
+      "processing": "Processing"
     },
     "evaluation": {
       "externalization": "Externalization",
