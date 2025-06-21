@@ -34,17 +34,19 @@ const AboutPage = () => {
   return (
     <Section spacing='lg'>
       <div className='anim'>
-        <Typography variant='h1' className='text-center mb-5 text-primary'>
+        <Typography variant='h1' className='text-center mb-10 text-primary'>
           {t("aboutPage.title")}
         </Typography>
       </div>
-      {paragraphs.map((paragraph, id) => (
-        <div key={id} className='anim2'>
-          <Typography variant='lead' className='mb-4'>
-            {paragraph}
-          </Typography>
-        </div>
-      ))}
+      <main className='max-w-4xl mx-auto'>
+        {paragraphs.map((paragraph, id) => (
+          <div key={id} className='anim2'>
+            <Typography variant='lead' className='mb-8'>
+              {paragraph}
+            </Typography>
+          </div>
+        ))}
+      </main>
     </Section>
   );
 };
