@@ -7,6 +7,7 @@ import "@fontsource/poppins";
 import "@fontsource/roboto";
 import { BrowserRouter, useLocation } from "react-router-dom";
 import "./utils/i18n/index.ts";
+import { Toaster } from "sonner";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,6 +37,7 @@ createRoot(rootElement).render(
       <BrowserRouter>
         <ScrollToTop />
         <App />
+        <Toaster />
       </BrowserRouter>
     </QueryClientProvider>
   </StrictMode>

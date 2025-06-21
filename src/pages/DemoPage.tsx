@@ -15,6 +15,7 @@ import {
 import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import { classifyImage } from "@/services/htpService";
 import IHTPCLassifier from "@/models/IHTPClassifier";
+import { toast } from "sonner";
 
 const EXTERNALIZATION_VALUE = 33;
 const INTERNALIZATION_VALUE = 63;
@@ -50,10 +51,12 @@ const DemoPage = () => {
       setResult(result);
     } catch (err) {
       console.error("Image processing failed", err);
+      toast("Image processing failed");
     } finally {
       setLoading(false);
     }
     console.log(result);
+    toast("Image processed and classified", { description: result?.predicted_class });
   };
 
   return (
