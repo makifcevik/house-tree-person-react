@@ -38,25 +38,25 @@ const DemoPage = () => {
 
   const handleSelection = async (imageUrl: string) => {
     setSelectedImage(imageUrl);
-    console.log(imageUrl);
+    setLoading(true);
 
     try {
-      setLoading(true);
-      // Use the imageUrl parameter directly instead of selectedImage state
       const response = await fetch(imageUrl);
       const blob = await response.blob();
       const file = new File([blob], "selected-image.jpg", { type: blob.type });
 
-      const result = await classifyImage(file);
-      setResult(result);
+      const newResult = await classifyImage(file);
+      setResult(newResult);
+
+      console.log(newResult); // ONLY for debugging, remove later
+      toast("Image processed", {
+        description: newResult.predicted_class,
+      });
     } catch (err) {
-      console.error("Image processing failed", err);
-      toast("Image processing failed");
+      toast.error("Processing failed");
     } finally {
       setLoading(false);
     }
-    console.log(result);
-    toast("Image processed and classified", { description: result?.predicted_class });
   };
 
   return (

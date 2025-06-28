@@ -1,7 +1,7 @@
 interface IHTPCLassifierResult {
   predicted_class: "house" | "tree" | "person";
   confidence: number;
-  //probabilities: Probabilities;
+  probabilities: Probabilities;
 }
 
 type Probabilities = {
