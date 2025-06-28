@@ -19,7 +19,7 @@ import { toast } from "sonner";
 
 const EXTERNALIZATION_VALUE = 33;
 const INTERNALIZATION_VALUE = 63;
-const DEPRESSION_VALUE = 13;
+const DEPRESSION_VALUE = 13; // Deprecated
 
 const images = [
   { src: Img_House_AA_0016_112019, alt: "House Image" },
@@ -79,7 +79,6 @@ const DemoPage = () => {
             imageClass={loading ? "processing" : result?.predicted_class}
             extValue={EXTERNALIZATION_VALUE}
             intValue={INTERNALIZATION_VALUE}
-            depValue={DEPRESSION_VALUE}
           />
         </div>
       </Container>

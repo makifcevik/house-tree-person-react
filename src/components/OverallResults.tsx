@@ -6,13 +6,13 @@ import { useTranslation } from "react-i18next";
 
 const EXTERNALIZATION_COLOR = "bg-red-700";
 const INTERNALIZATION_COLOR = "bg-blue-700";
-const DEPRESSION_COLOR = "bg-amber-500";
+const DEPRESSION_COLOR = "bg-amber-500"; // Deprecated
 
 interface Props {
   imageClass: "house" | "tree" | "person" | "processing";
   extValue: number;
   intValue: number;
-  depValue: number;
+  //depValue: number; // Deprecated
 }
 
 const capitalizeFirstLetter = (str?: string) => {
@@ -20,7 +20,7 @@ const capitalizeFirstLetter = (str?: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 };
 
-const OverallResults = ({ imageClass, extValue, intValue, depValue }: Props) => {
+const OverallResults = ({ imageClass, extValue, intValue }: Props) => {
   const { t } = useTranslation();
   // Get the image classes object
   const imageClasses = t("HTPDictionary.imageClasses", { returnObjects: true }) as Record<
@@ -35,12 +35,12 @@ const OverallResults = ({ imageClass, extValue, intValue, depValue }: Props) => 
 
   return (
     <Card className='flex flex-grow'>
-      <CardContent className='flex flex-col gap-4 lg:mx-12'>
+      <CardContent className='flex flex-col gap-6 lg:mx-12'>
         <div className='mb-2 mt-4'>
           <Typography variant='h3'>{t("overallEvaluation.title")}</Typography>
           <Typography variant='lead'>{classDisplayName}</Typography>
         </div>
-        <div>
+        <div className='mt-5'>
           <Typography variant='h3'>
             {t("HTPDictionary.evaluation.externalization")}
           </Typography>
@@ -62,7 +62,7 @@ const OverallResults = ({ imageClass, extValue, intValue, depValue }: Props) => 
             </Typography>
           </div>
         </div>
-        <div>
+        {/* <div>
           <Typography variant='h3'>{t("HTPDictionary.evaluation.depression")}</Typography>
           <div className='flex flex-row align-middle items-center'>
             <Progress value={depValue} indicatorClassName={DEPRESSION_COLOR} />
@@ -70,7 +70,7 @@ const OverallResults = ({ imageClass, extValue, intValue, depValue }: Props) => 
               {depValue}%
             </Typography>
           </div>
-        </div>
+        </div> */}
       </CardContent>
     </Card>
   );
