@@ -1,4 +1,4 @@
-interface IHTPCLassifier {
+interface IHTPCLassifierResult {
   predicted_class: "house" | "tree" | "person";
   confidence: number;
   //probabilities: Probabilities;
@@ -10,4 +10,4 @@ type Probabilities = {
   tree: number;
 };
 
-export default IHTPCLassifier;
+export default IHTPCLassifierResult;

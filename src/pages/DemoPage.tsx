@@ -13,8 +13,8 @@ import {
   Img_Tree_SD_0174_201803,
 } from "@/utils";
 import { ImageCarousel } from "@/components/ui/ImageCarousel";
-import { classifyImage } from "@/services/htpService";
-import IHTPCLassifier from "@/models/IHTPClassifier";
+import { classifyImage } from "@/services/htpClassifierService";
+import IHTPCLassifierResult from "@/models/IHTPClassifierResult";
 import { toast } from "sonner";
 
 const EXTERNALIZATION_VALUE = 33;
@@ -33,7 +33,7 @@ const DemoPage = () => {
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const [result, setResult] = useState<IHTPCLassifier | null>(null);
+  const [result, setResult] = useState<IHTPCLassifierResult | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSelection = async (imageUrl: string) => {
