@@ -13,8 +13,4 @@ const ROUTES = {
   ADMIN_DASHBOARD: "/admin_dashboard",
 };
 
-const PATHS = {
-  USER_PROFILE: (id: bigint) => `/users/${id}`,
-};
-
 export default ROUTES;
