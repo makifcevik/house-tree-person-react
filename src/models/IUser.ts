@@ -3,14 +3,13 @@ interface IUser {
   first_name: string;
   last_name: string;
   email: string;
-  email_verified_at: Date;
+  email_verified_at: string | null;//Date;
   password: string;
   profile_picture: string;
-  status: number;
-  privilage: number;
+  privilege: number;
   remember_token: string;
-  created_at: Date;
-  updated_at: Date;
+  created_at: string;//Date;
+  updated_at: string;//Date;
 }
 
 export default IUser;
