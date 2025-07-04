@@ -1,9 +1,10 @@
+import IResponse from "@/models/IResponse";
 import IUser from "../models/IUser";
 import API_ROUTES from "../routes/apiRoutes";
 import { axiosInstance } from "./axiosInstance";
 
-export const getAllUsers = async (): Promise<IUser[]> => {
-  const response = await axiosInstance.get<IUser[]>(API_ROUTES.USERS);
+export const getAllUsers = async (): Promise<IResponse<IUser[]>> => {
+  const response = await axiosInstance.get<Promise<IResponse<IUser[]>>>(API_ROUTES.USERS);
   return response.data;
 };
 
