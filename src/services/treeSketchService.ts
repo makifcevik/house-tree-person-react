@@ -1,14 +1,17 @@
+import IResponse from "@/models/IResponse";
 import ITreeSketch from "../models/ITreeSketch";
 import API_ROUTES from "../routes/apiRoutes";
 import { axiosInstance } from "./axiosInstance";
 
-export const getAllTreeSketches = async (): Promise<ITreeSketch[]> => {
-  const response = await axiosInstance.get<ITreeSketch[]>(`${API_ROUTES.TREE_SKETCHES}`);
+export const getAllTreeSketches = async (): Promise<IResponse<ITreeSketch[]>> => {
+  const response = await axiosInstance.get<IResponse<ITreeSketch[]>>(
+    `${API_ROUTES.TREE_SKETCHES}`
+  );
   return response.data;
 };
 
-export const getTreeSketch = async (id: number): Promise<ITreeSketch> => {
-  const response = await axiosInstance.get<ITreeSketch>(
+export const getTreeSketch = async (id: number): Promise<IResponse<ITreeSketch>> => {
+  const response = await axiosInstance.get<IResponse<ITreeSketch>>(
     `${API_ROUTES.TREE_SKETCHES}/${id}`
   );
   return response.data;

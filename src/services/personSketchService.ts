@@ -1,16 +1,17 @@
+import IResponse from "@/models/IResponse";
 import IPersonSketch from "../models/IPersonSketch";
 import API_ROUTES from "../routes/apiRoutes";
 import { axiosInstance } from "./axiosInstance";
 
-export const getAllPersonSketches = async (): Promise<IPersonSketch[]> => {
-  const response = await axiosInstance.get<IPersonSketch[]>(
+export const getAllPersonSketches = async (): Promise<IResponse<IPersonSketch[]>> => {
+  const response = await axiosInstance.get<IResponse<IPersonSketch[]>>(
     `${API_ROUTES.PERSON_SKETCHES}`
   );
   return response.data;
 };
 
-export const getPersonSketch = async (id: number): Promise<IPersonSketch> => {
-  const response = await axiosInstance.get<IPersonSketch>(
+export const getPersonSketch = async (id: number): Promise<IResponse<IPersonSketch>> => {
+  const response = await axiosInstance.get<IResponse<IPersonSketch>>(
     `${API_ROUTES.PERSON_SKETCHES}/${id}`
   );
   return response.data;

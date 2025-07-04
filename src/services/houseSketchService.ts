@@ -1,16 +1,17 @@
+import IResponse from "@/models/IResponse";
 import IHouseSketch from "../models/IHouseSketch";
 import API_ROUTES from "../routes/apiRoutes";
 import { axiosInstance } from "./axiosInstance";
 
-export const getAllHouseSketches = async (): Promise<IHouseSketch[]> => {
-  const response = await axiosInstance.get<IHouseSketch[]>(
+export const getAllHouseSketches = async (): Promise<IResponse<IHouseSketch[]>> => {
+  const response = await axiosInstance.get<IResponse<IHouseSketch[]>>(
     `${API_ROUTES.HOUSE_SKETCHES}`
   );
   return response.data;
 };
 
-export const getHouseSketch = async (id: number): Promise<IHouseSketch> => {
-  const response = await axiosInstance.get<IHouseSketch>(
+export const getHouseSketch = async (id: number): Promise<IResponse<IHouseSketch>> => {
+  const response = await axiosInstance.get<IResponse<IHouseSketch>>(
     `${API_ROUTES.HOUSE_SKETCHES}/${id}`
   );
   return response.data;

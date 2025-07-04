@@ -3,23 +3,24 @@ import React from "react";
 import { getUser } from "../services/userService";
 import IUser from "../models/IUser";
 import { useParams } from "react-router-dom";
+import IResponse from "@/models/IResponse";
 
 const UserProfileTest = () => {
   const { id } = useParams<{ id: string }>();
   const userId = Number(id);
 
   const {
-    data: user,
+    data: response,
     isLoading,
     isError,
     error,
-  } = useQuery<IUser>({
+  } = useQuery<IResponse<IUser>>({
     queryKey: ["user", userId],
     queryFn: () => getUser(userId),
     enabled: !!userId,
   });
 
-  console.log(user);
+  const user = response?.data;
 
   if (isLoading) return <h1>Loading...</h1>;
   if (isError) return <h1>AN ERROR OCCURRED: {error.message}</h1>;

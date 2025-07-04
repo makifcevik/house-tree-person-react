@@ -4,12 +4,12 @@ import API_ROUTES from "../routes/apiRoutes";
 import { axiosInstance } from "./axiosInstance";
 
 export const getAllUsers = async (): Promise<IResponse<IUser[]>> => {
-  const response = await axiosInstance.get<Promise<IResponse<IUser[]>>>(API_ROUTES.USERS);
+  const response = await axiosInstance.get<IResponse<IUser[]>>(API_ROUTES.USERS);
   return response.data;
 };
 
-export const getUser = async (id: number): Promise<IUser> => {
-  const response = await axiosInstance.get<IUser>(`${API_ROUTES.USERS}/${id}`);
+export const getUser = async (id: number): Promise<IResponse<IUser>> => {
+  const response = await axiosInstance.get<IResponse<IUser>>(`${API_ROUTES.USERS}/${id}`);
   return response.data;
 };
 

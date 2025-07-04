@@ -1,14 +1,19 @@
+import IResponse from "@/models/IResponse";
 import IPatient from "../models/IPatient";
 import API_ROUTES from "../routes/apiRoutes";
 import { axiosInstance } from "./axiosInstance";
 
-export const getAllPatients = async (): Promise<IPatient[]> => {
-  const response = await axiosInstance.get<IPatient[]>(`${API_ROUTES.PATIENTS}`);
+export const getAllPatients = async (): Promise<IResponse<IPatient[]>> => {
+  const response = await axiosInstance.get<IResponse<IPatient[]>>(
+    `${API_ROUTES.PATIENTS}`
+  );
   return response.data;
 };
 
-export const getPatient = async (id: number): Promise<IPatient> => {
-  const response = await axiosInstance.get<IPatient>(`${API_ROUTES.PATIENTS}/${id}`);
+export const getPatient = async (id: number): Promise<IResponse<IPatient>> => {
+  const response = await axiosInstance.get<IResponse<IPatient>>(
+    `${API_ROUTES.PATIENTS}/${id}`
+  );
   return response.data;
 };
 
